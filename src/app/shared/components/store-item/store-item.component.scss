@@ -1,0 +1,19 @@
+.store-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px;
+
+  .store-item-name {
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    background-color: pink;
+  }
+
+  .pricing-section,
+  .description-section {
+    margin-top: auto;
+  }
+}

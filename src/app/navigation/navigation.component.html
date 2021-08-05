@@ -1,0 +1,10 @@
+<div class="navigation-wrapper">
+  <div
+    *ngFor="let navigationItem of navigationMenu"
+    class="navigation-item"
+    routerLinkActive="active"
+    [routerLink]="navigationItem.url"
+  >
+    <span class="navigation-item-name">{{navigationItem.name}}</span>
+  </div>
+</div>

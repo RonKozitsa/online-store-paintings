@@ -1,0 +1,26 @@
+.category {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-header {
+    height: 20%;
+  }
+
+  &-img {
+    height: 80%;
+  }
+
+  &-button {
+    position: absolute;
+    bottom: 10%;
+    border-radius: 50%;
+
+    &:hover {
+      box-shadow: 1px 1px 15px 1px gray;
+      transition: box-shadow 0.5s ease-in-out;
+    }
+  }
+}

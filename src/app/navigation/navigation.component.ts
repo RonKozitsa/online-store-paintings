@@ -22,21 +22,13 @@ export class NavigationComponent implements OnInit {
   initNavigationMenu() {
     this.navigationMenu = [
       {
-        name: 'home',
+        name: 'Home',
         url: 'home'
 
       },
       {
-        name: 'baby',
-        url: 'baby'
-      },
-      {
-        name: 'flowers',
-        url: 'flowers'
-      },
-      {
-        name: 'other',
-        url: 'other'
+        name: 'Online Shop',
+        url: 'shop'
       },
       {
         name: 'about',

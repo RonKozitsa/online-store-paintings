@@ -12,12 +12,14 @@ export class StoreItemComponent implements OnInit {
 
   @Input() item: string;
 
-  displayPricing: boolean;
-
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  showDetails() {
+
   }
 
 }

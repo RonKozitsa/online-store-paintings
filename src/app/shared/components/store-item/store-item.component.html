@@ -1,18 +1,19 @@
 <div class="store-item-wrapper" (mouseenter)="displayPricing = true" (mouseleave)="displayPricing = false">
   <div class="store-item-name">{{item}}</div>
   <app-store-item-image></app-store-item-image>
-  <app-store-item-description
-    *ngIf="!displayPricing else appItemPricingTemplate"
-    class="description-section"
-    [description]="'some description'"
-    [@fadeInOnEnterAnimation]
-  ></app-store-item-description>
-  <ng-template #appItemPricingTemplate>
-    <app-item-pricing
-      class="pricing-section"
-      [originalPrice]="50"
-      [printPrice]="20"
-      [@fadeInOnEnterAnimation]
-    ></app-item-pricing>
-  </ng-template>
+  <div (click)="showDetails()">more details</div>
+<!--  <app-store-item-description-->
+<!--    *ngIf="!displayPricing else appItemPricingTemplate"-->
+<!--    class="description-section"-->
+<!--    [description]="'some description'"-->
+<!--    [@fadeInOnEnterAnimation]-->
+<!--  ></app-store-item-description>-->
+<!--  <ng-template #appItemPricingTemplate>-->
+<!--    <app-item-pricing-->
+<!--      class="pricing-section"-->
+<!--      [originalPrice]="50"-->
+<!--      [printPrice]="20"-->
+<!--      [@fadeInOnEnterAnimation]-->
+<!--    ></app-item-pricing>-->
+<!--  </ng-template>-->
 </div>

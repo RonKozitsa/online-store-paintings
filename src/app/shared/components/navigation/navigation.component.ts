@@ -31,11 +31,11 @@ export class NavigationComponent implements OnInit {
         url: 'shop'
       },
       {
-        name: 'about',
+        name: 'About',
         url: 'about'
       },
       {
-        name: 'contact',
+        name: 'Contact',
         url: 'contact'
       },
     ];

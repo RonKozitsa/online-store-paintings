@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
 
 .grid-wrapper {
   height: 100%;
@@ -8,5 +10,9 @@
 .app-button {
   cursor: pointer;
   border-radius: 50px;
-  border: 1px solid gray;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 1px 1px 15px 1px gray;
+  }
 }

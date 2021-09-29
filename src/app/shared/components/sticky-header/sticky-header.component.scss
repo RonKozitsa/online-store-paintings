@@ -1,0 +1,20 @@
+.header-content {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto 100px;
+
+  .navigation {
+    width: 50%;
+    height: 80%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+  }
+}

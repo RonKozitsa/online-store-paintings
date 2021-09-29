@@ -1,5 +1,5 @@
-<div class="category" [routerLink]="shopCategoryOption.url">
+<div class="category">
     <div class="category-header">{{shopCategoryOption.name}}</div>
     <img class="category-img" [src]="shopCategoryOption.imgPath">
-    <button class="category-button">View Gallery</button>
+    <button class="app-button category-button" [routerLink]="shopCategoryOption.url">View Gallery</button>
 </div>

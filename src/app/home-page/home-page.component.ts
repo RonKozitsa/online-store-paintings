@@ -8,6 +8,8 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  images = ['sitting', 'peacock', 'hands-painting', 'painting-in-progress'];
+
   constructor() { }
 
   ngOnInit() {

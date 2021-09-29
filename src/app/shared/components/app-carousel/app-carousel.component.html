@@ -1,0 +1,3 @@
+<ngb-carousel [interval]="interval" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus">
+    <ng-template ngbSlide *ngFor="let img of carouselImages;"><img class="carousel-img" [src]="img"></ng-template>
+</ngb-carousel>

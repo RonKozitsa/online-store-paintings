@@ -1,12 +1,7 @@
 .navigation-wrapper {
-  position: sticky;
-  top: 0;
   display: flex;
   align-items: center;
-  background-color: orange;
-  height: 25px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  height: 100%;
 }
 
 .navigation-item {
@@ -14,7 +9,10 @@
   cursor: pointer;
   color: blue;
   text-align: center;
-  border-right: 1px solid black;
+
+  &:not(:last-of-type) {
+    border-right: 1px solid black;
+  }
 
   .active &-name {
     color: turquoise;

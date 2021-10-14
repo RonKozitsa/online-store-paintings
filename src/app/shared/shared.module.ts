@@ -14,6 +14,7 @@ import {NavigationComponent} from './components/navigation/navigation.component'
 import {PictureWithDescriptionComponent} from './components/picture-with-description/picture-with-description.component';
 import {AppCarouselComponent} from './components/app-carousel/app-carousel.component';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
+import {SideMenuComponent} from './components/side-menu/side-menu.component';
 
 const components = [
     StickyHeaderComponent,
@@ -26,7 +27,8 @@ const components = [
     ShopCategoryOptionComponent,
     NavigationComponent,
     PictureWithDescriptionComponent,
-    AppCarouselComponent
+    AppCarouselComponent,
+    SideMenuComponent
 ];
 
 @NgModule({

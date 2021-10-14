@@ -1,6 +1,11 @@
-<div class="categories">
-    <ng-container *ngFor="let category of categories">
-        <app-shop-category-option [shopCategoryOption]="category"></app-shop-category-option>
-    </ng-container>
+<!--<div class="categories">-->
+<!--    <ng-container *ngFor="let category of categories">-->
+<!--        <app-shop-category-option [shopCategoryOption]="category"></app-shop-category-option>-->
+<!--    </ng-container>-->
+<!--</div>-->
+<div class="page-wrapper">
+    <app-side-menu class="shop-side-menu" [sideMenuItems]="categories"></app-side-menu>
+    <div class="page-content">
+        <router-outlet></router-outlet>
+    </div>
 </div>
-y

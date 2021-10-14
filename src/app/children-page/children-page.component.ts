@@ -8,7 +8,7 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 })
 export class ChildrenPageComponent implements OnInit {
 
-  gridItems = ['1', '2', '3', '5', '6', '7', '8', '9', '10'];
+  gridItems = ['1', '2', '3', '5', '6', '7', '8', '9', '10', '2', '3', '5', '6', '7', '8', '9', '10'];
 
   constructor() {
   }

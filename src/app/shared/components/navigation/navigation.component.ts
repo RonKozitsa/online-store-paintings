@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 import {NavigationItemInterface} from './navigation.interface';
 
@@ -8,37 +8,10 @@ import {NavigationItemInterface} from './navigation.interface';
   styleUrls: ['./navigation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
 
-  navigationMenu: NavigationItemInterface[];
+  @Input() navigationMenu: NavigationItemInterface[];
 
   constructor() {
   }
-
-  ngOnInit() {
-    this.initNavigationMenu();
-  }
-
-  initNavigationMenu() {
-    this.navigationMenu = [
-      {
-        name: 'Home',
-        url: 'home'
-
-      },
-      {
-        name: 'Online Shop',
-        url: 'shop'
-      },
-      {
-        name: 'About',
-        url: 'about'
-      },
-      {
-        name: 'Contact',
-        url: 'contact'
-      },
-    ];
-  }
-
 }

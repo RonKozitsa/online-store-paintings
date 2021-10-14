@@ -10,6 +10,12 @@
   color: blue;
   text-align: center;
 
+  &-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &:not(:last-of-type) {
     border-right: 1px solid black;
   }

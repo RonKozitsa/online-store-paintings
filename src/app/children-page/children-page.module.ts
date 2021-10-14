@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 
 import {ChildrenPageComponent} from './children-page.component';
-import {babyPageRoutes} from './children-page.routing';
+import {childrenPageRoutes} from './children-page.routing';
 import {SharedModule} from '../shared/shared.module';
 
 
@@ -11,7 +11,7 @@ import {SharedModule} from '../shared/shared.module';
   declarations: [ChildrenPageComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(babyPageRoutes),
+    RouterModule.forChild(childrenPageRoutes),
     SharedModule,
   ]
 })

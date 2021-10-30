@@ -6,14 +6,25 @@
   padding: 10px;
 
   .store-item-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid black;
     margin-bottom: 5px;
-    padding-bottom: 5px;
     background-color: pink;
+    height: 10%;
+  }
+
+  .store-item-image {
+    height: 80%;
   }
 
   .pricing-section,
   .description-section {
     margin-top: auto;
+  }
+
+  .more-details-button {
+    height: 10%;
   }
 }

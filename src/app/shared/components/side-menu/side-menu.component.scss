@@ -9,7 +9,15 @@
   .menu-item {
     color: black;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .side-menu-icon {
+      margin-left: 5px;
+    }
 
     &.active {
       color: blue;

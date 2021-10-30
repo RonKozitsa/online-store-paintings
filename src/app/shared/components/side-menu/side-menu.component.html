@@ -3,6 +3,8 @@
         *ngFor="let item of sideMenuItems"
         class="menu-item"
         routerLinkActive="active"
-        [routerLink]="item.url"
-    >{{item.name}}</div>
+        [routerLink]="item.url">
+        <span>{{item.name}}</span>
+        <img class="side-menu-icon" src="assets/svg/{{item.iconName}}.svg">
+    </div>
 </div>

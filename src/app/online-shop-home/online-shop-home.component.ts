@@ -1,6 +1,7 @@
 import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {ShopCategoryOptionInterface} from '../shared/components/shop-category-option/shop-category-option.interface';
 import {NavigationItemInterface} from '../shared/components/navigation/navigation.interface';
+import {SideMenuItemI} from '../shared/components/side-menu/side-menu.interface';
 
 @Component({
     selector: 'app-online-shop-home',
@@ -10,18 +11,21 @@ import {NavigationItemInterface} from '../shared/components/navigation/navigatio
 })
 export class OnlineShopHomeComponent implements OnInit {
 
-    categories: NavigationItemInterface[] = [
+    categories: SideMenuItemI[] = [
         {
             url: 'children',
             name: 'Children',
+            iconName: 'child'
         },
         {
             url: 'flowers',
             name: 'Flowers',
+            iconName: 'flower'
         },
         {
             url: 'other',
             name: 'Other',
+            iconName: ''
         },
     ];
 

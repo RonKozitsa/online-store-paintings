@@ -1,7 +1,7 @@
 <div class="store-item-wrapper">
   <div class="store-item-name">{{item}}</div>
-  <app-store-item-image></app-store-item-image>
-  <div (click)="showDetails()">more details</div>
+  <app-store-item-image class="store-item-image"></app-store-item-image>
+  <div class="more-details-button" (click)="showDetails()">more details</div>
 <!--  <app-store-item-description-->
 <!--    *ngIf="!displayPricing else appItemPricingTemplate"-->
 <!--    class="description-section"-->

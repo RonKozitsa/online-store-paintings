@@ -1,14 +1,11 @@
 :host {
   width: 100%;
+  height: 100%;
 }
 
 .wrapper {
-  width: 90%;
-  height: 500px;
   display: flex;
   align-items: center;
-  margin: auto;
-  background-color: darkgreen;
 
   .img {
     height: 100%;
@@ -16,9 +13,10 @@
   }
 
   .description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 30%;
-    text-align: center;
-    background-color: pink;
   }
 }

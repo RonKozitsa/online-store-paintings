@@ -16,10 +16,6 @@
     justify-content: center;
   }
 
-  &:not(:last-of-type) {
-    border-right: 1px solid black;
-  }
-
   .active &-name {
     color: turquoise;
   }

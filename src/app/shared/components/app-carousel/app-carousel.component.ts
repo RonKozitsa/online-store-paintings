@@ -1,10 +1,11 @@
-import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from '@angular/core';
 
 @Component({
     selector: 'app-carousel',
     templateUrl: './app-carousel.component.html',
     styleUrls: ['./app-carousel.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None
 })
 export class AppCarouselComponent {
 

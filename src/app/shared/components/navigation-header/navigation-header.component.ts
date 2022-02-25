@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {NavigationItemInterface} from '../navigation/navigation.interface';
 
 @Component({
-  selector: 'app-sticky-header',
-  templateUrl: './sticky-header.component.html',
-  styleUrls: ['./sticky-header.component.scss']
+  selector: 'app-navigation-header',
+  templateUrl: './navigation-header.component.html',
+  styleUrls: ['./navigation-header.component.scss']
 })
-export class StickyHeaderComponent implements OnInit {
+export class NavigationHeaderComponent implements OnInit {
 
   navigationMenu: NavigationItemInterface[] = [
     {
@@ -15,11 +15,11 @@ export class StickyHeaderComponent implements OnInit {
 
     },
     {
-      name: 'Online Shop',
+      name: 'Shop',
       url: 'shop'
     },
     {
-      name: 'About',
+      name: 'About Me',
       url: 'about'
     },
     {

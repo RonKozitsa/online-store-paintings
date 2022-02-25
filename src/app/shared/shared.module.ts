@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 
-import {StickyHeaderComponent} from './components/sticky-header/sticky-header.component';
+import {NavigationHeaderComponent} from './components/navigation-header/navigation-header.component';
 import {ImagesGridComponent} from './components/images-grid/images-grid.component';
 import {StoreItemComponent} from './components/store-item/store-item.component';
 import {StoreItemDescriptionComponent} from './components/store-item-description/store-item-description.component';
@@ -17,7 +17,7 @@ import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {SideMenuComponent} from './components/side-menu/side-menu.component';
 
 const components = [
-    StickyHeaderComponent,
+    NavigationHeaderComponent,
     ImagesGridComponent,
     StoreItemComponent,
     StoreItemDescriptionComponent,

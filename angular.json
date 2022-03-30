@@ -61,12 +61,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "website-project:build",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
-            }
+            "browserTarget": "website-project:build"
           },
           "configurations": {
             "production": {

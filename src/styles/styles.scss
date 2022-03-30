@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 html {
   height: 100vh;
@@ -12,9 +12,18 @@ body{
   width: 100%;
 }
 
+a {
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: unset;
+  }
+}
+
 .grid-wrapper {
   height: 100%;
 }
+
 
 .app-button {
   cursor: pointer;
@@ -25,3 +34,9 @@ body{
     box-shadow: 1px 1px 15px 1px gray;
   }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '../../node_modules/bootstrap/scss/bootstrap';

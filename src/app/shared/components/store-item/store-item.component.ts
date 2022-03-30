@@ -1,25 +1,24 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
-
+import {Component, OnInit, ChangeDetectionStrategy, Input, EventEmitter, Output} from '@angular/core';
 import {StoreItemInterface} from './store-item.interface';
 
 @Component({
-  selector: 'app-store-item',
-  templateUrl: './store-item.component.html',
-  styleUrls: ['./store-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-store-item',
+    templateUrl: './store-item.component.html',
+    styleUrls: ['./store-item.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StoreItemComponent implements OnInit {
+    @Input() item: StoreItemInterface;
 
-  @Input() item: string;
+    @Output() showFullDetails = new EventEmitter<number>();
 
-  constructor() {
-  }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  showDetails() {
-
-  }
+    showDetails() {
+    }
 
 }

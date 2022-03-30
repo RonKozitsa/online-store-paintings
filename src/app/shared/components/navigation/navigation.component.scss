@@ -2,21 +2,19 @@
   display: flex;
   align-items: center;
   height: 100%;
+  border-bottom: unset;
 }
 
 .navigation-item {
   flex-grow: 1;
+  opacity: 1;
   cursor: pointer;
   color: blue;
   text-align: center;
+  min-width: unset;
+  padding: 0;
 
-  &-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .active &-name {
-    color: turquoise;
+  &.active {
+    font-weight: bold;
   }
 }

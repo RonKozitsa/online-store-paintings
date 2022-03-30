@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {StoreItemInterface} from '../shared/components/store-item/store-item.interface';
 
 @Component({
   selector: 'app-children-page',
@@ -8,7 +9,20 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 })
 export class ChildrenPageComponent implements OnInit {
 
-  gridItems = ['1', '2', '3', '5', '6', '7', '8', '9', '10', '2', '3', '5', '6', '7', '8', '9', '10'];
+  gridItems: StoreItemInterface[] = [
+    {
+      description: 'desc',
+      id: 1,
+      price: 100,
+      name: 'Item name'
+    },
+    {
+      description: 'desc 2',
+      id: 2,
+      price: 200,
+      name: 'Item name 2'
+    }
+  ];
 
   constructor() {
   }

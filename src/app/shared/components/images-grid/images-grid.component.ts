@@ -1,4 +1,5 @@
 import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
+import {StoreItemInterface} from '../store-item/store-item.interface';
 
 @Component({
   selector: 'app-images-grid',
@@ -8,7 +9,7 @@ import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
 })
 export class ImagesGridComponent implements OnInit {
 
-  @Input() gridItems: string[] = [];
+  @Input() gridItems: StoreItemInterface[] = [];
   @Input() gridStyle: object;
 
   constructor() {

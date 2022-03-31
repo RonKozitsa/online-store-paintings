@@ -1,8 +1,8 @@
 .header-content {
   z-index: 1;
-  height: 100px;
+  height: var(--navigation-height);
   padding: 0 100px;
-  margin: 20px auto auto;
+  margin: auto;
   display: flex;
   width: 60%;
   align-items: center;

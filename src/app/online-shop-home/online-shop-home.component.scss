@@ -1,18 +1,18 @@
-.page-wrapper {
+.online-shop-page-wrapper {
+  height: 100%;
   display: flex;
-  align-items: center;
   position: relative;
 
 
   .shop-side-menu {
-    position: absolute;
-    width: 15%;
+    flex-basis: 15%;
     height: 100%;
   }
 
-  .page-content {
-    width: 85%;
-    margin-left: 15%;
+  .online-shop-page-content {
+    flex-basis: 85%;
+    flex-shrink: 0;
     padding: 0 20px;
+    min-width: 700px;
   }
 }

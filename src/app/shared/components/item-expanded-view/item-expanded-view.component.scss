@@ -1,0 +1,15 @@
+.expanded-view-item {
+  display: flex;
+  align-items: flex-start;
+
+  .item-picture {
+    width: 50%;
+  }
+
+  .item-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}

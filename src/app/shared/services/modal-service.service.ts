@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
-import {NgbModal, NgbModalConfig} from '@ng-bootstrap/ng-bootstrap';
+import {Injectable} from '@angular/core';
+import {NgbModal, NgbModalConfig, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ModalServiceService {
 
-  constructor(config: NgbModalConfig, private modalService: NgbModal) {
-    config.modalDialogClass = 'modal-dialog-centered';
-  }
+    constructor(config: NgbModalConfig, private modalService: NgbModal) {
+        config.modalDialogClass = 'modal-dialog-centered';
+    }
 
-  open(content) {
-    this.modalService.open(content);
-  }
+    open(content, modalSize?: string): NgbModalRef {
+        return this.modalService.open(content, {size: modalSize});
+    }
 }

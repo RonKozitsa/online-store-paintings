@@ -9,18 +9,18 @@ import {StoreItemService} from '../../services/store-item.service';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StoreItemComponent implements OnInit {
-    @Input() item: StoreItemInterface;
+    @Input() itemConfig: StoreItemInterface;
 
     @Output() showFullDetails = new EventEmitter<number>();
 
-    constructor(private storeItemService:StoreItemService) {
+    constructor(private storeItemService: StoreItemService) {
     }
 
     ngOnInit() {
     }
 
     showDetails() {
-        this.storeItemService.showItemDetails();
+        this.storeItemService.showItemDetails(this.itemConfig);
     }
 
 }

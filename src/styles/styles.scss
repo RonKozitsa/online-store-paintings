@@ -35,16 +35,6 @@ a {
   flex-direction: column;
 }
 
-.app-button {
-  cursor: pointer;
-  border-radius: 50px;
-  transition: box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    box-shadow: 1px 1px 15px 1px gray;
-  }
-}
-
 .modal-open .modal {
   z-index: 9999;
 }

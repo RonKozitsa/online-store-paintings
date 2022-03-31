@@ -20,7 +20,8 @@ export class OtherPageComponent implements OnInit {
       description: 'desc 2',
       id: 2,
       price: 200,
-      name: 'Item name 2'
+      name: 'Item name 2',
+      imageName: 'sitting.jpeg'
     }
   ];
 

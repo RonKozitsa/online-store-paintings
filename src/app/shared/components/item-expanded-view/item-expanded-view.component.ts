@@ -1,5 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import {StoreItemInterface} from '../store-item/store-item.interface';
 
 @Component({
   selector: 'app-item-expanded-view',
@@ -8,6 +9,7 @@ import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemExpandedViewComponent implements OnInit {
+  @Input() itemConfig: StoreItemInterface;
 
   constructor(public activeModal: NgbActiveModal) {}
 

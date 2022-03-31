@@ -12,6 +12,7 @@ import {NavigationComponent} from './components/navigation/navigation.component'
 import {AppCarouselComponent} from './components/app-carousel/app-carousel.component';
 import {SideMenuComponent} from './components/side-menu/side-menu.component';
 import {StoreItemImageComponent} from './components/store-item-image/store-item-image.component';
+import {ItemExpandedViewComponent} from './components/item-expanded-view/item-expanded-view.component';
 
 const components = [
     NavigationHeaderComponent,
@@ -22,7 +23,8 @@ const components = [
     NavigationComponent,
     AppCarouselComponent,
     SideMenuComponent,
-    StoreItemImageComponent
+    StoreItemImageComponent,
+    ItemExpandedViewComponent
 ];
 
 @NgModule({

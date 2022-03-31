@@ -52,3 +52,7 @@ a {
   justify-content: center;
   margin: auto;
 }
+
+.modal-open .modal {
+  z-index: 9999;
+}

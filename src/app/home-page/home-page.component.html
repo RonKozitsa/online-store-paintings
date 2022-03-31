@@ -1,3 +1,7 @@
 <div class="home-page">
-
+    <div class="website-name">My Website</div>
+    <app-button [type]="ButtonType.square" (clicked)="navigateToCollection()">View My Collection</app-button>
+    <div class="sentences">
+        <span *ngIf="!loadingSentence" @fadeInOut>{{currentSentence}}</span>
+    </div>
 </div>

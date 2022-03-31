@@ -3,12 +3,7 @@
 
   .page-content {
     width: 100%;
-    height: calc(100% - var(--navigation-height));
-  }
-
-  .navigation-header {
-    display: block;
-    background-color: lightpink;
+    height: 100%;
   }
 }
 

@@ -8,14 +8,20 @@ html {
   width: 100vw;
 }
 
-body{
+body {
   height: 100%;
   width: 100%;
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 a {
   &:hover,
@@ -38,5 +44,3 @@ a {
 .modal-open .modal {
   z-index: 9999;
 }
-
-

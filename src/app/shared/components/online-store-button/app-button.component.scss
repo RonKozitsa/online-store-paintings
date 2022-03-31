@@ -1,9 +1,17 @@
-.standard {
+%button-common {
   cursor: pointer;
-  border-radius: 50px;
   transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
     box-shadow: 1px 1px 15px 1px gray;
   }
+}
+
+.standard {
+  @extend %button-common;
+  border-radius: 50px;
+}
+
+.square {
+  @extend %button-common;
 }

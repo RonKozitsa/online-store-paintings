@@ -11,20 +11,20 @@ export class NavigationHeaderComponent implements OnInit {
   navigationMenu: NavigationItemInterface[] = [
     {
       name: 'Home',
-      url: 'home'
+      url: '/home'
 
     },
     {
       name: 'Shop',
-      url: 'shop'
+      url: '/shop'
     },
     {
       name: 'About Me',
-      url: 'about'
+      url: '/about'
     },
     {
       name: 'Contact',
-      url: 'contact'
+      url: '/contact'
     },
   ];
 

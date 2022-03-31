@@ -1,9 +1,11 @@
 .online-shop-page-wrapper {
   height: 100%;
-  display: flex;
   position: relative;
-  padding-top: 20px;
 
+  .shopping-content {
+    display: flex;
+    height: calc(100% - var(--navigation-height));
+  }
 
   .shop-side-menu {
     flex-basis: 15%;

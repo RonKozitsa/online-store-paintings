@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* Importing Bootstrap SCSS file. */
-@forward 'variables';
 @import '../../node_modules/bootstrap/scss/bootstrap';
+@import "themes";
 
 html {
   height: 100vh;
@@ -38,3 +38,5 @@ a {
 .modal-open .modal {
   z-index: 9999;
 }
+
+

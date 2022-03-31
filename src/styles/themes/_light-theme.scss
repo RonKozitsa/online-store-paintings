@@ -1,0 +1,5 @@
+@use 'variables';
+
+:root .light-theme {
+  --navigation-height: #{variables.$navigation-height}px;
+}

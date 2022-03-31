@@ -32,7 +32,10 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/styles"
+                "src/styles",
+                "src/styles/mixins",
+                "src/styles/themes",
+                "src/styles/variables"
               ]
             },
             "scripts": []

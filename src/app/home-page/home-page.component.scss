@@ -1,0 +1,5 @@
+@use 'mixins';
+
+.home-page {
+  @include mixins.backgroundOnPage('/assets/pictures/art-backgroud.jpeg');
+}

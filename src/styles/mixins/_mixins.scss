@@ -1,0 +1,6 @@
+@mixin backgroundOnPage($backgroundImgPath) {
+  background: url("#{$backgroundImgPath}") no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}

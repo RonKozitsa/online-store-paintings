@@ -1,5 +1,12 @@
+@use 'light-theme-variables';
 @use 'variables';
 
 :root .light-theme {
   --navigation-height: #{variables.$navigation-height}px;
+  --logo-width: #{variables.$logo-width}px;
+  --color-primary: #{light-theme-variables.$color-primary};
+  --color-on-primary: #{light-theme-variables.$color-on-primary};
+  --app-gray: #{light-theme-variables.$app-gray};
+  --app-black: #{light-theme-variables.$app-black};
+  --app-border: #{light-theme-variables.$app-border};
 }

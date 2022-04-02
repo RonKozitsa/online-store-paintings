@@ -15,7 +15,7 @@ export class NavigationHeaderComponent implements OnInit {
 
     },
     {
-      name: 'Shop',
+      name: 'Collection',
       url: '/shop'
     },
     {

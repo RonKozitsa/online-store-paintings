@@ -1,0 +1,11 @@
+.social-media-contact-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  .social-media-logo {
+    cursor: pointer;
+    height: 20%;
+    margin: 0 10px;
+  }
+}

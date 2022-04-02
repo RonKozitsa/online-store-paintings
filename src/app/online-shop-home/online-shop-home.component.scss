@@ -1,10 +1,16 @@
+@use 'mixins';
+
+:host {
+  height: calc(100% - var(--navigation-height));
+}
+
 .online-shop-page-wrapper {
   height: 100%;
   position: relative;
 
   .shopping-content {
     display: flex;
-    height: calc(100% - var(--navigation-height));
+    height: 100%;
   }
 
   .shop-side-menu {

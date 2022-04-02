@@ -14,6 +14,8 @@ import {SideMenuComponent} from './components/side-menu/side-menu.component';
 import {StoreItemImageComponent} from './components/store-item-image/store-item-image.component';
 import {ItemExpandedViewComponent} from './components/item-expanded-view/item-expanded-view.component';
 import {AppButtonComponent} from './components/online-store-button/app-button.component';
+import {SocialMediaContactComponent} from './components/social-media-contact/social-media-contact.component';
+import {WINDOW} from './injection-tokens/window-token';
 
 const components = [
     NavigationHeaderComponent,
@@ -26,7 +28,8 @@ const components = [
     SideMenuComponent,
     StoreItemImageComponent,
     ItemExpandedViewComponent,
-    AppButtonComponent
+    AppButtonComponent,
+    SocialMediaContactComponent
 ];
 
 @NgModule({
@@ -36,7 +39,8 @@ const components = [
         RouterModule,
         NgbCarouselModule,
     ],
-    exports: components
+    exports: components,
+    providers: [{provide: WINDOW, useValue: window}]
 })
 export class SharedModule {
 }

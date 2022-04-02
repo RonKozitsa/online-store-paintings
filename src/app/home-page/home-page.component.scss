@@ -1,22 +1,48 @@
 @use 'mixins';
 
+:host {
+  flex-grow: 1;
+}
+
 .home-page {
-  @include mixins.backgroundOnPage('/assets/pictures/art-backgroud.jpeg');
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--color-on-primary);
 
-  .website-name {
-    margin-bottom: 10px;
-  }
-
-  .sentences {
-    width: 100%;
-    height: 200px;
-    padding-top: 100px;
+  .home-page-info {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin: auto 0;
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+    }
+
+    &-picture {
+      height: 400px;
+      margin-right: 100px;
+    }
+  }
+
+  .website-name {
+    padding-top: 50px;
+    font-size: 30px;
+  }
+
+  .quotes {
+    width: 100%;
+    height: 200px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: fantasy;
+    font-size: 20px;
   }
 }

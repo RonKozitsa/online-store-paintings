@@ -1,7 +1,18 @@
 <div class="home-page">
-    <div class="website-name">My Website</div>
-    <app-button [type]="ButtonType.square" (clicked)="navigateToCollection()">View My Collection</app-button>
-    <div class="sentences">
-        <span *ngIf="!loadingSentence" @fadeInOut>{{currentSentence}}</span>
+    <div class="website-name">Flowers and Roses</div>
+    <div class="home-page-info">
+        <img class="home-page-info-picture" src="assets/pictures/hands-painting.jpeg">
+        <div class="home-page-info-description">
+            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+            <app-button class="go-to-collection-button" [type]="ButtonType.square" routerLink="/shop">View My Collection
+            </app-button>
+        </div>
+    </div>
+    <div class="quotes">
+        <ng-container *ngIf="!loadingQuote">
+            <p @fadeInOut>"{{currentQuote.quote}}"</p>
+            <span @fadeInOut>- {{currentQuote.artist}}</span>
+        </ng-container>
     </div>
 </div>

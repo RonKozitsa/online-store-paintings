@@ -1,22 +1,29 @@
 :host {
   display: block;
-  background-color: lightpink;
+  background-image: linear-gradient(to bottom right,black 10%,transparent 50%);
+  border-bottom: 1px solid gray;
+
 }
 
 .header-content {
   z-index: 1;
   height: var(--navigation-height);
-  padding: 20px 100px;
-  margin: 0 auto;
   display: flex;
-  width: 60%;
   align-items: center;
   justify-content: center;
 
+  .navigation {
+    margin: 0 auto;
+  }
+
   .logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 50%;
+    margin-left: 40px;
+    height: var(--navigation-height);
+    width: var(--logo-width);
+  }
+
+  .social-media {
+    margin-right: 40px;
+    height: var(--navigation-height);
   }
 }

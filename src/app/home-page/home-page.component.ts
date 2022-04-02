@@ -5,6 +5,8 @@ import {trigger} from '@angular/animations';
 
 import {animations} from '../shared/animations/animations';
 import {ButtonType} from '../shared/components/online-store-button/app-button.interface';
+import {artistsQuotes} from './home-page.consts';
+import {QuoteI} from './home-page.interface';
 
 @Component({
     selector: 'app-home-page',
@@ -14,11 +16,11 @@ import {ButtonType} from '../shared/components/online-store-button/app-button.in
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePageComponent implements OnInit, OnDestroy {
-    currentSentence: string;
-    loadingSentence: boolean;
+    currentQuote = artistsQuotes[0];
+    loadingQuote: boolean;
 
     images = ['sitting', 'peacock', 'hands-painting', 'painting-in-progress'];
-    sentences = ['sitting', 'peacock', 'hands-painting', 'painting-in-progress'];
+    quotes: QuoteI[] = artistsQuotes;
     destroy$ = new Subject<void>();
     ButtonType = ButtonType;
 
@@ -27,12 +29,12 @@ export class HomePageComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        interval(5000).pipe(takeUntil(this.destroy$)).subscribe(() => {
-            this.loadingSentence = true;
+        interval(8000).pipe(takeUntil(this.destroy$)).subscribe(() => {
+            this.loadingQuote = true;
             this.changeDetectorRef.markForCheck();
             setTimeout(() => {
-                this.currentSentence = this.sentences[Math.floor(Math.random() * this.sentences.length)];
-                this.loadingSentence = false;
+                this.currentQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
+                this.loadingQuote = false;
                 this.changeDetectorRef.markForCheck();
             }, 1000);
         });
@@ -41,10 +43,6 @@ export class HomePageComponent implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.destroy$.next();
         this.destroy$.complete();
-    }
-
-    navigateToCollection() {
-        this.router.navigate(['/shop']);
     }
 
 }

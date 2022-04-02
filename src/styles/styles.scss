@@ -13,19 +13,50 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  color: var(--color-on-primary);
+  color: var(--color-primary);
   @include mixins.backgroundOnPage('/assets/pictures/background.jpeg');
   font-family: Times, "Helvetica Neue", sans-serif;
 }
 
 a {
+  position: relative;
+  color: var(--color-primary);
+
   &:hover,
   &:active,
   &:focus {
     text-decoration: unset;
+    color: unset;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  &.active::after,
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
+button {
+  background-color: #3C415C;
+  border: none;
+  color: var(--color-primary);
+  padding: 0 20px;
+}
 
 .grid-wrapper {
   height: 100%;

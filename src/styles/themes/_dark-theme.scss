@@ -1,0 +1,12 @@
+@use 'dark-theme-variables';
+@use 'variables';
+
+:root .dark-theme {
+  --navigation-height: #{variables.$navigation-height}px;
+  --logo-width: #{variables.$logo-width}px;
+  --color-primary: #{dark-theme-variables.$color-primary};
+  --color-on-primary: #{dark-theme-variables.$color-on-primary};
+  --app-gray: #{dark-theme-variables.$app-gray};
+  --app-black: #{dark-theme-variables.$app-black};
+  --app-border: #{dark-theme-variables.$app-border};
+}

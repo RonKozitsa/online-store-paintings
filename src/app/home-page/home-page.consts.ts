@@ -66,7 +66,7 @@ export const artistsQuotes: QuoteI[] = [
         artist: 'Salvador Dalí'
     },
     {
-        quote: 'If you hear a voice within you say ‘you cannot paint,\' then by all means paint, and that voice will be silenced.',
+        quote: 'If you hear a voice within you say \'you cannot paint\', then by all means paint, and that voice will be silenced.',
         artist: 'Vincent van Gogh'
     },
     {

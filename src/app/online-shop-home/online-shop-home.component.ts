@@ -13,14 +13,14 @@ export class OnlineShopHomeComponent implements OnInit {
 
     categories: SideMenuItemI[] = [
         {
-            url: 'children',
-            name: 'Children',
-            iconName: 'child'
-        },
-        {
             url: 'flowers',
             name: 'Flowers',
             iconName: 'flower'
+        },
+        {
+            url: 'children',
+            name: 'Children',
+            iconName: 'child'
         },
         {
             url: 'other',

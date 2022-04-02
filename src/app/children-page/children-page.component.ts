@@ -86,13 +86,15 @@ export class ChildrenPageComponent implements OnInit {
       description: 'desc',
       id: 1,
       price: 100,
-      name: 'Item name'
+      name: 'Item name',
+      imageName: 'sitting.jpeg'
     },
     {
       description: 'desc',
       id: 1,
       price: 100,
-      name: 'Item name'
+      name: 'Item name',
+      imageName: 'painting-in-progress.jpeg'
     },
     {
       description: 'desc 2',

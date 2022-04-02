@@ -7,6 +7,7 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AboutPageComponent implements OnInit {
+  carouselImages: string[] = ['sitting', 'painting-in-progress'];
 
   constructor() { }
 

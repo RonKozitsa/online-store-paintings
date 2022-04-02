@@ -6,7 +6,21 @@
     <div class="item-picture">
         <app-store-item-image [imgName]="itemConfig.imageName || 'peacock.jpeg'"></app-store-item-image>
     </div>
-    <div class="item-info">
-        <p>{{itemConfig.description}}</p>
+    <div class="item-info-container">
+        <div class="item-info-section">
+            <h4 class="item-info-section-title">Description:</h4>
+            <p>{{itemConfig.description}}</p>
+        </div>
+        <div class="item-info-section">
+            <h4 class="item-info-section-title">Information:</h4>
+            <div class="key-value-pair">
+                <span class="key">Dimensions:</span>
+                <span class="value">{{itemConfig.description}}</span>
+            </div>
+            <div class="key-value-pair">
+                <span class="key">Date:</span>
+                <span class="value">2019</span>
+            </div>
+        </div>
     </div>
 </div>

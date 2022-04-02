@@ -1,4 +1,4 @@
-.modal-header{
+.modal-header {
   border-bottom: 1px solid var(--app-border);
 }
 
@@ -10,10 +10,35 @@
     width: 50%;
   }
 
-  .item-info {
+  .item-info-container {
     width: 50%;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+
+    .item-info-section {
+      width: 90%;
+      padding-top: 20px;
+
+      &-title{
+        padding-bottom: 20px;
+        text-decoration: underline;
+      }
+
+      &:not(:last-of-type) {
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--app-border);
+      }
+
+      .key-value-pair {
+        display: flex;
+        align-items: center;
+
+        .key {
+          font-weight: bold;
+          margin-right: 10px;
+        }
+      }
+    }
   }
 }

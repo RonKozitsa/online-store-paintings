@@ -73,5 +73,6 @@ button {
 }
 
 .modal-content {
-  background-image: linear-gradient(to top left, var(--background-light), var(--background))
+  background-image: linear-gradient(to top left, var(--background-light), black, var(--background));
+  border: 1px solid var(--app-border);
 }

@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-about-page',
@@ -6,12 +6,6 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   styleUrls: ['./about-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AboutPageComponent implements OnInit {
+export class AboutPageComponent {
   carouselImages: string[] = ['sitting.jpeg', 'painting-in-progress.jpeg'];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

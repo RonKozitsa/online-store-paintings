@@ -2,7 +2,7 @@
 /* Importing Bootstrap SCSS file. */
 @use "themes";
 @use 'mixins';
-@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "~bootstrap/dist/css/bootstrap.css";
 
 html {
   height: 100vh;
@@ -20,12 +20,13 @@ body {
 
 a {
   position: relative;
+  text-decoration: none;
   color: var(--color-primary);
 
   &:hover,
   &:active,
   &:focus {
-    text-decoration: unset;
+    text-decoration: none;
     color: unset;
   }
 

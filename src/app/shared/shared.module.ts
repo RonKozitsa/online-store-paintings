@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 
+import {WINDOW} from './injection-tokens/window-token';
 import {NavigationHeaderComponent} from './components/navigation-header/navigation-header.component';
 import {ImagesGridComponent} from './components/images-grid/images-grid.component';
 import {StoreItemComponent} from './components/store-item/store-item.component';
@@ -15,7 +16,8 @@ import {StoreItemImageComponent} from './components/store-item-image/store-item-
 import {ItemExpandedViewComponent} from './components/item-expanded-view/item-expanded-view.component';
 import {AppButtonComponent} from './components/online-store-button/app-button.component';
 import {SocialMediaContactComponent} from './components/social-media-contact/social-media-contact.component';
-import {WINDOW} from './injection-tokens/window-token';
+import {InputTextComponent} from './components/input-text/input-text.component';
+import {FormsModule} from '@angular/forms';
 
 const components = [
     NavigationHeaderComponent,
@@ -29,7 +31,8 @@ const components = [
     StoreItemImageComponent,
     ItemExpandedViewComponent,
     AppButtonComponent,
-    SocialMediaContactComponent
+    SocialMediaContactComponent,
+    InputTextComponent
 ];
 
 @NgModule({
@@ -38,6 +41,7 @@ const components = [
         CommonModule,
         RouterModule,
         NgbCarouselModule,
+        FormsModule,
     ],
     exports: components,
     providers: [{provide: WINDOW, useValue: window}]

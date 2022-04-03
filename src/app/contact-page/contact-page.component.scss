@@ -1,0 +1,36 @@
+:host {
+  height: 100%;
+}
+
+.contact-form {
+  height: 100%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+
+  .sender-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .form-email {
+      margin-left: 10px;
+      flex-grow: 1;
+    }
+  }
+
+  .sender-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+
+    .form-message {
+      height: 100%;
+    }
+  }
+}

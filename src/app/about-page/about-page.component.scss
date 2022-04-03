@@ -5,18 +5,20 @@
 .about-me {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 800px;
   justify-content: center;
 
   .carousel {
     margin-right: 40px;
-    height: 600px;
+    max-height: 600px;
     width: 500px;
+    max-width: 500px;
   }
 
-  &-text {
+  .about-me-info {
+    display: flex;
+    flex-direction: column;
     max-width: 800px;
-    max-height: 600px;
     overflow: auto;
   }
 }

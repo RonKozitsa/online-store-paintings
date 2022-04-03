@@ -15,6 +15,6 @@ export class AppCarouselComponent {
 
     pauseOnHover = true;
     pauseOnFocus = true;
-    interval = 3000;
+    interval = 10000;
     carouselImages: string[];
 }

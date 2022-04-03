@@ -3,7 +3,7 @@ export interface StoreItemInterface {
     description: string;
     price: number;
     id: number;
-    imageName?: string;
+    imagesPath?: string[];
     dimensions?: ItemDimensionsI;
 }
 

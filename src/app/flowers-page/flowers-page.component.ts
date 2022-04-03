@@ -14,13 +14,15 @@ export class FlowersPageComponent implements OnInit {
             description: 'desc',
             id: 1,
             price: 100,
-            name: 'Item name'
+            name: 'Item name',
+            imagesPath: []
         },
         {
             description: 'desc 2',
             id: 2,
             price: 200,
-            name: 'Item name 2'
+            name: 'Item name 2',
+            imagesPath: []
         }
     ];
 

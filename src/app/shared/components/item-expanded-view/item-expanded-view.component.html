@@ -3,9 +3,7 @@
     <app-button class="close-modal-btn" (clicked)="activeModal.dismiss()">X</app-button>
 </div>
 <div class="modal-body expanded-view-item">
-    <div class="item-picture">
-        <app-store-item-image [imgName]="itemConfig.imageName || 'peacock.jpeg'"></app-store-item-image>
-    </div>
+    <app-display-paintings class="paintings" [itemConfig]="itemConfig"></app-display-paintings>
     <div class="item-info-container">
         <div class="item-info-section">
             <h4 class="item-info-section-title">Description:</h4>
@@ -22,6 +20,8 @@
                 <span class="value">2019</span>
             </div>
         </div>
-        <app-button class="want-it-btn" [buttonStyle]="buttonType.square" (clicked)="navigateToContact(itemConfig)">I want it !</app-button>
+        <app-button class="want-it-btn" [buttonStyle]="buttonType.square" (clicked)="navigateToContact(itemConfig)">I
+            want it !
+        </app-button>
     </div>
 </div>

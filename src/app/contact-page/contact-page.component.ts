@@ -4,7 +4,7 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 
-import {ButtonStyle} from '../shared/components/online-store-button/app-button.interface';
+import {ButtonStyle} from '../shared/components/app-button/app-button.interface';
 import {ContactPageFormControls} from './contact-page.interface';
 
 

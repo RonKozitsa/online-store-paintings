@@ -1,6 +1,5 @@
 <div class="store-item-wrapper">
     <div class="store-item-name">{{itemConfig.name}}</div>
-    <app-store-item-image class="store-item-image"
-                          [imgName]="itemConfig.imageName || 'peacock.jpeg'"></app-store-item-image>
+    <app-display-paintings class="paintings" [itemConfig]="itemConfig"></app-display-paintings>
     <app-button class="more-details-button" (clicked)="showDetails()">more details</app-button>
 </div>

@@ -21,7 +21,7 @@ export class OtherPageComponent implements OnInit {
       id: 2,
       price: 200,
       name: 'Item name 2',
-      imageName: 'sitting.jpeg'
+      imagesPath: ['sitting.jpeg']
     }
   ];
 

@@ -15,9 +15,10 @@ import {AppCarouselComponent} from './components/app-carousel/app-carousel.compo
 import {SideMenuComponent} from './components/side-menu/side-menu.component';
 import {StoreItemImageComponent} from './components/store-item-image/store-item-image.component';
 import {ItemExpandedViewComponent} from './components/item-expanded-view/item-expanded-view.component';
-import {AppButtonComponent} from './components/online-store-button/app-button.component';
+import {AppButtonComponent} from './components/app-button/app-button.component';
 import {SocialMediaContactComponent} from './components/social-media-contact/social-media-contact.component';
 import {InputTextComponent} from './components/input-text/input-text.component';
+import {DisplayPaintingsComponent} from './components/display-paintings/display-paintings.component';
 
 const components = [
     NavigationHeaderComponent,
@@ -32,11 +33,14 @@ const components = [
     ItemExpandedViewComponent,
     AppButtonComponent,
     SocialMediaContactComponent,
-    InputTextComponent
+    InputTextComponent,
+    DisplayPaintingsComponent
 ];
 
 @NgModule({
-    declarations: components,
+    declarations: [
+        components,
+    ],
     imports: [
         CommonModule,
         RouterModule,

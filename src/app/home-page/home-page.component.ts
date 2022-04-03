@@ -4,7 +4,7 @@ import {interval, Subject, takeUntil} from 'rxjs';
 import {trigger} from '@angular/animations';
 
 import {animations} from '../shared/animations/animations';
-import {ButtonStyle} from '../shared/components/online-store-button/app-button.interface';
+import {ButtonStyle} from '../shared/components/app-button/app-button.interface';
 import {artistsQuotes} from './home-page.consts';
 import {QuoteI} from './home-page.interface';
 

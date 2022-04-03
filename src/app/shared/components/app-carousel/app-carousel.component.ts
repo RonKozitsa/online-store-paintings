@@ -9,8 +9,8 @@ import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from '@ang
 })
 export class AppCarouselComponent {
 
-    @Input() set images(images: string[]) {
-        this.carouselImages = images.map((name) => `/assets/pictures/${name}.jpeg`);
+    @Input() set images(imagesPath: string[]) {
+        this.carouselImages = imagesPath.map((path) => `/assets/pictures/${path}`);
     }
 
     pauseOnHover = true;

@@ -1,8 +1,8 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 import {StoreItemInterface} from '../store-item/store-item.interface';
-import {ButtonStyle} from '../online-store-button/app-button.interface';
+import {ButtonStyle} from '../app-button/app-button.interface';
 import {Router} from '@angular/router';
 
 @Component({
@@ -11,15 +11,13 @@ import {Router} from '@angular/router';
     styleUrls: ['./item-expanded-view.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ItemExpandedViewComponent implements OnInit {
+export class ItemExpandedViewComponent {
     @Input() itemConfig: StoreItemInterface;
 
     buttonType = ButtonStyle;
 
-    constructor(public activeModal: NgbActiveModal, private router: Router) {
-    }
 
-    ngOnInit(): void {
+    constructor(public activeModal: NgbActiveModal, private router: Router) {
     }
 
     navigateToContact(item: StoreItemInterface) {

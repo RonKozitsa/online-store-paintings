@@ -9,6 +9,7 @@ import {ButtonType} from './app-button.interface';
 })
 export class AppButtonComponent implements OnInit {
     @Input() type = ButtonType.standard;
+    @Input() disabled: boolean;
     @Input() customClass = '';
 
     @Output() clicked = new EventEmitter<void>();

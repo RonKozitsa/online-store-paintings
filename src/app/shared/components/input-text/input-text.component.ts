@@ -18,9 +18,6 @@ export class InputTextComponent implements ControlValueAccessor {
     constructor() {
     }
 
-    ngOnInit(): void {
-    }
-
     registerOnChange(fn: any): void {
         this.onChange = fn;
     }

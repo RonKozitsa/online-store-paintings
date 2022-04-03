@@ -1,5 +1,6 @@
 <button
     class="app-button {{customClass}}"
+    [disabled]="disabled"
     [ngClass]="type"
     (click)="clicked.emit()">
     <ng-content></ng-content>

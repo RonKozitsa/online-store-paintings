@@ -1,16 +1,20 @@
-<form class="contact-form" [formGroup]="contactForm">
-    <div class="sender-info">
-        <app-input-text formControlName="name">Name</app-input-text>
-        <app-input-text class="form-email" formControlName="email">Email</app-input-text>
-    </div>
-    <div class="sender-message">
-        <label for="message">Message</label>
-        <textarea
-            id="message"
-            name="message"
-            class="form-message"
-            formControlName="message"
-            name="message">
+<main class="contact-page">
+    <h3 class="contact-page-title">Contact Me !</h3>
+    <form class="contact-page-form" [formGroup]="contactForm">
+        <div class="sender-info">
+            <app-input-text formControlName="name">Name</app-input-text>
+            <app-input-text class="form-email" formControlName="email">Email</app-input-text>
+        </div>
+        <div class="sender-message">
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                class="form-message"
+                formControlName="message"
+                name="message">
     </textarea>
-    </div>
-</form>
+        </div>
+    </form>
+    <app-button [type]="buttonType.square" (clicked)="submitForm()">Submit</app-button>
+</main>

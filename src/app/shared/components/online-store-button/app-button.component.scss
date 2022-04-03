@@ -7,11 +7,11 @@
   }
 }
 
-.standard {
+.standard:not([disabled]) {
   @extend %button-common;
   border-radius: 50px;
 }
 
-.square {
+.square:not([disabled]) {
   @extend %button-common;
 }

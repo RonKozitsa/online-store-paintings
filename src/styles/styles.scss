@@ -3,6 +3,7 @@
 @use "themes";
 @use 'mixins';
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "overrides";
 
 html {
   height: 100vh;
@@ -67,13 +68,4 @@ button {
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.modal-open .modal {
-  z-index: 9999;
-}
-
-.modal-content {
-  background-image: linear-gradient(to top left, var(--background-light), black, var(--background));
-  border: 1px solid var(--app-border);
 }

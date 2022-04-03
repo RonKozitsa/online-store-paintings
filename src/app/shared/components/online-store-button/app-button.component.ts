@@ -1,5 +1,5 @@
 import {Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter} from '@angular/core';
-import {ButtonType} from './app-button.interface';
+import {ButtonStyle} from './app-button.interface';
 
 @Component({
     selector: 'app-button',
@@ -8,7 +8,8 @@ import {ButtonType} from './app-button.interface';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppButtonComponent implements OnInit {
-    @Input() type = ButtonType.standard;
+    @Input() buttonStyle = ButtonStyle.standard;
+    @Input() type = 'button';
     @Input() disabled: boolean;
     @Input() customClass = '';
 

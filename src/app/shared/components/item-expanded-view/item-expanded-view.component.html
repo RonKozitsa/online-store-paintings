@@ -1,6 +1,6 @@
 <div class="modal-header">
     <h4 class="modal-title">{{itemConfig.name}}</h4>
-    <app-button (clicked)="activeModal.dismiss('Cross click')">X</app-button>
+    <app-button class="close-modal-btn" (clicked)="activeModal.dismiss()">X</app-button>
 </div>
 <div class="modal-body expanded-view-item">
     <div class="item-picture">
@@ -22,5 +22,6 @@
                 <span class="value">2019</span>
             </div>
         </div>
+        <app-button class="want-it-btn" [buttonStyle]="buttonType.square" (clicked)="navigateToContact(itemConfig)">I want it !</app-button>
     </div>
 </div>

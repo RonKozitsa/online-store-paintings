@@ -20,7 +20,7 @@
       width: 90%;
       padding-top: 20px;
 
-      &-title{
+      &-title {
         padding-bottom: 20px;
         text-decoration: underline;
       }
@@ -39,6 +39,11 @@
           margin-right: 10px;
         }
       }
+    }
+
+    .want-it-btn {
+      position: absolute;
+      bottom: 20px;
     }
   }
 }

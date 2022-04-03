@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
+import {FormsModule} from '@angular/forms';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {WINDOW} from './injection-tokens/window-token';
@@ -17,7 +18,6 @@ import {ItemExpandedViewComponent} from './components/item-expanded-view/item-ex
 import {AppButtonComponent} from './components/online-store-button/app-button.component';
 import {SocialMediaContactComponent} from './components/social-media-contact/social-media-contact.component';
 import {InputTextComponent} from './components/input-text/input-text.component';
-import {FormsModule} from '@angular/forms';
 
 const components = [
     NavigationHeaderComponent,
@@ -44,7 +44,9 @@ const components = [
         FormsModule,
     ],
     exports: components,
-    providers: [{provide: WINDOW, useValue: window}]
+    providers: [
+        {provide: WINDOW, useValue: window},
+    ]
 })
 export class SharedModule {
 }

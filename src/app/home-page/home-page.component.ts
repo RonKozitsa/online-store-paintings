@@ -4,7 +4,7 @@ import {interval, Subject, takeUntil} from 'rxjs';
 import {trigger} from '@angular/animations';
 
 import {animations} from '../shared/animations/animations';
-import {ButtonType} from '../shared/components/online-store-button/app-button.interface';
+import {ButtonStyle} from '../shared/components/online-store-button/app-button.interface';
 import {artistsQuotes} from './home-page.consts';
 import {QuoteI} from './home-page.interface';
 
@@ -22,7 +22,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
     images = ['sitting', 'peacock', 'hands-painting', 'painting-in-progress'];
     quotes: QuoteI[] = artistsQuotes;
     destroy$ = new Subject<void>();
-    ButtonType = ButtonType;
+    buttonStyle = ButtonStyle;
 
 
     constructor(private router: Router, private changeDetectorRef: ChangeDetectorRef) {

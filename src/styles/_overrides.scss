@@ -1,0 +1,13 @@
+.modal-open .modal {
+  z-index: 9999;
+}
+
+.modal-content {
+  background-image: linear-gradient(to top left, var(--background-light), black, var(--background));
+  border: 1px solid var(--app-border);
+
+  .close-modal-btn button {
+    background-color: transparent;
+    padding: 0 10px;
+  }
+}

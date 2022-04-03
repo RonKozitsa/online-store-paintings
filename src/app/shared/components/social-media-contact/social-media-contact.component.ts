@@ -20,17 +20,17 @@ export class SocialMediaContactComponent {
         this.configurations = [
             {
                 name: 'Facebook',
-                url: '',
+                url: 'https://www.facebook.com/leonie.fix.3',
                 logo: 'facebook.svg'
             },
             {
                 name: 'Instagram',
-                url: '',
+                url: 'https://www.instagram.com/leonie__fix/',
                 logo: 'instagram.svg'
             },
             {
                 name: 'Linkedin',
-                url: '',
+                url: 'https://www.linkedin.com/in/leonie-fix-91005012b/',
                 logo: 'linkedin.svg'
             }
         ];

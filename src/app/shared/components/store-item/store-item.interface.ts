@@ -5,9 +5,10 @@ export interface StoreItemInterface {
     imagesPath: string[];
     price?: number;
     dimensions?: ItemDimensionsI;
+    framed?: boolean;
 }
 
 export interface ItemDimensionsI {
-  height: number;
-  width: number;
+    height: number;
+    width: number;
 }

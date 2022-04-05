@@ -16,10 +16,12 @@
                 <span class="value">{{itemConfig.description}}</span>
                 <span class="key">Date:</span>
                 <span class="value">2019</span>
+                <span class="key">Framed:</span>
+                <span class="value">{{itemConfig.framed ? 'Yes': 'No'}}</span>
             </div>
         </div>
         <div class="modal-bottom">
-            <div class="item-color-picker">
+            <div *ngIf="!itemConfig.framed" class="item-color-picker">
                 <input #colorPicker hidden id="color-picker" [colorPicker]="frameColor"
                        (colorPickerChange)="onFrameColorPicked($event)"/>
                 <app-button [buttonStyle]="buttonType.square" (clicked)="colorPicker.click()">Attach a frame

@@ -25,6 +25,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     {
         description: 'Simple and timeless trilogy with calm colors that can fit any room\n',
         id: 1,
+        framed: true,
         price: 100,
         name: 'Llama Queen - Set',
         imagesPath: ['children/lama-set/lama-left.jpeg', 'children/lama-set/lama-middle.jpeg', 'children/lama-set/lama-right.jpeg',

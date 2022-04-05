@@ -16,9 +16,12 @@
   margin-bottom: 0;
 }
 
-.about-me .carousel-img {
-  object-fit: cover;
+.about-me .carousel-img .store-image,
+.expanded-view-item .paintings .carousel-img .store-image,
+.expanded-view-item .paintings .store-image, {
+  object-fit: fill;
 }
+
 
 .color-picker {
   bottom: 0;

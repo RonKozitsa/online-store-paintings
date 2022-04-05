@@ -1,4 +1,6 @@
 <img class="store-image"
      src="/assets/pictures/{{imgName}}"
      [ngClass]="{'frame': frameColor}"
-     [style.border-color]="frameColor">
+     [style.border-color]="frameColor"
+     [style.object-fit]="containImage ? 'contain' : 'fill'"
+>

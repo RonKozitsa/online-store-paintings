@@ -20,16 +20,6 @@
   object-fit: cover;
 }
 
-.expanded-view-item .paintings .carousel-img,
-.expanded-view-item .paintings, {
-  app-store-item-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-
 .color-picker {
   bottom: 0;
   top: revert !important;

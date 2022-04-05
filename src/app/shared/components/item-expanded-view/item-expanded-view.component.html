@@ -3,7 +3,7 @@
     <app-button class="close-modal-btn" (clicked)="activeModal.dismiss()">X</app-button>
 </div>
 <div class="modal-body expanded-view-item">
-    <app-display-paintings class="paintings" [itemConfig]="itemConfig"></app-display-paintings>
+    <app-display-paintings class="paintings" [itemConfig]="itemConfig" [frameColor]="frameColor"></app-display-paintings>
     <div class="item-info-container">
         <div class="item-info-section">
             <h4 class="item-info-section-title">Description:</h4>
@@ -11,17 +11,24 @@
         </div>
         <div class="item-info-section">
             <h4 class="item-info-section-title">Information:</h4>
-            <div class="key-value-pair">
+            <div class="item-info-section-content">
                 <span class="key">Dimensions:</span>
                 <span class="value">{{itemConfig.description}}</span>
-            </div>
-            <div class="key-value-pair">
                 <span class="key">Date:</span>
                 <span class="value">2019</span>
             </div>
         </div>
-        <app-button class="want-it-btn" [buttonStyle]="buttonType.square" (clicked)="navigateToContact(itemConfig)">I
-            want it !
-        </app-button>
+        <div class="modal-bottom">
+            <div class="item-color-picker">
+                <input #colorPicker hidden id="color-picker" [colorPicker]="frameColor"
+                       (colorPickerChange)="onFrameColorPicked($event)"/>
+                <app-button [buttonStyle]="buttonType.square" (clicked)="colorPicker.click()">Attach a frame
+                </app-button>
+            </div>
+            <app-button class="want-it-btn" [buttonStyle]="buttonType.square" (clicked)="navigateToContact(itemConfig)">
+                I
+                want it !
+            </app-button>
+        </div>
     </div>
 </div>

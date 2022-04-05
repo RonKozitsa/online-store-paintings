@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input, ChangeDetectorRef} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 import {StoreItemInterface} from '../store-item/store-item.interface';
@@ -16,8 +16,10 @@ export class ItemExpandedViewComponent {
 
     buttonType = ButtonStyle;
 
+    frameColor: string;
 
-    constructor(public activeModal: NgbActiveModal, private router: Router) {
+
+    constructor(public activeModal: NgbActiveModal, private router: Router, private changeDetectorRef:ChangeDetectorRef) {
     }
 
     navigateToContact(item: StoreItemInterface) {
@@ -30,4 +32,7 @@ export class ItemExpandedViewComponent {
         });
     }
 
+    onFrameColorPicked(color:string){
+        this.frameColor = color;
+    }
 }

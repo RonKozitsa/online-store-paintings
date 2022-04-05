@@ -10,7 +10,7 @@ export const OnlineShopHomeRoutes: Routes = [
             {path: '', pathMatch: 'full', redirectTo: 'flowers'},
             {path: 'flowers', loadChildren: () => import('../flowers-page/flowers-page.module').then(m => m.FlowersPageModule)},
             {path: 'children', loadChildren: () => import('../children-page/children-page.module').then(m => m.ChildrenPageModule)},
-            {path: 'other', loadChildren: () => import('../other-page/other-page.module').then(m => m.OtherPageModule)}
+            {path: 'animals', loadChildren: () => import('../animals-page/animals-page.module').then(m => m.AnimalsPageModule)}
         ],
     }
 ];

@@ -41,22 +41,15 @@ export class ContactPageComponent implements OnInit, OnDestroy {
     submitForm() {
         if (this.contactForm.valid) {
             const formData: FormData = new FormData();
-            this.setDefaultFormSubmitValues(formData);
-            Object.keys(this.contactForm.controls).forEach(key => {
-                formData.append(key, this.contactForm.get(key).value);
-            });
+            this.setFormSubmitValues(formData);
             this.httpClient.post(
                 'https://formsubmit.co/ronkoz44@gmail.com',
                 formData,
                 {responseType: 'text'}
             ).subscribe(response => {
-                try {
-                    const myWindow = window.open('', '_blank', 'resizable=yes');
-                    myWindow.document.write(response);
-                    myWindow.document.close();
-                } catch (e) {
-
-                }
+                const myWindow = window.open('', '_blank', 'resizable=yes');
+                myWindow.document.write(response);
+                myWindow.document.close();
                 this.formSubmitted = true;
                 this.changeDetectorRef.markForCheck();
             });
@@ -87,13 +80,16 @@ export class ContactPageComponent implements OnInit, OnDestroy {
         this.predefinedMessage = `Hi there ! I love your "${paintingName}" painting !\nIs it available for sale ?`;
     }
 
-    private setDefaultFormSubmitValues(formData: FormData) {
+    private setFormSubmitValues(formData: FormData) {
         // formData.append('_next', 'http://localhost:4200/contact?submitted=true');
         formData.append('_captcha', 'false');
         formData.append('_template', 'box');
         formData.append('_subject', 'A New Message From Your Website !');
         formData.append('_autoresponse', `Thank you for contacting me !\nI\'ll try to reply as soon as possible.
         \nIn the meantime, you can also try and contact me through one of my social media channels`);
+        Object.keys(this.contactForm.controls).forEach(key => {
+            formData.append(key, this.contactForm.get(key).value);
+        });
     }
 
 }

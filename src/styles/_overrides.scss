@@ -11,3 +11,28 @@
     padding: 0 10px;
   }
 }
+
+.carousel-indicators {
+  margin-bottom: 0;
+}
+
+.about-me .carousel-img {
+  object-fit: cover;
+}
+
+.expanded-view-item .paintings .carousel-img,
+.expanded-view-item .paintings, {
+  app-store-item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.color-picker {
+  bottom: 0;
+  top: revert !important;
+  position: absolute !important;
+  background-color: var(--app-dark-gray) !important;
+}

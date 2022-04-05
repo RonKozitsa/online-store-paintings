@@ -19,6 +19,7 @@ import {AppButtonComponent} from './components/app-button/app-button.component';
 import {SocialMediaContactComponent} from './components/social-media-contact/social-media-contact.component';
 import {InputTextComponent} from './components/input-text/input-text.component';
 import {DisplayPaintingsComponent} from './components/display-paintings/display-paintings.component';
+import {ColorPickerModule} from 'ngx-color-picker';
 
 const components = [
     NavigationHeaderComponent,
@@ -46,6 +47,7 @@ const components = [
         RouterModule,
         NgbCarouselModule,
         FormsModule,
+        ColorPickerModule,
     ],
     exports: components,
     providers: [

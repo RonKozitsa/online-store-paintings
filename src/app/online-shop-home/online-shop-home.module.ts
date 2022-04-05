@@ -11,7 +11,7 @@ import {OnlineShopHomeRoutes} from './online-shop-home.routing';
     imports: [
         RouterModule.forChild(OnlineShopHomeRoutes),
         SharedModule,
-        CommonModule
+        CommonModule,
     ]
 })
 export class OnlineShopHomeModule {

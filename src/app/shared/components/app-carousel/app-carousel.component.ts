@@ -9,12 +9,10 @@ import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from '@ang
 })
 export class AppCarouselComponent {
 
-    @Input() set images(imagesPath: string[]) {
-        this.carouselImages = imagesPath.map((path) => `/assets/pictures/${path}`);
-    }
+    @Input() frameColor: string;
+    @Input() carouselImages: string[];
 
     pauseOnHover = true;
     pauseOnFocus = true;
     interval = 10000;
-    carouselImages: string[];
 }

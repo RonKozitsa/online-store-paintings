@@ -5,13 +5,16 @@
 .expanded-view-item {
   display: flex;
   align-items: flex-start;
+  height: 600px;
 
   .paintings {
     width: 50%;
+    height: 100%;
   }
 
   .item-info-container {
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,25 +28,39 @@
         text-decoration: underline;
       }
 
+      &-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 10px;
+
+        .key {
+          font-weight: bold;
+          grid-column: 1;
+        }
+
+        .value {
+          grid-column: 2;
+        }
+      }
+
       &:not(:last-of-type) {
         padding-bottom: 20px;
         border-bottom: 1px solid var(--app-border);
       }
-
-      .key-value-pair {
-        display: flex;
-        align-items: center;
-
-        .key {
-          font-weight: bold;
-          margin-right: 10px;
-        }
-      }
     }
 
-    .want-it-btn {
-      position: absolute;
-      bottom: 20px;
+    .modal-bottom {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+
+      .item-color-picker {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
     }
   }
 }

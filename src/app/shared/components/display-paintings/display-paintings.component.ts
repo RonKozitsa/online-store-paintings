@@ -1,4 +1,4 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy, Input, HostBinding} from '@angular/core';
 
 import {StoreItemInterface} from '../store-item/store-item.interface';
 
@@ -10,6 +10,7 @@ import {StoreItemInterface} from '../store-item/store-item.interface';
 })
 export class DisplayPaintingsComponent implements OnInit {
     @Input() itemConfig: StoreItemInterface;
+    @Input() frameColor: string;
 
     isSet: boolean;
 

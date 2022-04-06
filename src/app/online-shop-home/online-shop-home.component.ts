@@ -26,6 +26,11 @@ export class OnlineShopHomeComponent implements OnInit {
             name: 'Animals',
             iconName: ''
         },
+        {
+            url: 'nature',
+            name: 'Nature',
+            iconName: ''
+        },
     ];
 
     constructor() {

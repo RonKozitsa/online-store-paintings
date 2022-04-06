@@ -1,4 +1,6 @@
-import {StoreItemInterface} from '../../../shared/components/store-item/store-item.interface';
+import {StoreItemInterface} from '../../shared/components/store-item/store-item.interface';
+
+const directoryPrefix = 'animals';
 
 export const animalPaintings: StoreItemInterface[] = [
     {
@@ -6,41 +8,41 @@ export const animalPaintings: StoreItemInterface[] = [
         id: 1,
         price: 100,
         name: 'Peacock On Tree',
-        imagesPath: ['animals/peacock-on-tree.jpeg'],
+        imagesPath: [`${directoryPrefix}/peacock-on-tree.jpeg`],
     },
     {
         description: '',
         id: 1,
         price: 100,
         name: 'Flamingos',
-        imagesPath: ['animals/flamingos.jpeg'],
+        imagesPath: [`${directoryPrefix}/flamingos.jpeg`],
     },
     {
         description: '',
         id: 1,
         price: 100,
         name: 'Parrot',
-        imagesPath: ['animals/parrot.jpeg'],
+        imagesPath: [`${directoryPrefix}/parrot.jpeg`],
     },
     {
         description: '',
         id: 1,
         price: 100,
         name: 'Peacock On Purple Background',
-        imagesPath: ['animals/peacock-purple.jpeg'],
+        imagesPath: [`${directoryPrefix}/peacock-purple.jpeg`],
     },
     {
         description: '',
         id: 1,
         price: 100,
         name: 'Cow',
-        imagesPath: ['animals/cow.jpeg'],
+        imagesPath: [`${directoryPrefix}/cow.jpeg`, `${directoryPrefix}/cow-example.jpeg`],
     },
     {
         description: '',
         id: 1,
         price: 100,
         name: 'Peacock',
-        imagesPath: ['animals/peacock.jpeg'],
+        imagesPath: [`${directoryPrefix}/peacock.jpeg`],
     },
 ];

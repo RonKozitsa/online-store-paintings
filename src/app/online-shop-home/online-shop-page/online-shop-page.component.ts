@@ -1,6 +1,6 @@
 import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {StoreItemInterface} from '../../shared/components/store-item/store-item.interface';
-import {childrenPaintings} from './page-items/children-page.consts';
+import {childrenPaintings} from '../page-items/children-page.consts';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -19,7 +19,6 @@ export class OnlineShopPageComponent implements OnInit {
 
     ngOnInit(): void {
         this.gridItems = Object.values(this.activatedRoute.snapshot.data) as StoreItemInterface[];
-        console.log(this.gridItems);
     }
 
 }

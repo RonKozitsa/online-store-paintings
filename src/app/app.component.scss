@@ -7,4 +7,23 @@
     display: flex;
     flex-direction: column;
   }
+
+  .app-navigation-top {
+    display: block;
+    background-image: linear-gradient(to bottom right, var(--app-black) 10%, transparent 50%);
+    border-bottom: 1px solid var(--app-border);
+  }
+
+  .menu-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    padding: 5px;
+
+    img {
+      height: 40px;
+    }
+  }
 }

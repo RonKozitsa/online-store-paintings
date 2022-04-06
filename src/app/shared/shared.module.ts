@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {ColorPickerModule} from 'ngx-color-picker';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {WINDOW} from './injection-tokens/window-token';
@@ -19,7 +20,7 @@ import {AppButtonComponent} from './components/app-button/app-button.component';
 import {SocialMediaContactComponent} from './components/social-media-contact/social-media-contact.component';
 import {InputTextComponent} from './components/input-text/input-text.component';
 import {DisplayPaintingsComponent} from './components/display-paintings/display-paintings.component';
-import {ColorPickerModule} from 'ngx-color-picker';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 const components = [
     NavigationHeaderComponent,
@@ -35,7 +36,8 @@ const components = [
     AppButtonComponent,
     SocialMediaContactComponent,
     InputTextComponent,
-    DisplayPaintingsComponent
+    DisplayPaintingsComponent,
+    ClickOutsideDirective
 ];
 
 @NgModule({

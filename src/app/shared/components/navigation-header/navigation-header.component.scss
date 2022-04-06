@@ -1,10 +1,3 @@
-:host {
-  display: block;
-  background-image: linear-gradient(to bottom right, var(--app-black) 10%, transparent 50%);
-  border-bottom: 1px solid var(--app-border);
-
-}
-
 .header-content {
   z-index: 1;
   height: var(--navigation-height);

@@ -1,6 +1,14 @@
 <div class="website-wrapper">
+    <app-navigation-header *ngIf="showNavigationMenu"
+                           class="app-navigation-side"
+                           (appClickOut)="toggleMenu()"
+                           @fadeInOut></app-navigation-header>
     <div class="page-content">
-        <app-navigation-header></app-navigation-header>
+        <div class="menu-icon" (click)="toggleMenu()">
+            <img src="assets/svg/menu.svg" alt="menu">
+        </div>
+        <app-navigation-header class="app-navigation-top"></app-navigation-header>
         <router-outlet></router-outlet>
     </div>
 </div>
+

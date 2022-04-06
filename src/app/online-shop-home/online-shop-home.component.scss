@@ -1,7 +1,7 @@
 @use 'mixins';
 
 :host {
-  height: calc(100% - var(--navigation-height));
+  height: 100%;
 }
 
 .online-shop-page-wrapper {

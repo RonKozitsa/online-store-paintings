@@ -70,18 +70,81 @@ button {
   flex-direction: column;
 }
 
+.small-screen-only {
+  display: none;
+}
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1300px) {
+  .online-shop-page-content .shopping-page-content-wrapper .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .website-wrapper .app-navigation-top .navigation .navigation-item {
+    margin-right: 20px;
+  }
+
+  .page-content {
+    overflow: auto;
+
+    .home-page {
+      height: revert !important;
+      padding: 20px;
+
+      .quotes {
+        min-height: 150px;
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid var(--app-border);
+        margin-top: 20px;
+        height: revert !important;
+        padding-bottom: revert !important;
+      }
+
+      .home-page-info {
+        flex-direction: column;
+        width: 100%;
+        margin: revert !important;
+        padding-top: 0 !important;
+
+        &-description {
+          align-items: center;
+          padding: 10px;
+          text-align: center;
+          max-width: revert !important;
+        }
+
+        &-picture {
+          width: 100%;
+          margin-right: 0 !important;
+        }
+
+        .go-to-collection-button {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .wide-screen-only {
+    display: none !important;
+  }
+
+  .small-screen-only {
+    display: revert !important;
+  }
 
   .website-wrapper {
-    .page-content {
-      .app-navigation-top {
-        display: none !important;
-      }
+    .menu-icon {
+      display: flex !important;
+    }
 
-      .menu-icon {
-        display: flex !important;
-      }
+    .page-content {
+      height: calc(100% - var(--small-screen-navigation-height)) !important;
     }
 
     .app-navigation-side .header-content {
@@ -125,12 +188,7 @@ button {
   }
 
   app-online-shop-home {
-    height: calc(100% - 50px) !important;;
-
-
-    .online-shop-page-wrapper {
-      border-top: 1px solid var(--app-border);
-    }
+    height: calc(100% - var(--small-screen-navigation-height)) !important;;
   }
 
   .grid-container {

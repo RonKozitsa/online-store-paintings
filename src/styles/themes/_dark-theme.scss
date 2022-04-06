@@ -3,6 +3,7 @@
 
 :root .dark-theme {
   --navigation-height: #{variables.$navigation-height}px;
+  --small-screen-navigation-height: #{variables.$small-screen-navigation-height}px;
   --logo-width: #{variables.$logo-width}px;
   --color-primary: #{dark-theme-variables.$color-primary};
   --color-on-primary: #{dark-theme-variables.$color-on-primary};

@@ -15,7 +15,7 @@ export class StoreItemService {
     }
 
     showItemDetails(itemConfig: StoreItemInterface): void {
-        const modalRef: NgbModalRef = this.modalServiceService.open(ItemExpandedViewComponent, ModalSize.lg);
+        const modalRef: NgbModalRef = this.modalServiceService.open(ItemExpandedViewComponent, ModalSize.xl);
         modalRef.componentInstance.itemConfig = itemConfig;
     }
 }

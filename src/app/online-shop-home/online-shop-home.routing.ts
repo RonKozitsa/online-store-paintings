@@ -1,6 +1,6 @@
 import {Routes} from '@angular/router';
 
-import {childrenPaintings, animalPaintings, naturePaintings} from './page-items';
+import {childrenPaintings, animalPaintings, naturePaintings, flowersPaintings} from './page-items';
 import {OnlineShopHomeComponent} from './online-shop-home.component';
 import {OnlineShopPageComponent} from './online-shop-page/online-shop-page.component';
 
@@ -13,7 +13,7 @@ export const OnlineShopHomeRoutes: Routes = [
             {
                 path: 'flowers',
                 component: OnlineShopPageComponent,
-                data: []
+                data: flowersPaintings
             },
             {
                 path: 'children',

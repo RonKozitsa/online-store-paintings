@@ -1,4 +1,6 @@
+import {MainPagesNavigationNamesEnums} from '../../interfaces/pages-navigation-names.interface';
+
 export interface NavigationItemInterface {
-  url: string;
+  url: MainPagesNavigationNamesEnums;
   name: string;
 }

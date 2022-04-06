@@ -1,6 +1,9 @@
 import {Routes} from '@angular/router';
 
 import {OnlineShopHomeComponent} from './online-shop-home.component';
+import {childrenPaintings} from './online-shop-page/page-items/children-page.consts';
+import {animalPaintings} from './online-shop-page/page-items/animals-page.consts';
+import {OnlineShopPageComponent} from './online-shop-page/online-shop-page.component';
 
 export const OnlineShopHomeRoutes: Routes = [
     {
@@ -8,9 +11,21 @@ export const OnlineShopHomeRoutes: Routes = [
         component: OnlineShopHomeComponent,
         children: [
             {path: '', pathMatch: 'full', redirectTo: 'flowers'},
-            {path: 'flowers', loadChildren: () => import('../flowers-page/flowers-page.module').then(m => m.FlowersPageModule)},
-            {path: 'children', loadChildren: () => import('../children-page/children-page.module').then(m => m.ChildrenPageModule)},
-            {path: 'animals', loadChildren: () => import('../animals-page/animals-page.module').then(m => m.AnimalsPageModule)}
+            {
+                path: 'flowers',
+                component: OnlineShopPageComponent,
+                data: []
+            },
+            {
+                path: 'children',
+                component: OnlineShopPageComponent,
+                data: childrenPaintings
+            },
+            {
+                path: 'animals',
+                component: OnlineShopPageComponent,
+                data: animalPaintings
+            }
         ],
     }
 ];

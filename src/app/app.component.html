@@ -2,6 +2,7 @@
     <app-navigation-header *ngIf="showNavigationMenu"
                            class="app-navigation-side small-screen-only"
                            (appClickOut)="toggleMenu()"
+                           (navigationClicked)="toggleMenu()"
                            @fadeInOut></app-navigation-header>
     <div class="menu-icon small-screen-only">
         <img src="assets/svg/menu.svg" alt="menu" (click)="toggleMenu()">

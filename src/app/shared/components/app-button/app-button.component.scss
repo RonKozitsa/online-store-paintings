@@ -7,11 +7,19 @@
   }
 }
 
-.standard:not([disabled]) {
-  @extend %button-common;
-  border-radius: 50px;
+.app-button {
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &.standard:not([disabled]) {
+    @extend %button-common;
+    border-radius: 50px;
+  }
+
+  &.square:not([disabled]) {
+    @extend %button-common;
+  }
 }
 
-.square:not([disabled]) {
-  @extend %button-common;
-}

@@ -1,37 +1,41 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+
 import {NavigationItemInterface} from '../navigation/navigation.interface';
+import {MainPagesNavigationNamesEnums} from '../../interfaces/pages-navigation-names.interface';
 
 @Component({
-  selector: 'app-navigation-header',
-  templateUrl: './navigation-header.component.html',
-  styleUrls: ['./navigation-header.component.scss']
+    selector: 'app-navigation-header',
+    templateUrl: './navigation-header.component.html',
+    styleUrls: ['./navigation-header.component.scss']
 })
 export class NavigationHeaderComponent implements OnInit {
 
-  navigationMenu: NavigationItemInterface[] = [
-    {
-      name: 'Home',
-      url: '/home'
+    @Output() navigationClicked = new EventEmitter<void>();
 
-    },
-    {
-      name: 'Collection',
-      url: '/shop'
-    },
-    {
-      name: 'About Me',
-      url: '/about'
-    },
-    {
-      name: 'Contact',
-      url: '/contact'
-    },
-  ];
+    navigationMenu: NavigationItemInterface[] = [
+        {
+            name: 'Home',
+            url: MainPagesNavigationNamesEnums.home
 
-  constructor() {
-  }
+        },
+        {
+            name: 'Collection',
+            url: MainPagesNavigationNamesEnums.collection
+        },
+        {
+            name: 'About Me',
+            url: MainPagesNavigationNamesEnums.about
+        },
+        {
+            name: 'Contact',
+            url: MainPagesNavigationNamesEnums.contact
+        },
+    ];
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
+
+    ngOnInit() {
+    }
 
 }

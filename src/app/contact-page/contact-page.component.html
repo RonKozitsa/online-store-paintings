@@ -4,7 +4,7 @@
         <form class="contact-page-form" [formGroup]="contactForm">
             <input type="text" name="_honey" style="display:none"> <!-- honeypot to avoid bots -->
             <div class="sender-info">
-                <app-input-text [formControlName]="ContactPageFormControls.name">Name</app-input-text>
+                <app-input-text class="form-name" [formControlName]="ContactPageFormControls.name">Name</app-input-text>
                 <app-input-text class="form-email" [formControlName]="ContactPageFormControls.email"
                 >Email
                 </app-input-text>

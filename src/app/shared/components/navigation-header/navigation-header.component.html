@@ -1,5 +1,9 @@
 <div class="header-content">
     <img class="logo" src="/assets/logo/logo.png">
-    <app-navigation class="navigation" [navigationMenu]="navigationMenu"></app-navigation>
+    <app-navigation
+        class="navigation"
+        [navigationMenu]="navigationMenu"
+        (navigationClicked)="navigationClicked.emit()"
+    ></app-navigation>
     <app-social-media-contact class="social-media"></app-social-media-contact>
 </div>

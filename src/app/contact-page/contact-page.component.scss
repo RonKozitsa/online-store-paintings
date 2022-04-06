@@ -24,9 +24,13 @@
       width: 100%;
       margin-bottom: 10px;
 
+      .form-name {
+        width: 40%;
+      }
+
       .form-email {
-        margin-left: 10px;
-        flex-grow: 1;
+        padding-left: 10px;
+        width: 60%;
       }
     }
 

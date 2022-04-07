@@ -16,7 +16,7 @@ export const flowersPaintings: StoreItemInterface[] = [
         id: 1,
         price: 100,
         framed: true,
-        imagesPath: [`${directoryPrefix}/red-rose-set/red-rose.jpeg`, `${directoryPrefix}/red-rose-set/preview.jpeg`],
+        imagesPath: [`${directoryPrefix}/red-rose-set/red-rose.jpeg`],
         name: ''
     },
     {
@@ -61,14 +61,6 @@ export const flowersPaintings: StoreItemInterface[] = [
         id: 1,
         price: 100,
         imagesPath: [`${directoryPrefix}/pink-flowers-bad-quality/left.jpeg`, `${directoryPrefix}/pink-flowers-bad-quality/right.jpeg`],
-        name: ''
-    },
-    {
-        description: '',
-        id: 1,
-        price: 100,
-        framed: true,
-        imagesPath: [`${directoryPrefix}/flower-head.jpeg`],
         name: ''
     },
     {

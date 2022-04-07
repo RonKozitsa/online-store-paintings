@@ -20,6 +20,12 @@
       width: 100%;
     }
 
+    .item-info-section {
+      &-description {
+        max-height: revert !important;
+      }
+    }
+
     .modal-bottom {
       padding-top: 20px;
     }
@@ -122,7 +128,7 @@ screen and (max-height: 600px) {
     }
 
     .app-navigation-side .header-content {
-      z-index: 1;
+      z-index: 99;
       display: flex;
       justify-content: flex-start;
       position: absolute;

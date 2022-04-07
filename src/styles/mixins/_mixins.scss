@@ -4,3 +4,16 @@
   height: 100%;
   width: 100%;
 }
+
+@mixin ellipsis() {
+  text-overflow: ellipsis;
+  white-space: pre;
+  overflow: hidden;
+}
+
+@mixin flexCenter($direction: 'row') {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}

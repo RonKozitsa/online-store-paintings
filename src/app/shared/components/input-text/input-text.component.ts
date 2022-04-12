@@ -1,5 +1,6 @@
 import {Component, ChangeDetectionStrategy, forwardRef} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+
 import {ValueAccessor} from '../../classes/value-accessor';
 
 @Component({

@@ -135,7 +135,7 @@ screen and (max-height: 600px) {
       flex-direction: column;
       height: 100vh;
       width: 250px;
-      background-image: linear-gradient(to top left, var(--background-secondary), black, var(--background));
+      background-image: linear-gradient(to top left, var(--background-secondary), var(--color-on-primary), var(--background));
 
       .logo {
         padding: 10px 0;

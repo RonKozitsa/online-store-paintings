@@ -1,9 +1,9 @@
 import {Component, ChangeDetectionStrategy, Input, ChangeDetectorRef} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import {Router} from '@angular/router';
 
 import {StoreItemInterface} from '../store-item/store-item.interface';
 import {ButtonType} from '../app-button/app-button.interface';
-import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-item-expanded-view',

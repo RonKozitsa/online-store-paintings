@@ -1,4 +1,5 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input, EventEmitter, Output} from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input, EventEmitter, Output} from '@angular/core';
+
 import {StoreItemInterface} from './store-item.interface';
 import {StoreItemService} from '../../services/store-item.service';
 
@@ -8,15 +9,12 @@ import {StoreItemService} from '../../services/store-item.service';
     styleUrls: ['./store-item.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StoreItemComponent implements OnInit {
+export class StoreItemComponent{
     @Input() itemConfig: StoreItemInterface;
 
     @Output() showFullDetails = new EventEmitter<number>();
 
     constructor(private storeItemService: StoreItemService) {
-    }
-
-    ngOnInit() {
     }
 
     showDetails() {

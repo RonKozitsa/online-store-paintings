@@ -18,11 +18,10 @@ import {MainPagesNavigationNamesEnums} from '../shared/interfaces/pages-navigati
 })
 export class HomePageComponent implements OnInit, OnDestroy {
     readonly mainPagesNavigationNamesEnums = MainPagesNavigationNamesEnums;
-    currentQuote = artistsQuotes[0];
-    loadingQuote: boolean;
 
-    images = ['sitting', 'peacock', 'hands-painting', 'painting-in-progress'];
+    currentQuote = artistsQuotes[0];
     quotes: QuoteI[] = artistsQuotes;
+    loadingQuote: boolean;
     destroy$ = new Subject<void>();
     buttonType = ButtonType;
 
@@ -46,5 +45,4 @@ export class HomePageComponent implements OnInit, OnDestroy {
         this.destroy$.next();
         this.destroy$.complete();
     }
-
 }

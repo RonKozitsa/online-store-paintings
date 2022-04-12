@@ -1,4 +1,4 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
 
 import {SideMenuItemI} from './side-menu.interface';
 
@@ -8,13 +8,7 @@ import {SideMenuItemI} from './side-menu.interface';
   styleUrls: ['./side-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SideMenuComponent implements OnInit {
+export class SideMenuComponent {
 
   @Input() sideMenuItems: SideMenuItemI[]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

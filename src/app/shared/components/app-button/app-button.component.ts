@@ -1,4 +1,5 @@
 import {Component, ChangeDetectionStrategy, Input, Output, EventEmitter} from '@angular/core';
+
 import {ButtonType} from './app-button.interface';
 
 @Component({

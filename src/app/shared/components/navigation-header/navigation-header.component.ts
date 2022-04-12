@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 import {NavigationItemInterface} from '../navigation/navigation.interface';
 import {MainPagesNavigationNamesEnums} from '../../interfaces/pages-navigation-names.interface';
@@ -8,7 +8,7 @@ import {MainPagesNavigationNamesEnums} from '../../interfaces/pages-navigation-n
     templateUrl: './navigation-header.component.html',
     styleUrls: ['./navigation-header.component.scss']
 })
-export class NavigationHeaderComponent implements OnInit {
+export class NavigationHeaderComponent {
 
     @Output() navigationClicked = new EventEmitter<void>();
 
@@ -31,11 +31,4 @@ export class NavigationHeaderComponent implements OnInit {
             url: MainPagesNavigationNamesEnums.contact
         },
     ];
-
-    constructor() {
-    }
-
-    ngOnInit() {
-    }
-
 }

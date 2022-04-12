@@ -14,6 +14,7 @@ import {ContactPageFormControls} from './contact-page.interface';
     styleUrls: ['./contact-page.component.scss']
 })
 export class ContactPageComponent implements OnInit, OnDestroy {
+
     ContactPageFormControls = ContactPageFormControls;
     buttonType = ButtonType;
     destroy$ = new Subject<void>();
@@ -81,7 +82,6 @@ export class ContactPageComponent implements OnInit, OnDestroy {
     }
 
     private setFormSubmitValues(formData: FormData) {
-        // formData.append('_next', 'http://localhost:4200/contact?submitted=true');
         formData.append('_captcha', 'false');
         formData.append('_template', 'box');
         formData.append('_subject', 'A New Message From Your Website !');

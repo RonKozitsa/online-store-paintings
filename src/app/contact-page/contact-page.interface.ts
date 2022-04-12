@@ -4,5 +4,3 @@ export enum ContactPageFormControls {
     message = 'message',
     id = 'id'
 }
-
-export enum FormStatus {}

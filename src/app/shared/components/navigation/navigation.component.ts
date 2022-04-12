@@ -13,7 +13,4 @@ export class NavigationComponent {
     @Input() navigationMenu: NavigationItemInterface[];
 
     @Output() navigationClicked = new EventEmitter<void>();
-
-    constructor() {
-    }
 }

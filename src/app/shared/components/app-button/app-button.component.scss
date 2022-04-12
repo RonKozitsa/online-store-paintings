@@ -21,5 +21,21 @@
   &.square:not([disabled]) {
     @extend %button-common;
   }
+
+  &.text {
+    background-color: transparent;
+    padding: 0;
+    color: var(--link-color);
+  }
+
+  &.icon {
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
 }
 

@@ -3,7 +3,10 @@
     <app-button class="close-modal-btn" (clicked)="activeModal.dismiss()">X</app-button>
 </div>
 <div class="modal-body expanded-view-item">
-    <app-display-paintings class="paintings" [itemConfig]="itemConfig" [frameColor]="frameColor"></app-display-paintings>
+    <app-display-paintings class="paintings"
+                           [ngClass]="{'real-dimensions': viewingRealDimensions || itemConfig.framed}"
+                           [itemConfig]="itemConfig"
+                           [frameColor]="frameColor"></app-display-paintings>
     <div class="item-info-container">
         <div class="item-info-section">
             <h4 class="item-info-section-title">Description:</h4>
@@ -17,17 +20,27 @@
                 <span class="key">Date:</span>
                 <span class="value">2019</span>
                 <span class="key">Framed:</span>
-                <span class="value">{{itemConfig.framed ? 'Yes': 'No'}}</span>
+                <span class="value">{{itemConfig.framed ? 'Yes' : 'No'}}</span>
+            </div>
+            <div *ngIf="!itemConfig.framed" class="dimensions-note">
+                {{viewingRealDimensions ? 'To attach a frame - ' : 'Note: Dimensions of image adjusted - '}}
+                <app-button
+                    class="change-dimensions"
+                    [buttonType]="buttonType.text"
+                    (clicked)="toggleViewingMode()"
+                >view in {{viewingRealDimensions ? 'adjusted' : 'real'}} dimensions
+                </app-button>
             </div>
         </div>
         <div class="modal-bottom">
             <div *ngIf="!itemConfig.framed" class="item-color-picker">
                 <input #colorPicker hidden id="color-picker" [colorPicker]="frameColor"
                        (colorPickerChange)="onFrameColorPicked($event)"/>
-                <app-button [buttonStyle]="buttonType.square" (clicked)="colorPicker.click()">Attach a frame
+                <app-button [buttonType]="buttonType.square" [disabled]="viewingRealDimensions"
+                            (clicked)="colorPicker.click()">Attach a frame
                 </app-button>
             </div>
-            <app-button class="want-it-btn" [buttonStyle]="buttonType.square" (clicked)="navigateToContact(itemConfig)">
+            <app-button class="want-it-btn" [buttonType]="buttonType.square" (clicked)="navigateToContact(itemConfig)">
                 I
                 want it !
             </app-button>

@@ -2,7 +2,7 @@ import {Component, ChangeDetectionStrategy, Input, ChangeDetectorRef} from '@ang
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 import {StoreItemInterface} from '../store-item/store-item.interface';
-import {ButtonStyle} from '../app-button/app-button.interface';
+import {ButtonType} from '../app-button/app-button.interface';
 import {Router} from '@angular/router';
 
 @Component({
@@ -14,12 +14,14 @@ import {Router} from '@angular/router';
 export class ItemExpandedViewComponent {
     @Input() itemConfig: StoreItemInterface;
 
-    buttonType = ButtonStyle;
+    readonly buttonType = ButtonType;
 
     frameColor: string;
+    cachedFrameColor: string;
+    viewingRealDimensions: boolean;
 
 
-    constructor(public activeModal: NgbActiveModal, private router: Router, private changeDetectorRef:ChangeDetectorRef) {
+    constructor(public activeModal: NgbActiveModal, private router: Router, private changeDetectorRef: ChangeDetectorRef) {
     }
 
     navigateToContact(item: StoreItemInterface) {
@@ -32,7 +34,14 @@ export class ItemExpandedViewComponent {
         });
     }
 
-    onFrameColorPicked(color:string){
+    onFrameColorPicked(color: string) {
         this.frameColor = color;
+    }
+
+    toggleViewingMode() {
+        this.viewingRealDimensions = !this.viewingRealDimensions;
+        const currentFrameColor = this.frameColor;
+        this.frameColor = this.viewingRealDimensions ? undefined : this.cachedFrameColor;
+        this.cachedFrameColor = currentFrameColor;
     }
 }

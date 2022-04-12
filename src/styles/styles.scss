@@ -4,6 +4,7 @@
 @use 'mixins';
 @use "media-queries";
 @use "overrides";
+@use "variables";
 @import "~bootstrap/dist/css/bootstrap.css";
 
 html {
@@ -16,8 +17,16 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
+  font-size: variables.$app-font-size;
   color: var(--color-primary);
-  @include mixins.backgroundOnPage('/assets/pictures/background.jpeg');
+
+  &.light-theme {
+    @include mixins.backgroundOnPage('/assets/pictures/website-background/light-background.jpeg');
+  }
+
+  &.dark-theme {
+    @include mixins.backgroundOnPage('/assets/pictures/website-background/dark-background.jpeg');
+  }
 }
 
 a {
@@ -55,7 +64,7 @@ a {
 }
 
 button {
-  background-color: #3C415C;
+  background-color: var(--background-secondary);
   border: none;
   color: var(--color-primary);
   padding: 0 20px;

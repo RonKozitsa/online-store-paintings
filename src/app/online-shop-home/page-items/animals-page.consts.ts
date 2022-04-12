@@ -36,7 +36,7 @@ export const animalPaintings: StoreItemInterface[] = [
         id: 1,
         price: 100,
         name: 'Cow',
-        imagesPath: [`${directoryPrefix}/cow.jpeg`, `${directoryPrefix}/cow-example.jpeg`],
+        imagesPath: [`${directoryPrefix}/cow.jpeg`, `${directoryPrefix}/cow-preview.jpeg`],
     },
     {
         description: '',

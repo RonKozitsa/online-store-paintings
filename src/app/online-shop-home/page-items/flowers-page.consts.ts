@@ -15,7 +15,6 @@ export const flowersPaintings: StoreItemInterface[] = [
         description: '',
         id: 1,
         price: 100,
-        framed: true,
         imagesPath: [`${directoryPrefix}/red-rose-set/red-rose.jpeg`],
         name: ''
     },
@@ -67,7 +66,6 @@ export const flowersPaintings: StoreItemInterface[] = [
         description: '',
         id: 1,
         price: 100,
-        framed: true,
         imagesPath: [`${directoryPrefix}/palm-tree.jpeg`],
         name: ''
     },
@@ -75,7 +73,6 @@ export const flowersPaintings: StoreItemInterface[] = [
         description: '',
         id: 1,
         price: 100,
-        framed: true,
         imagesPath: [`${directoryPrefix}/opened-pink-flower.jpeg`],
         name: ''
     },
@@ -83,7 +80,6 @@ export const flowersPaintings: StoreItemInterface[] = [
         description: '',
         id: 1,
         price: 100,
-        framed: true,
         imagesPath: [`${directoryPrefix}/flower-head.jpeg`],
         name: ''
     },
@@ -91,7 +87,6 @@ export const flowersPaintings: StoreItemInterface[] = [
         description: '',
         id: 1,
         price: 100,
-        framed: true,
         imagesPath: [`${directoryPrefix}/pink-flower-blue-bg.jpeg`],
         name: ''
     },

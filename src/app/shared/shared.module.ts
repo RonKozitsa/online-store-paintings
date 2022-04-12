@@ -21,6 +21,7 @@ import {SocialMediaContactComponent} from './components/social-media-contact/soc
 import {InputTextComponent} from './components/input-text/input-text.component';
 import {DisplayPaintingsComponent} from './components/display-paintings/display-paintings.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
+import { ThemeControllerComponent } from './components/theme-controller/theme-controller.component';
 
 const components = [
     NavigationHeaderComponent,
@@ -43,6 +44,7 @@ const components = [
 @NgModule({
     declarations: [
         components,
+        ThemeControllerComponent,
     ],
     imports: [
         CommonModule,

@@ -1,5 +1,9 @@
 <ngb-carousel class="carousel" [interval]="interval" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus">
     <ng-template ngbSlide *ngFor="let img of carouselImages;">
-        <app-store-item-image class="carousel-img" [imgName]="img" [frameColor]="frameColor"></app-store-item-image>
+        <app-store-item-image
+            class="carousel-img"
+            [imgName]="img"
+            [frameColor]="showFrameColor(img) ? frameColor : undefined"
+        ></app-store-item-image>
     </ng-template>
 </ngb-carousel>

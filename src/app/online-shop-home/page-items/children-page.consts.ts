@@ -31,6 +31,6 @@ export const childrenPaintings: StoreItemInterface[] = [
         price: 100,
         name: 'Llama Queen - Set',
         imagesPath: [`${directoryPrefix}/lama-set/lama-left.jpeg`, `${directoryPrefix}/lama-set/lama-middle.jpeg`, `${directoryPrefix}/lama-set/lama-right.jpeg`,
-        `${directoryPrefix}/lama-set/lama-all.jpeg`],
+        `${directoryPrefix}/lama-set/lama-preview.jpeg`],
     },
 ];

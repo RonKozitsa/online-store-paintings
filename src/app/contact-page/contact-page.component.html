@@ -20,7 +20,7 @@
             </div>
             <input hidden name="id" [value]="chosenPaintingId">
         </form>
-        <app-button [buttonStyle]="buttonStyle.square"
+        <app-button [buttonType]="buttonType.square"
                     [disabled]="!contactForm.valid"
                     (clicked)="submitForm()">Send
         </app-button>

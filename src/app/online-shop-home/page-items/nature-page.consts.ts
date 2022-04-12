@@ -8,7 +8,7 @@ export const naturePaintings: StoreItemInterface[] = [
         id: 1,
         price: 100,
         imagesPath: [`${directoryPrefix}/beach-set/tree.jpeg`, `${directoryPrefix}/beach-set/wave.jpeg`,
-            `${directoryPrefix}/beach-set/fish.jpeg`, `${directoryPrefix}/beach-set/set.jpeg`],
+            `${directoryPrefix}/beach-set/fish.jpeg`, `${directoryPrefix}/beach-set/preview.jpeg`],
         name: 'Vacation'
     },
     {
@@ -29,7 +29,7 @@ export const naturePaintings: StoreItemInterface[] = [
         description: 'A tall mighty soldier, who stands at the boarder of the sea, providing hope and security and guidance for the sailors who pass him day and night.',
         id: 1,
         price: 100,
-        imagesPath: [`${directoryPrefix}/light-tower-set/light-tower.jpeg`, `${directoryPrefix}/light-tower-set/light-tower-shower.jpeg`],
+        imagesPath: [`${directoryPrefix}/light-tower-set/light-tower.jpeg`, `${directoryPrefix}/light-tower-set/light-tower-preview.jpeg`],
         name: 'Lighthouse'
     },
     {

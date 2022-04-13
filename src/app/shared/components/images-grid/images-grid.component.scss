@@ -1,11 +1,12 @@
+@use 'mixins';
+
 :host {
   display: block;
   overflow: auto;
 }
 
 .grid-container {
-  height: 100%;
-  width: 100%;
+  @include mixins.width-height-100();
   display: grid;
   grid-gap: 50px;
   padding: 40px;

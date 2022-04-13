@@ -1,3 +1,5 @@
+@use 'mixins';
+
 .carousel {
   height: 100%;
 
@@ -7,7 +9,6 @@
   }
 
   &-img {
-    height: 100%;
-    width: 100%;
+    @include mixins.width-height-100();
   }
 }

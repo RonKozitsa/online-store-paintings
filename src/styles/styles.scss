@@ -14,9 +14,8 @@ html {
 }
 
 body {
+  @include mixins.width-height-100();
   margin: 0;
-  height: 100%;
-  width: 100%;
   font-size: variables.$app-font-size;
   color: var(--color-primary);
 

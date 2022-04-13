@@ -1,23 +1,22 @@
+@use 'mixins';
+
 :host {
   height: 100%;
 }
 
 .about-me {
-  display: flex;
-  align-items: center;
+  @include mixins.flex($center: true);
   height: 800px;
-  justify-content: center;
 
   .carousel {
-    margin-right: 40px;
+    padding: 0 40px 0 10px;
     max-height: 450px;
     width: 450px;
     max-width: 450px;
   }
 
   .about-me-info {
-    display: flex;
-    flex-direction: column;
+    @include mixins.flex(true);
     max-width: 800px;
   }
 }

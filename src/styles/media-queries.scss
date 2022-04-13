@@ -1,10 +1,14 @@
-@media screen and (max-width: 1300px) {
+@use 'mixins';
+
+/* Large devices (laptops/desktops) and below */
+@media screen and (max-width: 1200px) {
   .online-shop-page-content .shopping-page-content-wrapper .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
-@media screen and (max-width: 993px) {
+/* Medium devices (landscape tablets) and below */
+@media screen and (max-width: 992px) {
   // 993 was chosen instead of 1000 to fit NGBootstrap media query for thr modal
   .modal-dialog .modal-content .modal-body.expanded-view-item {
     overflow: auto;
@@ -95,7 +99,12 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+  .shopping-page-content-wrapper .grid-container .grid-item .app-button {
+    font-size: 12px;
+  }
+
   .wide-screen-only {
     display: none !important;
   }
@@ -127,11 +136,10 @@
     }
 
     .app-navigation-side .header-content {
+      @include mixins.flex(true);
       z-index: 99;
-      display: flex;
       justify-content: flex-start;
       position: absolute;
-      flex-direction: column;
       height: 100vh;
       width: 250px;
       background-image: linear-gradient(
@@ -183,11 +191,5 @@
     .grid-container {
       grid-template-columns: 1fr !important;
     }
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .shopping-page-content-wrapper .grid-container .grid-item .app-button {
-    font-size: 12px;
   }
 }

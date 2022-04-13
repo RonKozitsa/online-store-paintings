@@ -1,4 +1,5 @@
 @use 'mixins';
+@use 'variables';
 
 :host {
   height: 100%;
@@ -9,12 +10,12 @@
   position: relative;
 
   .shopping-content {
-    display: flex;
+    @include mixins.flex();
     height: 100%;
   }
 
   .shop-side-menu {
-    flex-basis: 15%;
+    flex-basis: variables.$side-menu-width;
     height: 100%;
   }
 

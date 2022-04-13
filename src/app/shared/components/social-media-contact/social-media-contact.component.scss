@@ -1,6 +1,8 @@
+@use 'mixins';
+
 .social-media-contact-wrapper {
+  @include mixins.flex();
   height: 100%;
-  display: flex;
   align-items: center;
 
   .social-media-logo {

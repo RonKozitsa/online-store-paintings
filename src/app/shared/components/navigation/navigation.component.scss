@@ -1,5 +1,7 @@
+@use 'mixins';
+
 .navigation-wrapper {
-  display: flex;
+  @include mixins.flex();
   align-items: center;
   height: 100%;
   border-bottom: unset;

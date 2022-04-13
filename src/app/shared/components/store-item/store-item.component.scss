@@ -1,13 +1,12 @@
+@use 'mixins';
+
 .store-item-wrapper {
-  display: flex;
-  flex-direction: column;
+  @include mixins.flex(true);
   height: 100%;
   padding: 5px 5px 0 5px;
 
   .store-item-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mixins.flex($center: true);
     white-space: pre;
     padding-bottom: 5px;
     height: 10%;
@@ -24,9 +23,7 @@
   }
 
   .more-details-button {
+    @include mixins.flex($center: true);
     height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }

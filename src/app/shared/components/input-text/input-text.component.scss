@@ -1,4 +1,5 @@
+@use 'mixins';
+
 .app-input {
-  display: flex;
-  flex-direction: column;
+  @include mixins.flex(true);
 }

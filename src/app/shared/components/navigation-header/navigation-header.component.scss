@@ -1,16 +1,17 @@
+@use 'variables';
+@use 'mixins';
+
 .header-content {
-  z-index: 1;
+  @include mixins.flex($center: true);
   height: var(--navigation-height);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1;
 
   .navigation {
     margin: 0 auto;
   }
 
   .logo {
-    padding-left: 70px;
+    width: variables.$side-menu-width;
     height: var(--navigation-height);
   }
 

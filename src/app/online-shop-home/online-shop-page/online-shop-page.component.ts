@@ -6,7 +6,6 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-online-shop-page',
   templateUrl: './online-shop-page.component.html',
-  styleUrls: ['./online-shop-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OnlineShopPageComponent implements OnInit {

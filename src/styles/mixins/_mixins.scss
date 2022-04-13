@@ -5,15 +5,15 @@
   width: 100%;
 }
 
-@mixin ellipsis() {
-  text-overflow: ellipsis;
-  white-space: pre;
-  overflow: hidden;
-}
-
-@mixin flexCenter($direction: 'row') {
+@mixin flex($direction-column: false, $center: false) {
   display: flex;
-  flex-direction: $direction;
-  align-items: center;
-  justify-content: center;
+
+  @if ($direction-column) {
+    flex-direction: column;
+  }
+
+  @if ($center) {
+    align-items: center;
+    justify-content: center;
+  }
 }

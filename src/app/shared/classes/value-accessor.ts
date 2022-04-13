@@ -9,8 +9,6 @@ export class ValueAccessor {
     this.onTouch(val);
   }
 
-  constructor() {}
-
   registerOnChange(fn: any): void {
     this.onChange = fn;
   }

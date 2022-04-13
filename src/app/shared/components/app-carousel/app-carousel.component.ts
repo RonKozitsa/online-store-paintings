@@ -10,14 +10,13 @@ import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from '@ang
 export class AppCarouselComponent {
 
     @Input() frameColor: string;
-    @Input() viewingRealDimensions: boolean;
     @Input() carouselImages: string[];
 
     pauseOnHover = true;
     pauseOnFocus = true;
     interval = 5000;
 
-    showFrameColor(imgName: string): boolean {
-        return !imgName.includes('preview');
+    isPreviewImage(imgName: string): boolean {
+        return imgName.includes('preview');
     }
 }

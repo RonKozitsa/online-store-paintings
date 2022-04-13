@@ -1,7 +1,7 @@
-import {Routes} from '@angular/router';
+import { Routes } from '@angular/router';
 
-import {AboutPageComponent} from './about-page.component';
+import { AboutPageComponent } from './about-page.component';
 
 export const aboutPageRoutes: Routes = [
-  {path: '', component: AboutPageComponent, pathMatch: 'full'}
+  { path: '', component: AboutPageComponent, pathMatch: 'full' }
 ];

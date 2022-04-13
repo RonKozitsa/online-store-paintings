@@ -1,4 +1,4 @@
 export interface QuoteI {
-    quote: string;
-    artist: string;
+  quote: string;
+  artist: string;
 }

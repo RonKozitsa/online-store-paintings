@@ -15,6 +15,11 @@
     text-align: center;
     aspect-ratio: 1;
     border-radius: 10px;
-    background-image: linear-gradient(to bottom right, var(--background), transparent, var(--color-on-primary));
+    background-image: linear-gradient(
+      to bottom right,
+      var(--background),
+      transparent,
+      var(--color-on-primary)
+    );
   }
 }

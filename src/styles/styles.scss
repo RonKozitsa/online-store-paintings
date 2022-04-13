@@ -1,16 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 /* Importing Bootstrap SCSS file. */
-@use "themes";
+@use 'themes';
 @use 'mixins';
-@use "media-queries";
-@use "overrides";
-@use "variables";
-@import "~bootstrap/dist/css/bootstrap.css";
+@use 'media-queries';
+@use 'overrides';
+@use 'variables';
+@import '~bootstrap/dist/css/bootstrap.css';
 
 html {
   height: 100vh;
   width: 100vw;
-  font-family: Times, "Helvetica Neue", sans-serif;
+  font-family: Times, 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -21,11 +21,15 @@ body {
   color: var(--color-primary);
 
   &.light-theme {
-    @include mixins.backgroundOnPage('/assets/pictures/website-background/light-background.jpeg');
+    @include mixins.backgroundOnPage(
+      '/assets/pictures/website-background/light-background.jpeg'
+    );
   }
 
   &.dark-theme {
-    @include mixins.backgroundOnPage('/assets/pictures/website-background/dark-background.jpeg');
+    @include mixins.backgroundOnPage(
+      '/assets/pictures/website-background/dark-background.jpeg'
+    );
   }
 }
 

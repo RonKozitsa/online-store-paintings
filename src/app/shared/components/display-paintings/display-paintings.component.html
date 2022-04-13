@@ -1,12 +1,13 @@
-<ng-container *ngIf="!isSet else setCollection">
-    <app-store-item-image
-        [imgName]="itemConfig.imagesPath[0] || 'peacock.jpeg'"
-        [frameColor]="frameColor"
-    ></app-store-item-image>
+<ng-container *ngIf="!isSet; else setCollection">
+  <app-store-item-image
+    [imgName]="itemConfig.imagesPath[0] || 'peacock.jpeg'"
+    [frameColor]="frameColor"
+  ></app-store-item-image>
 </ng-container>
 <ng-template #setCollection>
-    <app-carousel
-        class="carousel"
-        [carouselImages]="itemConfig.imagesPath"
-        [frameColor]="frameColor"></app-carousel>
+  <app-carousel
+    class="carousel"
+    [carouselImages]="itemConfig.imagesPath"
+    [frameColor]="frameColor"
+  ></app-carousel>
 </ng-template>

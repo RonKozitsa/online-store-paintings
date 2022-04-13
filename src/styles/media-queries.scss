@@ -4,7 +4,8 @@
   }
 }
 
-@media screen and (max-width: 993px) { // 993 was chosen instead of 1000 to fit NGBootstrap media query for thr modal
+@media screen and (max-width: 993px) {
+  // 993 was chosen instead of 1000 to fit NGBootstrap media query for thr modal
   .modal-dialog .modal-content .modal-body.expanded-view-item {
     overflow: auto;
     flex-direction: column;
@@ -32,8 +33,7 @@
   }
 }
 
-@media screen and (max-width: 993px),
-screen and (max-height: 600px) {
+@media screen and (max-width: 993px), screen and (max-height: 600px) {
   .website-wrapper .app-navigation-top .navigation .navigation-item {
     margin-right: 20px;
   }
@@ -95,7 +95,6 @@ screen and (max-height: 600px) {
   }
 }
 
-
 @media screen and (max-width: 650px) {
   .wide-screen-only {
     display: none !important;
@@ -135,7 +134,12 @@ screen and (max-height: 600px) {
       flex-direction: column;
       height: 100vh;
       width: 250px;
-      background-image: linear-gradient(to top left, var(--background-secondary), var(--color-on-primary), var(--background));
+      background-image: linear-gradient(
+        to top left,
+        var(--background-secondary),
+        var(--color-on-primary),
+        var(--background)
+      );
 
       .logo {
         padding: 10px 0;
@@ -173,7 +177,7 @@ screen and (max-height: 600px) {
     }
 
     app-online-shop-home {
-      height: calc(100% - var(--small-screen-navigation-height)) !important;;
+      height: calc(100% - var(--small-screen-navigation-height)) !important;
     }
 
     .grid-container {

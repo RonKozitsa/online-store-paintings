@@ -1,7 +1,7 @@
-import {Routes} from '@angular/router';
+import { Routes } from '@angular/router';
 
-import {HomePageComponent} from './home-page.component';
+import { HomePageComponent } from './home-page.component';
 
 export const homePageRoutes: Routes = [
-  {path: '', component: HomePageComponent, pathMatch: 'full'}
+  { path: '', component: HomePageComponent, pathMatch: 'full' }
 ];

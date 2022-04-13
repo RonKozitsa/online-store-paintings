@@ -1,6 +1,6 @@
-import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
-import {StoreItemInterface} from '../store-item/store-item.interface';
+import { StoreItemInterface } from '../store-item/store-item.interface';
 
 @Component({
   selector: 'app-images-grid',
@@ -8,9 +8,7 @@ import {StoreItemInterface} from '../store-item/store-item.interface';
   styleUrls: ['./images-grid.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ImagesGridComponent{
-
+export class ImagesGridComponent {
   @Input() gridItems: StoreItemInterface[] = [];
   @Input() gridStyle: object;
-
 }

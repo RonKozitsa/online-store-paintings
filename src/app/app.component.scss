@@ -10,7 +10,11 @@
 
   .app-navigation-top {
     display: block;
-    background-image: linear-gradient(to bottom right, var(--color-on-primary) 10%, transparent 50%);
+    background-image: linear-gradient(
+      to bottom right,
+      var(--color-on-primary) 10%,
+      transparent 50%
+    );
     border-bottom: 1px solid var(--app-border);
   }
 

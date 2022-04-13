@@ -1,6 +1,6 @@
-import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
-import {SideMenuItemI} from './side-menu.interface';
+import { SideMenuItemI } from './side-menu.interface';
 
 @Component({
   selector: 'app-side-menu',
@@ -9,6 +9,5 @@ import {SideMenuItemI} from './side-menu.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SideMenuComponent {
-
-  @Input() sideMenuItems: SideMenuItemI[]
+  @Input() sideMenuItems: SideMenuItemI[];
 }

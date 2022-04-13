@@ -1,4 +1,4 @@
-import {MainPagesNavigationNamesEnums} from '../../interfaces/pages-navigation-names.interface';
+import { MainPagesNavigationNamesEnums } from '../../interfaces/pages-navigation-names.interface';
 
 export interface NavigationItemInterface {
   url: MainPagesNavigationNamesEnums;

@@ -1,7 +1,7 @@
-import {Routes} from '@angular/router';
+import { Routes } from '@angular/router';
 
-import {ContactPageComponent} from './contact-page.component';
+import { ContactPageComponent } from './contact-page.component';
 
 export const contactPageRoutes: Routes = [
-  {path: '', component: ContactPageComponent, pathMatch: 'full'}
+  { path: '', component: ContactPageComponent, pathMatch: 'full' }
 ];

@@ -32,7 +32,6 @@
   &.icon {
     @include mixins.flex($center: true);
     @include mixins.width-height-100();
-    background-color: transparent;
     padding: 0;
   }
 }

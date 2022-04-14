@@ -67,9 +67,9 @@ a {
 }
 
 button {
-  background-color: var(--background-secondary);
-  border: none;
+  background-color: rgba(var(--background-secondary-rgb), 0.5);
   color: var(--color-primary);
+  border: none;
   padding: 0 20px;
 }
 
@@ -84,4 +84,8 @@ button {
 
 .small-screen-only {
   display: none;
+}
+
+.active {
+  font-weight: 600;
 }

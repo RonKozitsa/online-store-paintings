@@ -22,11 +22,6 @@
     @include mixins.flex($center: true);
     cursor: pointer;
     margin: 25px 0;
-    border-bottom: 1px solid var(--app-border);
     padding-bottom: 10px;
-
-    a.active {
-      font-weight: bold;
-    }
   }
 }

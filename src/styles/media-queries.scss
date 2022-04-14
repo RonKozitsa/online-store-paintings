@@ -38,10 +38,6 @@
 }
 
 @media screen and (max-width: 993px), screen and (max-height: 600px) {
-  .website-wrapper .app-navigation-top .navigation .navigation-item {
-    margin-right: 20px;
-  }
-
   .page-content {
     overflow: auto;
 
@@ -101,6 +97,10 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
+  .website-wrapper .app-navigation-top .navigation .navigation-item {
+    margin-right: 20px;
+  }
+
   .shopping-page-content-wrapper .grid-container .grid-item .app-button {
     font-size: 12px;
   }
@@ -143,14 +143,15 @@
       height: 100vh;
       width: 250px;
       background-image: linear-gradient(
-        to top left,
-        var(--background-secondary),
-        var(--color-on-primary),
-        var(--background)
+                      to top left,
+                      var(--background-secondary),
+                      var(--color-on-primary),
+                      var(--background)
       );
 
       .logo {
         padding: 10px 0;
+        width: revert !important;
         margin-left: revert !important;
         padding-left: revert !important;
       }

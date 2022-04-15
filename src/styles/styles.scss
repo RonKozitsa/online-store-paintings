@@ -85,3 +85,7 @@ button {
 .active {
   font-weight: 600;
 }
+
+textarea.ng-dirty.ng-invalid {
+  border: 1px solid var(--app-error);
+}

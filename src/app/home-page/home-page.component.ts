@@ -1,10 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  OnDestroy,
-  OnInit
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { interval, Subject, takeUntil } from 'rxjs';
 import { trigger } from '@angular/animations';
@@ -31,10 +25,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   destroy$ = new Subject<void>();
   buttonType = ButtonType;
 
-  constructor(
-    private router: Router,
-    private changeDetectorRef: ChangeDetectorRef
-  ) {}
+  constructor(private router: Router, private changeDetectorRef: ChangeDetectorRef) {}
 
   ngOnInit() {
     interval(8000)
@@ -43,8 +34,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
         this.loadingQuote = true;
         this.changeDetectorRef.markForCheck();
         setTimeout(() => {
-          this.currentQuote =
-            this.quotes[Math.floor(Math.random() * this.quotes.length)];
+          this.currentQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
           this.loadingQuote = false;
           this.changeDetectorRef.markForCheck();
         }, 1000);

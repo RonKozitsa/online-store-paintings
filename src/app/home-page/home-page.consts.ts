@@ -6,8 +6,7 @@ export const artistsQuotes: QuoteI[] = [
     artist: 'Edward Hopper'
   },
   {
-    quote:
-      'I found I could say things with color and shapes that I couldn’t say any other way—things I had no words for.',
+    quote: 'I found I could say things with color and shapes that I couldn’t say any other way—things I had no words for.',
     artist: 'Georgia O’Keeffe'
   },
   {
@@ -15,8 +14,7 @@ export const artistsQuotes: QuoteI[] = [
     artist: 'Pablo Picasso'
   },
   {
-    quote:
-      'The emotions are sometimes so strong that I work without knowing it. The strokes come like speech.',
+    quote: 'The emotions are sometimes so strong that I work without knowing it. The strokes come like speech.',
     artist: 'Vincent van Gogh'
   },
   {
@@ -24,13 +22,11 @@ export const artistsQuotes: QuoteI[] = [
     artist: 'Pablo Picasso'
   },
   {
-    quote:
-      'The emotions are sometimes so strong that I work without knowing it. The strokes come like speech.',
+    quote: 'The emotions are sometimes so strong that I work without knowing it. The strokes come like speech.',
     artist: 'Vincent van Gogh'
   },
   {
-    quote:
-      'The object of art is not to reproduce reality, but to create a reality of the same intensity.',
+    quote: 'The object of art is not to reproduce reality, but to create a reality of the same intensity.',
     artist: 'Alberto Giacometti'
   },
   {
@@ -54,8 +50,7 @@ export const artistsQuotes: QuoteI[] = [
     artist: 'Michelangelo'
   },
   {
-    quote:
-      'The richness I achieve comes from nature, the source of my inspiration.',
+    quote: 'The richness I achieve comes from nature, the source of my inspiration.',
     artist: 'Claude Monet'
   },
   {
@@ -71,13 +66,11 @@ export const artistsQuotes: QuoteI[] = [
     artist: 'Salvador Dalí'
   },
   {
-    quote:
-      "If you hear a voice within you say 'you cannot paint', then by all means paint, and that voice will be silenced.",
+    quote: "If you hear a voice within you say 'you cannot paint', then by all means paint, and that voice will be silenced.",
     artist: 'Vincent van Gogh'
   },
   {
-    quote:
-      'Every child is an artist. The problem is how to remain an artist once we grow up.',
+    quote: 'Every child is an artist. The problem is how to remain an artist once we grow up.',
     artist: 'Pablo Picasso'
   }
 ];

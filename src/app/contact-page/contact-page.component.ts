@@ -23,12 +23,7 @@ export class ContactPageComponent implements OnInit, OnDestroy {
   formInvalid$: Observable<boolean>;
   chosenPaintingId: string;
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private activatedRoute: ActivatedRoute,
-    private httpClient: HttpClient,
-    private changeDetectorRef: ChangeDetectorRef
-  ) {}
+  constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute, private httpClient: HttpClient, private changeDetectorRef: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.checkQueryParams();
@@ -72,14 +67,8 @@ export class ContactPageComponent implements OnInit, OnDestroy {
   private buildForm() {
     this.contactForm = this.formBuilder.group({
       [ContactPageFormControls.name]: ['', Validators.required],
-      [ContactPageFormControls.email]: [
-        '',
-        [Validators.required, Validators.email]
-      ],
-      [ContactPageFormControls.message]: [
-        this.predefinedMessage,
-        Validators.required
-      ],
+      [ContactPageFormControls.email]: ['', [Validators.required, Validators.email]],
+      [ContactPageFormControls.message]: [this.predefinedMessage, Validators.required],
       [ContactPageFormControls.id]: [this.chosenPaintingId || '']
     });
   }

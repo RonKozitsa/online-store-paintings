@@ -7,9 +7,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AboutPageComponent {
-  carouselImages: string[] = [
-    'about-page/sitting.jpeg',
-    'about-page/painting-in-progress.jpeg',
-    'about-page/flowers-painting-in-progress.jpeg'
-  ];
+  carouselImages: string[] = ['about-page/sitting.jpeg', 'about-page/painting-in-progress.jpeg', 'about-page/flowers-painting-in-progress.jpeg'];
 }

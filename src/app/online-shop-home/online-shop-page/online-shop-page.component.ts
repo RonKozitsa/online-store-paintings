@@ -14,8 +14,6 @@ export class OnlineShopPageComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.gridItems = Object.values(
-      this.activatedRoute.snapshot.data
-    ) as StoreItemInterface[];
+    this.gridItems = Object.values(this.activatedRoute.snapshot.data) as StoreItemInterface[];
   }
 }

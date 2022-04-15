@@ -7,12 +7,7 @@ export const flowersPaintings: StoreItemInterface[] = [
     description: '',
     id: 1,
     price: 100,
-    imagesPath: [
-      `${directoryPrefix}/cactus-set/left.jpeg`,
-      `${directoryPrefix}/cactus-set/middle.jpeg`,
-      `${directoryPrefix}/cactus-set/right.jpeg`,
-      `${directoryPrefix}/cactus-set/preview.jpeg`
-    ],
+    imagesPath: [`${directoryPrefix}/cactus-set/left.jpeg`, `${directoryPrefix}/cactus-set/middle.jpeg`, `${directoryPrefix}/cactus-set/right.jpeg`, `${directoryPrefix}/cactus-set/preview.jpeg`],
     name: ''
   },
   {
@@ -63,10 +58,7 @@ export const flowersPaintings: StoreItemInterface[] = [
     description: '',
     id: 1,
     price: 100,
-    imagesPath: [
-      `${directoryPrefix}/pink-flowers-bad-quality/left.jpeg`,
-      `${directoryPrefix}/pink-flowers-bad-quality/right.jpeg`
-    ],
+    imagesPath: [`${directoryPrefix}/pink-flowers-bad-quality/left.jpeg`, `${directoryPrefix}/pink-flowers-bad-quality/right.jpeg`],
     name: ''
   },
   {
@@ -109,10 +101,7 @@ export const flowersPaintings: StoreItemInterface[] = [
     id: 1,
     price: 100,
     framed: true,
-    imagesPath: [
-      `${directoryPrefix}/yellow-flowers-set/yellow-flowers.jpeg`,
-      `${directoryPrefix}/yellow-flowers-set/preview.jpeg`
-    ],
+    imagesPath: [`${directoryPrefix}/yellow-flowers-set/yellow-flowers.jpeg`, `${directoryPrefix}/yellow-flowers-set/preview.jpeg`],
     name: ''
   },
   {

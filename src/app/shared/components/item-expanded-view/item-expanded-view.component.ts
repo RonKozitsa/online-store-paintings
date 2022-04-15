@@ -1,9 +1,4 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  Input,
-  ChangeDetectorRef
-} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
@@ -25,11 +20,7 @@ export class ItemExpandedViewComponent {
   cachedFrameColor: string;
   viewingRealDimensions: boolean;
 
-  constructor(
-    public activeModal: NgbActiveModal,
-    private router: Router,
-    private changeDetectorRef: ChangeDetectorRef
-  ) {}
+  constructor(public activeModal: NgbActiveModal, private router: Router, private changeDetectorRef: ChangeDetectorRef) {}
 
   navigateToContact(item: StoreItemInterface) {
     this.activeModal.close();
@@ -48,9 +39,7 @@ export class ItemExpandedViewComponent {
   toggleViewingMode() {
     this.viewingRealDimensions = !this.viewingRealDimensions;
     const currentFrameColor = this.frameColor;
-    this.frameColor = this.viewingRealDimensions
-      ? undefined
-      : this.cachedFrameColor;
+    this.frameColor = this.viewingRealDimensions ? undefined : this.cachedFrameColor;
     this.cachedFrameColor = currentFrameColor;
   }
 }

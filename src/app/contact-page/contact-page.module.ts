@@ -10,12 +10,6 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [ContactPageComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(contactPageRoutes),
-    ReactiveFormsModule,
-    HttpClientModule,
-    SharedModule
-  ]
+  imports: [CommonModule, RouterModule.forChild(contactPageRoutes), ReactiveFormsModule, HttpClientModule, SharedModule]
 })
 export class ContactPageModule {}

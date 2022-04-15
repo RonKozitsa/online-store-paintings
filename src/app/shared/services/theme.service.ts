@@ -10,11 +10,9 @@ import { WINDOW } from '../injection-tokens/window-token';
 export class ThemeService {
   currentTheme: ThemeType;
 
-  constructor(
-    @Inject(WINDOW) private window: Window,
-    @Inject(DOCUMENT) private document: Document
-  ) {
-    const currentTheme = (window.localStorage.getItem('theme') as ThemeType) || ThemeType.Light;this.setCurrentTheme(currentTheme);
+  constructor(@Inject(WINDOW) private window: Window, @Inject(DOCUMENT) private document: Document) {
+    const currentTheme = (window.localStorage.getItem('theme') as ThemeType) || ThemeType.Light;
+    this.setCurrentTheme(currentTheme);
   }
 
   setCurrentTheme(theme: ThemeType): void {
@@ -24,14 +22,11 @@ export class ThemeService {
   }
 
   toggleTheme(): void {
-    const newTheme =
-      this.currentTheme === ThemeType.Dark ? ThemeType.Light : ThemeType.Dark;
+    const newTheme = this.currentTheme === ThemeType.Dark ? ThemeType.Light : ThemeType.Dark;
     this.setCurrentTheme(newTheme);
   }
 
   getOppositeTheme(): ThemeType {
-    return this.currentTheme === ThemeType.Dark
-      ? ThemeType.Light
-      : ThemeType.Dark;
+    return this.currentTheme === ThemeType.Dark ? ThemeType.Light : ThemeType.Dark;
   }
 }

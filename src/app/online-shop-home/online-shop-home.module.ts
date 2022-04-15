@@ -9,10 +9,6 @@ import { OnlineShopPageComponent } from './online-shop-page/online-shop-page.com
 
 @NgModule({
   declarations: [OnlineShopHomeComponent, OnlineShopPageComponent],
-  imports: [
-    RouterModule.forChild(OnlineShopHomeRoutes),
-    SharedModule,
-    CommonModule
-  ]
+  imports: [RouterModule.forChild(OnlineShopHomeRoutes), SharedModule, CommonModule]
 })
 export class OnlineShopHomeModule {}

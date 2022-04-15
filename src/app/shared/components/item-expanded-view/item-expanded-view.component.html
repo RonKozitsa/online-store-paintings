@@ -1,8 +1,6 @@
 <div class="modal-header">
   <h4 class="modal-title">{{ itemConfig.name }}</h4>
-  <app-button class="close-modal-btn" (clicked)="activeModal.dismiss()"
-    >X</app-button
-  >
+  <app-button class="close-modal-btn" (clicked)="activeModal.dismiss()">X</app-button>
 </div>
 <div class="modal-body expanded-view-item">
   <app-display-paintings
@@ -29,42 +27,16 @@
         <span class="value">{{ itemConfig.framed ? 'Yes' : 'No' }}</span>
       </div>
       <div *ngIf="!itemConfig.framed" class="dimensions-note">
-        {{
-          viewingRealDimensions
-            ? 'To attach a frame - '
-            : 'Note: Dimensions of image adjusted - '
-        }}
-        <app-button
-          class="change-dimensions"
-          [buttonType]="buttonType.text"
-          (clicked)="toggleViewingMode()"
-          >view in {{ viewingRealDimensions ? 'adjusted' : 'real' }} dimensions
-        </app-button>
+        {{ viewingRealDimensions ? 'To attach a frame - ' : 'Note: Dimensions of image adjusted - ' }}
+        <app-button class="change-dimensions" [buttonType]="buttonType.text" (clicked)="toggleViewingMode()">view in {{ viewingRealDimensions ? 'adjusted' : 'real' }} dimensions </app-button>
       </div>
     </div>
     <div class="modal-bottom">
       <div *ngIf="!itemConfig.framed" class="item-color-picker">
-        <input
-          #colorPicker
-          hidden
-          id="color-picker"
-          [colorPicker]="frameColor"
-          (colorPickerChange)="onFrameColorPicked($event)"
-        />
-        <app-button
-          [buttonType]="buttonType.square"
-          [disabled]="viewingRealDimensions"
-          (clicked)="colorPicker.click()"
-          >Attach a frame
-        </app-button>
+        <input #colorPicker hidden id="color-picker" [colorPicker]="frameColor" (colorPickerChange)="onFrameColorPicked($event)" />
+        <app-button [buttonType]="buttonType.square" [disabled]="viewingRealDimensions" (clicked)="colorPicker.click()">Attach a frame </app-button>
       </div>
-      <app-button
-        class="want-it-btn"
-        [buttonType]="buttonType.square"
-        (clicked)="navigateToContact(itemConfig)"
-      >
-        I want it !
-      </app-button>
+      <app-button class="want-it-btn" [buttonType]="buttonType.square" (clicked)="navigateToContact(itemConfig)"> I want it ! </app-button>
     </div>
   </div>
 </div>

@@ -20,15 +20,11 @@ body {
   color: var(--color-primary);
 
   &.light-theme {
-    @include mixins.backgroundOnPage(
-      '/assets/pictures/website-background/light-background.jpeg'
-    );
+    @include mixins.backgroundOnPage('/assets/pictures/website-background/light-background.jpeg');
   }
 
   &.dark-theme {
-    @include mixins.backgroundOnPage(
-      '/assets/pictures/website-background/dark-background.jpeg'
-    );
+    @include mixins.backgroundOnPage('/assets/pictures/website-background/dark-background.jpeg');
   }
 }
 

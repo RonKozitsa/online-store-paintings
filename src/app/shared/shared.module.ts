@@ -40,13 +40,7 @@ const components = [
 
 @NgModule({
   declarations: [components],
-  imports: [
-    CommonModule,
-    RouterModule,
-    NgbCarouselModule,
-    FormsModule,
-    ColorPickerModule
-  ],
+  imports: [CommonModule, RouterModule, NgbCarouselModule, FormsModule, ColorPickerModule],
   exports: components,
   providers: [{ provide: WINDOW, useValue: window }]
 })

@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  NgbModal,
-  NgbModalConfig,
-  NgbModalRef
-} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalConfig, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Injectable({
   providedIn: 'root'

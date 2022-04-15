@@ -5,34 +5,16 @@
       <input type="text" name="_honey" style="display: none" />
       <!-- honeypot to avoid bots -->
       <div class="sender-info">
-        <app-input-text
-          class="form-name"
-          [formControlName]="ContactPageFormControls.name"
-          >Name
-        </app-input-text>
-        <app-input-text
-          class="form-email"
-          [formControlName]="ContactPageFormControls.email"
-          >Email
-        </app-input-text>
+        <app-input-text class="form-name" [formControlName]="ContactPageFormControls.name">Name </app-input-text>
+        <app-input-text class="form-email" [formControlName]="ContactPageFormControls.email">Email </app-input-text>
       </div>
       <div class="sender-message">
         <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          class="form-message"
-          [formControlName]="ContactPageFormControls.message"
-        ></textarea>
+        <textarea id="message" name="message" class="form-message" [formControlName]="ContactPageFormControls.message"></textarea>
       </div>
       <input hidden name="id" [value]="chosenPaintingId" />
     </form>
-    <app-button
-      [buttonType]="buttonType.square"
-      [disabled]="!contactForm.valid"
-      (clicked)="submitForm()"
-      >Send
-    </app-button>
+    <app-button [buttonType]="buttonType.square" [disabled]="!contactForm.valid" (clicked)="submitForm()">Send </app-button>
   </ng-container>
   <ng-template #submitted>
     <h2 class="contact-page-title">Thank You !</h2>

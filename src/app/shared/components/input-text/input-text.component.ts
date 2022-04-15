@@ -16,6 +16,4 @@ import { ValueAccessor } from '../../classes/value-accessor';
     }
   ]
 })
-export class InputTextComponent
-  extends ValueAccessor
-  implements ControlValueAccessor {}
+export class InputTextComponent extends ValueAccessor implements ControlValueAccessor {}

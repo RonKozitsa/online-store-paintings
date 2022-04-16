@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Self, Optional, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Self, Input } from '@angular/core';
 import { ControlValueAccessor, NgControl } from '@angular/forms';
 
 import { ValueAccessor } from '../../classes/value-accessor';
@@ -12,10 +12,9 @@ import { ValueAccessor } from '../../classes/value-accessor';
 export class InputTextComponent extends ValueAccessor implements ControlValueAccessor {
   @Input() label: string;
 
-  constructor(@Self() @Optional() private ngControl: NgControl) {
+  constructor(@Self() private ngControl: NgControl) {
     super();
-    // tslint:disable-next-line:no-unused-expression
-    this.ngControl && (this.ngControl.valueAccessor = this);
+    this.ngControl.valueAccessor = this;
   }
 
   get showError(): boolean {

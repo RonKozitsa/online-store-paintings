@@ -86,6 +86,6 @@ button {
   font-weight: 600;
 }
 
-textarea.ng-dirty.ng-invalid {
+textarea.ng-touched.ng-invalid {
   border: 1px solid var(--app-error);
 }

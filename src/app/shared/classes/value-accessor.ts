@@ -1,12 +1,12 @@
-export class ValueAccessor {
-  val = '';
-  onChange: any = () => {};
-  onTouch: any = () => {};
+import { ControlValueAccessor } from '@angular/forms';
 
-  set value(val) {
-    this.val = val;
-    this.onChange(val);
-    this.onTouch(val);
+export class ValueAccessor implements ControlValueAccessor {
+  value: any;
+  onChange: (value) => void;
+  onTouch: () => void;
+
+  writeValue(value: string): void {
+    this.value = value;
   }
 
   registerOnChange(fn: any): void {
@@ -15,9 +15,5 @@ export class ValueAccessor {
 
   registerOnTouched(fn: any): void {
     this.onTouch = fn;
-  }
-
-  writeValue(text: string): void {
-    this.value = text;
   }
 }

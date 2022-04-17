@@ -1,3 +1,5 @@
+@use 'mixins';
+
 .modal-open .modal {
   z-index: 9999;
 }
@@ -16,10 +18,8 @@
   margin-bottom: 0;
 }
 
-.about-me .carousel-img .store-image,
-.expanded-view-item .paintings:not(.real-dimensions) .carousel-img .store-image,
-.expanded-view-item .paintings:not(.real-dimensions) .store-image {
-  object-fit: fill;
+app-item-expanded-view .modal-body {
+  padding: 0;
 }
 
 .theme-controller button {
@@ -31,9 +31,10 @@
   top: revert !important;
   position: absolute !important;
   left: 0 !important;
-  background-color: var(--app-dark-gray) !important;
+  background-color: var(--background) !important;
 
   .box div {
     color: var(--color-primary) !important;
   }
 }
+

@@ -12,7 +12,8 @@
   .paintings {
     width: 50%;
     height: 100%;
-    padding-right: 20px;
+    padding: 10px;
+    background-image: linear-gradient(to top left, var(--app-light-gray), var(--color-on-primary), var(--background));
   }
 
   .item-info-container {
@@ -20,6 +21,7 @@
     width: 50%;
     height: 100%;
     align-items: center;
+    padding: 10px 10px 20px 10px;
 
     .item-info-section {
       width: 90%;
@@ -71,6 +73,12 @@
         @include mixins.flex();
         align-items: center;
         position: relative;
+        flex-basis: 200px;
+        flex-shrink: 0;
+
+        &-button {
+          padding-right: 10px;
+        }
       }
     }
   }

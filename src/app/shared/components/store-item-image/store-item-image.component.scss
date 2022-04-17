@@ -2,11 +2,11 @@
 
 :host {
   @include mixins.width-height-100();
-  display: block;
+  @include mixins.flex($center: true);
 }
 
 .store-image {
-  @include mixins.width-height-100();
+  @include mixins.width-height-max-100();
   object-fit: contain;
 
   &.frame {

@@ -4,6 +4,7 @@
 </div>
 <div class="modal-body expanded-view-item">
     <app-display-paintings
+        #paintings
         class="paintings"
         [itemConfig]="itemConfig"
         [frameColor]="frameColor"
@@ -29,7 +30,7 @@
                 <div class="item-color-picker-button">
                     <input #colorPicker hidden id="color-picker" [colorPicker]="frameColor"
                            (colorPickerChange)="onFrameColorPicked($event)"/>
-                    <app-button [buttonType]="buttonType.square" (clicked)="colorPicker.click()">Attach a frame
+                    <app-button [buttonType]="buttonType.square" (clicked)="openColorPicker()">Attach a frame
                     </app-button>
                 </div>
                 <app-button

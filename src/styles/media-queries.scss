@@ -18,6 +18,7 @@
       width: 100%;
       height: 50%;
       padding-right: revert;
+      background-image: revert;
     }
 
     .item-info-container {
@@ -185,7 +186,7 @@
     }
 
     .grid-container {
-      grid-template-columns: 1fr !important;
+      grid-template-columns: minmax(200px, 1fr) !important;
     }
   }
 }

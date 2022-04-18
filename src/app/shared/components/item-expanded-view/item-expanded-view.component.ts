@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input, ViewChild, ElementRef} from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
@@ -12,6 +12,9 @@ import { ButtonType } from '../app-button/app-button.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemExpandedViewComponent {
+  @ViewChild('paintings',{read: ElementRef}) paintings: ElementRef;
+  @ViewChild('colorPicker') colorPicker: ElementRef;
+
   @Input() itemConfig: StoreItemInterface;
 
   readonly buttonType = ButtonType;
@@ -21,7 +24,6 @@ export class ItemExpandedViewComponent {
   constructor(public activeModal: NgbActiveModal, private router: Router) {}
 
   navigateToContact(item: StoreItemInterface) {
-    const x = '';
     this.activeModal.close();
     this.router.navigate(['/contact'], {
       queryParams: {
@@ -33,5 +35,10 @@ export class ItemExpandedViewComponent {
 
   onFrameColorPicked(color: string) {
     this.frameColor = color;
+  }
+
+  openColorPicker() {
+    this.colorPicker.nativeElement.click();
+    this.paintings.nativeElement.scrollIntoView({behavior: 'smooth'});
   }
 }

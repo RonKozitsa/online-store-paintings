@@ -78,6 +78,7 @@ export class ContactPageComponent implements OnInit, OnDestroy {
   }
 
   private setFormSubmitValues(formData: FormData) {
+    formData.append('_next', 'http://www.blooming-arts.com/conntact?submitted=true');
     formData.append('_captcha', 'false');
     formData.append('_template', 'box');
     formData.append('_subject', 'A New Message From Your Website !');

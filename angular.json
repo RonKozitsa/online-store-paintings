@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "website-project": {
+    "painting-store": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/website-project",
+            "outputPath": "dist/painting-store",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "website-project:build"
+            "browserTarget": "painting-store:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "website-project:build:production"
+              "browserTarget": "painting-store:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "website-project:build"
+            "browserTarget": "painting-store:build"
           }
         },
         "test": {
@@ -105,11 +105,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "website-project:serve"
+            "devServerTarget": "painting-store:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "website-project:serve:production"
+              "devServerTarget": "painting-store:serve:production"
             }
           }
         },
@@ -125,7 +125,7 @@
       }
     }
   },
-  "defaultProject": "website-project",
+  "defaultProject": "painting-store",
   "schematics": {
     "@schematics/angular": {
       "component": {

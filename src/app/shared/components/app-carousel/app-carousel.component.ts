@@ -11,7 +11,7 @@ export class AppCarouselComponent {
 
   pauseOnHover = true;
   pauseOnFocus = true;
-  interval = 8000;
+  interval = 5000;
 
   isPreviewImage(imgName: string): boolean {
     return imgName.includes('preview');

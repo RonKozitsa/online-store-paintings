@@ -14,8 +14,7 @@ export const animalPaintings: StoreItemInterface[] = [
     imagesPath: [`${directoryPrefix}/flamingos.jpeg`]
   },
   {
-    description: 'Just like a peacock, the papagei is fun to paint and filled with different colors.' +
-        ' I was able to dive deep into details of each individual feather',
+    description: 'Just like a peacock, the papagei is fun to paint and filled with different colors.' + ' I was able to dive deep into details of each individual feather',
     name: 'Papagei',
     imagesPath: [`${directoryPrefix}/parrot.jpeg`]
   },

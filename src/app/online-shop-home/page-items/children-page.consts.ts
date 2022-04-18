@@ -11,7 +11,7 @@ export const childrenPaintings: StoreItemInterface[] = [
   {
     description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
     imagesPath: [`${directoryPrefix}/astronaut-set/astronaut.jpeg`, `${directoryPrefix}/astronaut-set/missile.jpeg`],
-    name: 'Astronaut\'s Dreams - Set'
+    name: "Astronaut's Dreams - Set"
   },
   {
     description: 'Two little pirates, never alone discovering hidden treasures on their pirate map  \n',

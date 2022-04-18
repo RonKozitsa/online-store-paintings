@@ -4,8 +4,7 @@ const directoryPrefix = 'flowers';
 
 export const flowersPaintings: StoreItemInterface[] = [
   {
-    description: 'These small little plants are not only fun to paint, they also have much to offer.' +
-        '\nThey can help purify the air, improve your focus and enhance memory.',
+    description: 'These small little plants are not only fun to paint, they also have much to offer.' + '\nThey can help purify the air, improve your focus and enhance memory.',
     imagesPath: [`${directoryPrefix}/cactus-set/left.jpeg`, `${directoryPrefix}/cactus-set/middle.jpeg`, `${directoryPrefix}/cactus-set/right.jpeg`, `${directoryPrefix}/cactus-set/preview.jpeg`],
     name: 'Succulent'
   },
@@ -21,7 +20,7 @@ export const flowersPaintings: StoreItemInterface[] = [
     name: 'Echinacea'
   },
   {
-    description: 'When a leek flower came across me, I couldn\'t help but paint and reflect it’s beauty. Leek contain a variety of nutrients, may reduce inflammation and promote heart health. ',
+    description: "When a leek flower came across me, I couldn't help but paint and reflect it’s beauty. Leek contain a variety of nutrients, may reduce inflammation and promote heart health. ",
     imagesPath: [`${directoryPrefix}/leek-flower-set/leek-flower.jpeg`],
     name: 'Leek Flower'
   },

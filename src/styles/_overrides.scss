@@ -14,8 +14,21 @@
   }
 }
 
-.carousel-indicators {
-  margin-bottom: 0;
+.carousel {
+  height: 100%;
+
+  &-inner,
+  &-item {
+    height: 100%;
+  }
+
+  &-img {
+    @include mixins.width-height-100();
+  }
+
+  .carousel-indicators {
+    margin-bottom: 0;
+  }
 }
 
 app-item-expanded-view .modal-body {

@@ -37,6 +37,7 @@ export class ContactPageComponent implements OnInit, OnDestroy {
 
   submitForm() {
     if (this.contactForm.valid) {
+      this.formSubmitted = true;
       const formData: FormData = new FormData();
       this.setFormSubmitValues(formData);
       this.httpClient
@@ -47,7 +48,6 @@ export class ContactPageComponent implements OnInit, OnDestroy {
           const myWindow = window.open('', '_blank', 'resizable=yes');
           myWindow.document.write(response);
           myWindow.document.close();
-          this.formSubmitted = true;
           this.changeDetectorRef.markForCheck();
         });
     }

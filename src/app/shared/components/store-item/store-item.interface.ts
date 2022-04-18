@@ -1,10 +1,9 @@
 export interface StoreItemInterface {
   name: string;
   description: string;
-  id: number;
   imagesPath: string[];
-  price?: number;
   dimensions?: ItemDimensionsI;
+  id?: number;
   framed?: boolean;
 }
 

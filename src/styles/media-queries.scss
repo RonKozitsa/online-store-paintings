@@ -120,7 +120,7 @@
     }
 
     .page-content {
-      height: calc(100% - var(--small-screen-navigation-height)) !important;
+      height: revert !important;
 
       .contact-page {
         height: revert;

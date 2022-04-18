@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, Input, ViewChild, ElementRef} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, ViewChild, ElementRef } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
@@ -12,7 +12,7 @@ import { ButtonType } from '../app-button/app-button.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemExpandedViewComponent {
-  @ViewChild('paintings',{read: ElementRef}) paintings: ElementRef;
+  @ViewChild('paintings', { read: ElementRef }) paintings: ElementRef;
   @ViewChild('colorPicker') colorPicker: ElementRef;
 
   @Input() itemConfig: StoreItemInterface;
@@ -39,6 +39,6 @@ export class ItemExpandedViewComponent {
 
   openColorPicker() {
     this.colorPicker.nativeElement.click();
-    this.paintings.nativeElement.scrollIntoView({behavior: 'smooth'});
+    this.paintings.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 }

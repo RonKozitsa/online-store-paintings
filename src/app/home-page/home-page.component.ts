@@ -28,12 +28,12 @@ export class HomePageComponent implements OnInit, OnDestroy {
   constructor(private router: Router, private changeDetectorRef: ChangeDetectorRef) {}
 
   ngOnInit() {
-    interval(8000)
+    interval(5000)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
         this.loadingQuote = true;
         this.changeDetectorRef.markForCheck();
-        setTimeout(() => {
+        setTimeout(() => { // to make disappear and reappear
           this.currentQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
           this.loadingQuote = false;
           this.changeDetectorRef.markForCheck();

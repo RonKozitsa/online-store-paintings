@@ -10,9 +10,15 @@
     margin: 0 auto;
   }
 
-  .logo {
+  .logo-container {
+    @include mixins.flex($center: true);
     width: variables.$side-menu-width;
     height: var(--navigation-height);
+
+    .logo {
+      height: 100%;
+      cursor: pointer;
+    }
   }
 
   .social-media {

@@ -13,7 +13,7 @@
     @include mixins.flex();
     align-items: center;
     margin: auto 0;
-    padding-top: 100px;
+    padding-top: 50px;
 
     &-description {
       @include mixins.flex(true);
@@ -26,7 +26,7 @@
     }
 
     &-picture {
-      height: 400px;
+      height: 450px;
       margin-right: 100px;
     }
   }

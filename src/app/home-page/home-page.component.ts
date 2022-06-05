@@ -33,7 +33,8 @@ export class HomePageComponent implements OnInit, OnDestroy {
       .subscribe(() => {
         this.loadingQuote = true;
         this.changeDetectorRef.markForCheck();
-        setTimeout(() => { // to make disappear and reappear
+        setTimeout(() => {
+          // to make disappear and reappear
           this.currentQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
           this.loadingQuote = false;
           this.changeDetectorRef.markForCheck();

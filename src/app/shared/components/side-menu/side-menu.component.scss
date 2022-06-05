@@ -4,7 +4,6 @@
   @include mixins.flex(true);
   align-items: center;
   height: 100%;
-  border-right: 1px solid var(--app-border);
 
   .menu-title {
     padding: 10px;

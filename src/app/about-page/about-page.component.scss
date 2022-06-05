@@ -8,15 +8,22 @@
   @include mixins.flex($center: true);
   height: 800px;
 
-  .carousel {
-    padding: 0 40px 0 10px;
-    max-height: 450px;
-    width: 450px;
-    max-width: 450px;
+  .picture {
+    padding: 0 60px 0 10px;
+    max-height: 500px;
+    width: 500px;
   }
 
   .about-me-info {
     @include mixins.flex(true);
-    max-width: 800px;
+    max-width: 600px;
+
+    &-personal {
+      @include mixins.flex();
+      font-weight: 500;
+      font-size: 18px;
+      padding-bottom: 10px;
+      text-decoration: underline;
+    }
   }
 }

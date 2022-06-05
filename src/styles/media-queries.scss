@@ -85,12 +85,8 @@
       overflow: auto;
       height: revert !important;
 
-      .carousel {
-        height: 400px;
-        margin-right: revert !important;
-        max-height: revert !important;
-        width: 100% !important;
-        padding: 0 !important;
+      &-info {
+        margin-bottom: 50px;
       }
     }
   }
@@ -198,6 +194,19 @@
 
     .grid-container {
       grid-template-columns: 200px !important;
+    }
+  }
+
+  .about-me {
+
+    &-info-personal {
+      font-size: unset !important;
+    }
+
+    .picture {
+      padding: 0 !important;
+      max-height: 350px !important;
+      width: 350px !important;
     }
   }
 }

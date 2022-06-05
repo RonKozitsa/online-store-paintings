@@ -9,16 +9,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class AboutPageComponent {
   age = this.getAge();
 
-
   getAge() {
-      const today = new Date();
-      const birthDate = new Date('1995-10-25');
-      let age = today.getFullYear() - birthDate.getFullYear();
-      const m = today.getMonth() - birthDate.getMonth();
-      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate()))
-      {
-        age--;
-      }
-      return age;
+    const today = new Date();
+    const birthDate = new Date('1995-10-25');
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
   }
 }

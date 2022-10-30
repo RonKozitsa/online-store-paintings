@@ -1,10 +1,12 @@
 <div class="website-wrapper">
-  <app-navigation-header *ngIf="showNavigationMenu" class="app-navigation-side small-screen-only" (appClickOut)="toggleMenu()" (navigationClicked)="toggleMenu()" @fadeInOut></app-navigation-header>
-  <div class="menu-icon small-screen-only">
-    <img src="assets/svg/menu.svg" alt="menu" (click)="toggleMenu()" />
-  </div>
-  <app-navigation-header class="app-navigation-top wide-screen-only"></app-navigation-header>
-  <div class="page-content">
-    <router-outlet></router-outlet>
-  </div>
+    <app-navigation-header *ngIf="showNavigationMenu" class="app-navigation-side" (appClickOut)="toggleMenu()"
+                           (navigationClicked)="toggleMenu()" @fadeInOut></app-navigation-header>
+    <div class="small-device-header">
+        <img class="menu-icon" src="assets/svg/menu.svg" alt="menu" (click)="toggleMenu()"/>
+        <img class="logo" routerLink="/home" src="/assets/logo/logo.svg"/>
+    </div>
+    <app-navigation-header class="app-navigation-top"></app-navigation-header>
+    <div class="page-content">
+        <router-outlet></router-outlet>
+    </div>
 </div>

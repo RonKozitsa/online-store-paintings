@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { finalize, Observable, Subject } from 'rxjs';
 
 import { ButtonType } from '../shared/components/app-button/app-button.interface';
 import { ContactPageFormControls } from './contact-page.interface';
@@ -18,9 +18,10 @@ export class ContactPageComponent implements OnInit, OnDestroy {
   destroy$ = new Subject<void>();
   predefinedMessage = '';
   formSubmitted: boolean;
+  submittingForm: boolean;
+  failedToSubmit: boolean;
 
   contactForm: FormGroup;
-  formInvalid$: Observable<boolean>;
   chosenPaintingId: string;
 
   constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute, private httpClient: HttpClient, private changeDetectorRef: ChangeDetectorRef) {}
@@ -37,19 +38,24 @@ export class ContactPageComponent implements OnInit, OnDestroy {
 
   submitForm() {
     if (this.contactForm.valid) {
-      this.formSubmitted = true;
+      this.failedToSubmit = false;
+      this.submittingForm = true;
       const formData: FormData = new FormData();
       this.setFormSubmitValues(formData);
       this.httpClient
         .post('https://formsubmit.co/ronkoz44@gmail.com', formData, {
           responseType: 'text'
         })
-        .subscribe((response) => {
-          const myWindow = window.open('', '_blank', 'resizable=yes');
-          myWindow.document.write(response);
-          myWindow.document.close();
-          this.changeDetectorRef.markForCheck();
-        });
+        .pipe(
+          finalize(() => {
+            this.submittingForm = false;
+            this.changeDetectorRef.markForCheck();
+          })
+        )
+        .subscribe(
+          () => (this.formSubmitted = true),
+          () => (this.failedToSubmit = true)
+        );
     }
   }
 
@@ -58,9 +64,6 @@ export class ContactPageComponent implements OnInit, OnDestroy {
     this.chosenPaintingId = paramsMap.get('paintingId');
     if (paramsMap.has('paintingName')) {
       this.setPredefinedMessage(paramsMap.get('paintingName'));
-    }
-    if (paramsMap.has('submitted')) {
-      this.formSubmitted = true;
     }
   }
 

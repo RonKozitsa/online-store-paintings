@@ -20,6 +20,7 @@ import { InputTextComponent } from './components/input-text/input-text.component
 import { DisplayPaintingsComponent } from './components/display-paintings/display-paintings.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { ThemeControllerComponent } from './components/theme-controller/theme-controller.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 const components = [
   NavigationHeaderComponent,
@@ -35,13 +36,14 @@ const components = [
   InputTextComponent,
   DisplayPaintingsComponent,
   ClickOutsideDirective,
-  ThemeControllerComponent
+  ThemeControllerComponent,
+  LoaderComponent
 ];
 
 @NgModule({
   declarations: [components],
   imports: [CommonModule, RouterModule, NgbCarouselModule, FormsModule, ColorPickerModule],
-  exports: components,
+  exports: [components],
   providers: [{ provide: WINDOW, useValue: window }]
 })
 export class SharedModule {}

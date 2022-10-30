@@ -63,7 +63,7 @@ a {
 }
 
 button {
-  background-color: rgba(var(--background-secondary-rgb), 0.5);
+  background-color: var(--button);
   color: var(--color-primary);
   border: none;
   padding: 0 20px;
@@ -76,10 +76,6 @@ button {
 .shopping-page-content-wrapper {
   height: 100%;
   @include mixins.flex(true);
-}
-
-.small-screen-only {
-  display: none;
 }
 
 .active {

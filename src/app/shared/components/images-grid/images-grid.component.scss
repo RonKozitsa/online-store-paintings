@@ -9,8 +9,9 @@
   @include mixins.width-height-100();
   display: grid;
   grid-gap: 50px;
-  padding: 40px;
-  grid-template-columns: repeat(3, 1fr);
+  padding: 0 40px 40px;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
 
   .grid-item {
     text-align: center;

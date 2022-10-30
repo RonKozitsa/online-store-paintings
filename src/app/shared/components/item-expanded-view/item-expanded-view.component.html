@@ -30,7 +30,7 @@
                 <div class="item-color-picker-button">
                     <input #colorPicker hidden id="color-picker" [colorPicker]="frameColor"
                            (colorPickerChange)="onFrameColorPicked($event)"/>
-                    <app-button [buttonType]="buttonType.square" (clicked)="openColorPicker()">Attach a frame
+                    <app-button [buttonType]="buttonType.standard" (clicked)="openColorPicker()">Attach a frame
                     </app-button>
                 </div>
                 <app-button
@@ -40,7 +40,7 @@
                     X
                 </app-button>
             </div>
-            <app-button class="want-it-btn" [buttonType]="buttonType.square" (clicked)="navigateToContact(itemConfig)">
+            <app-button class="want-it-btn" [buttonType]="buttonType.standard" (clicked)="navigateToContact(itemConfig)">
                 I want it !
             </app-button>
         </div>

@@ -24,12 +24,12 @@
       margin-bottom: 10px;
 
       .form-name {
-        width: 40%;
+        width: 50%;
       }
 
       .form-email {
         padding-left: 10px;
-        width: 60%;
+        width: 50%;
       }
     }
 
@@ -44,5 +44,15 @@
         height: 100%;
       }
     }
+  }
+
+  .loader {
+    display: flex;
+    align-items: center;
+    height: calc(100% - var(--navigation-height));
+  }
+
+  .error-message {
+    color: var(--app-error);
   }
 }

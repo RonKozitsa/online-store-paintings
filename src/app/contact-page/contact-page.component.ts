@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { finalize, Subject } from 'rxjs';
 
 import { ButtonType } from '../shared/components/app-button/app-button.interface';
 import { ContactPageFormControls } from './contact-page.interface';
@@ -46,11 +46,14 @@ export class ContactPageComponent implements OnInit, OnDestroy {
         .post('https://formsubmit.co/ronkoz44@gmail.com', formData, {
           responseType: 'text'
         })
-        .subscribe(() => {
-          this.submittingForm = false;
-          this.formSubmitted = true;
-          this.changeDetectorRef.markForCheck();
-        });
+        .pipe(
+          finalize(() => {
+            this.submittingForm = false;
+            this.formSubmitted = true;
+            this.changeDetectorRef.markForCheck();
+          })
+        )
+        .subscribe();
     }
   }
 

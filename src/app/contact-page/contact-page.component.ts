@@ -1,8 +1,8 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { finalize, Subject } from 'rxjs';
+import { BehaviorSubject, finalize, Subject } from 'rxjs';
 
 import { ButtonType } from '../shared/components/app-button/app-button.interface';
 import { ContactPageFormControls } from './contact-page.interface';
@@ -13,18 +13,17 @@ import { ContactPageFormControls } from './contact-page.interface';
   styleUrls: ['./contact-page.component.scss']
 })
 export class ContactPageComponent implements OnInit, OnDestroy {
-  ContactPageFormControls = ContactPageFormControls;
-  buttonType = ButtonType;
+  readonly buttonType = ButtonType;
+  readonly ContactPageFormControls = ContactPageFormControls;
+
+  submittingForm$ = new BehaviorSubject(false);
+  formSubmitted$ = new BehaviorSubject(false);
   destroy$ = new Subject<void>();
   predefinedMessage = '';
-  formSubmitted: boolean;
-  submittingForm: boolean;
-  failedToSubmit: boolean;
-
   contactForm: FormGroup;
   chosenPaintingId: string;
 
-  constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute, private httpClient: HttpClient, private changeDetectorRef: ChangeDetectorRef) {}
+  constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute, private httpClient: HttpClient) {}
 
   ngOnInit() {
     this.checkQueryParams();
@@ -38,8 +37,7 @@ export class ContactPageComponent implements OnInit, OnDestroy {
 
   submitForm() {
     if (this.contactForm.valid) {
-      this.failedToSubmit = false;
-      this.submittingForm = true;
+      this.submittingForm$.next(true);
       const formData: FormData = new FormData();
       this.setFormSubmitValues(formData);
       this.httpClient
@@ -48,9 +46,8 @@ export class ContactPageComponent implements OnInit, OnDestroy {
         })
         .pipe(
           finalize(() => {
-            this.submittingForm = false;
-            this.formSubmitted = true;
-            this.changeDetectorRef.markForCheck();
+            this.submittingForm$.next(false);
+            this.formSubmitted$.next(true);
           })
         )
         .subscribe();

@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { interval, Subject, takeUntil } from 'rxjs';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { BehaviorSubject, interval, Subject, takeUntil } from 'rxjs';
 import { trigger } from '@angular/animations';
 
 import { animations } from '../shared/animations/animations';
@@ -21,23 +20,19 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   currentQuote = artistsQuotes[0];
   quotes: QuoteI[] = artistsQuotes;
-  loadingQuote: boolean;
+  showQuote$ = new BehaviorSubject(true);
   destroy$ = new Subject<void>();
   buttonType = ButtonType;
-
-  constructor(private router: Router, private changeDetectorRef: ChangeDetectorRef) {}
-
+  
   ngOnInit() {
-    interval(5000)
+    interval(8000)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
-        this.loadingQuote = true;
-        this.changeDetectorRef.markForCheck();
+        this.showQuote$.next(false);
         setTimeout(() => {
           // to make disappear and reappear
           this.currentQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
-          this.loadingQuote = false;
-          this.changeDetectorRef.markForCheck();
+          this.showQuote$.next(true);
         }, 1000);
       });
   }

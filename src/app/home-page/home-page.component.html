@@ -3,7 +3,7 @@
     <img class="home-page-info-picture" src="assets/pictures/hands-painting.jpeg" />
     <div class="home-page-info-description">
       <p>
-        Creativity was always a big part of my life, ever since I can remember, it is in my genes and a part of who I am.<br />
+        Creativity was always a big part of my life, it is in my genes and a part of who I am.
         I have always looked at the world as a place full of colors and opportunities.
       </p>
       <p>
@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="quotes">
-    <ng-container *ngIf="!loadingQuote">
+    <ng-container *ngIf="showQuote$ | async">
       <p @fadeInOut>"{{ currentQuote.quote }}"</p>
       <span @fadeInOut>- {{ currentQuote.artist }}</span>
     </ng-container>

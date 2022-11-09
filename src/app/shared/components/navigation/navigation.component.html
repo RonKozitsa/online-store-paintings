@@ -1,7 +1,12 @@
 <nav>
     <ul class="navigation-wrapper">
         <li *ngFor="let navigationItem of navigationMenu" class="navigation-item">
-            <a routerLinkActive="active" [routerLink]="navigationItem.url" (click)="navigationClicked.emit()">
+            <a
+                #rla="routerLinkActive"
+                routerLinkActive="active"
+                [routerLink]="navigationItem.url"
+                [attr.aria-current]="rla.isActive ? 'page' : false"
+                (click)="navigationClicked.emit()">
                 {{ navigationItem.name }}
             </a>
         </li>

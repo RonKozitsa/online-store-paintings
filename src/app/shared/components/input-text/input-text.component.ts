@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Self, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Self } from '@angular/core';
 import { NgControl } from '@angular/forms';
 
 import { ValueAccessor } from '../../classes/value-accessor';
@@ -10,8 +10,6 @@ import { ValueAccessor } from '../../classes/value-accessor';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InputTextComponent extends ValueAccessor {
-  @Input() label: string;
-
   constructor(@Self() private ngControl: NgControl) {
     super();
     this.ngControl.valueAccessor = this;

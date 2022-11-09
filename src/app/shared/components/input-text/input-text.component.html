@@ -1,15 +1,13 @@
-<div class="app-input">
-    <label [for]="label">
-        <ng-content></ng-content>
-    </label>
+<label class="app-input">
+    <ng-content></ng-content>
     <input
         type="text"
         name="text"
         class="app-input-text"
-        [id]="label"
-        [(ngModel)]="value"
         [ngClass]="{'invalid' : showError}"
+        [attr.aria-invalid]="showError"
+        [(ngModel)]="value"
         (blur)="onTouch()"
-        (input)="onChange($event.target.value)"
+        (input)="onChange($event?.target?.value)"
     />
-</div>
+</label>

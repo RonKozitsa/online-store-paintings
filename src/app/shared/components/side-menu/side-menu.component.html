@@ -1,5 +1,12 @@
 <menu class="menu-items">
-    <a *ngFor="let item of sideMenuItems" class="menu-item" role="menu-item" routerLinkActive="active" [routerLink]="item.url">
-        {{ item.name }}
-    </a>
+    <li *ngFor="let item of sideMenuItems" class="menu-item" role="menu-item">
+        <a
+            #rla="routerLinkActive"
+            routerLinkActive="active"
+            [routerLink]="item.url"
+            [attr.aria-current]="rla.isActive ? 'page' : false"
+        >
+            {{ item.name }}
+        </a>
+    </li>
 </menu>

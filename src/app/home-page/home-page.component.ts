@@ -23,7 +23,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   showQuote$ = new BehaviorSubject(true);
   destroy$ = new Subject<void>();
   buttonType = ButtonType;
-  
+
   ngOnInit() {
     interval(8000)
       .pipe(takeUntil(this.destroy$))

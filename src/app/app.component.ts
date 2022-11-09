@@ -1,7 +1,9 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { trigger } from '@angular/animations';
 
 import { animations } from './shared/animations/animations';
+import { ButtonType } from './shared/components/app-button/app-button.interface';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +13,14 @@ import { animations } from './shared/animations/animations';
   animations: [trigger('fadeInOut', animations.fadeInOut)]
 })
 export class AppComponent {
-  showNavigationMenu: boolean;
+  readonly ButtonType = ButtonType;
 
-  constructor(private changeDetectorRef: ChangeDetectorRef) {}
+  showNavigationMenu$ = new BehaviorSubject<boolean>(false);
 
-  toggleMenu() {
-    setTimeout(() => {
-      this.showNavigationMenu = !this.showNavigationMenu;
-      this.changeDetectorRef.markForCheck();
-    });
+  toggleMenu(event?: Event) {
+    this.showNavigationMenu$.next(!this.showNavigationMenu$.value);
+    if (event) {
+      event.stopPropagation();
+    }
   }
 }

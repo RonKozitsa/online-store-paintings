@@ -1,9 +1,20 @@
 <div class="website-wrapper">
-    <app-navigation-header *ngIf="showNavigationMenu" class="app-navigation-side" (appClickOut)="toggleMenu()"
+    <app-navigation-header *ngIf="showNavigationMenu$ | async" class="app-navigation-side" (appClickOut)="toggleMenu($event)"
                            (navigationClicked)="toggleMenu()" @fadeInOut></app-navigation-header>
     <div class="small-device-header">
-        <img class="menu-icon" src="assets/svg/menu.svg" alt="menu" (click)="toggleMenu()"/>
-        <img class="logo" routerLink="/home" src="/assets/logo/logo.svg"/>
+        <app-button class="menu-icon-button"
+                    label="main menu"
+                    [ariaExpanded]="showNavigationMenu$ | async"
+                    [buttonType]="ButtonType.icon"
+                    (clicked)="toggleMenu($event)">
+            <img class="menu-icon-img" src="assets/svg/menu.svg" aria-hidden="true"/>
+        </app-button>
+        <app-button
+                    label="home page"
+                    routerLink="/home"
+                    [buttonType]="ButtonType.icon">
+            <img class="logo" src="/assets/logo/logo.svg" aria-hidden="true" alt="website logo"/>
+        </app-button>
     </div>
     <app-navigation-header class="app-navigation-top"></app-navigation-header>
     <div class="page-content">

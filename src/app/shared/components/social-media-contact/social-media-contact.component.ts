@@ -21,22 +21,21 @@ export class SocialMediaContactComponent {
       {
         name: 'Facebook',
         url: 'https://www.facebook.com/leonie.fix.3',
-        logo: 'facebook.svg'
+        logo: 'facebook.svg',
+        alt: 'Facebook'
       },
       {
         name: 'Instagram',
         url: 'https://www.instagram.com/leonie__fix/',
-        logo: 'instagram.svg'
+        logo: 'instagram.svg',
+        alt: 'Instagram'
       },
       {
         name: 'Linkedin',
         url: 'https://www.linkedin.com/in/leonie-fix-91005012b/',
-        logo: 'linkedin.svg'
+        logo: 'linkedin.svg',
+        alt: 'Linkedin'
       }
     ];
-  }
-
-  navigateToSocialMediaPage(url: string) {
-    this.window.open(url, '_blank');
   }
 }

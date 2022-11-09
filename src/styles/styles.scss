@@ -62,6 +62,10 @@ a {
   }
 }
 
+ul, li {
+  all: unset;
+}
+
 button {
   background-color: var(--button);
   color: var(--color-primary);

@@ -1,6 +1,6 @@
 <div class="modal-header">
     <h4 class="modal-title">{{ itemConfig.name }}</h4>
-    <app-button class="close-modal-btn" (clicked)="activeModal.dismiss()" [buttonType]="buttonType.icon">X</app-button>
+    <app-button class="close-modal-btn" label="close" [buttonType]="buttonType.icon" (clicked)="activeModal.dismiss()">X</app-button>
 </div>
 <div class="modal-body expanded-view-item">
     <app-display-paintings
@@ -35,12 +35,13 @@
                 </div>
                 <app-button
                     *ngIf="frameColor"
+                    label="remove frame"
                     [buttonType]="buttonType.icon"
                     (clicked)="onFrameColorPicked(undefined)">
                     X
                 </app-button>
             </div>
-            <app-button class="want-it-btn" [buttonType]="buttonType.standard" (clicked)="navigateToContact(itemConfig)">
+            <app-button class="want-it-btn" label="contact for painting details" [buttonType]="buttonType.standard" (clicked)="navigateToContact(itemConfig)">
                 I want it !
             </app-button>
         </div>

@@ -15,7 +15,7 @@
                 </div>
                 <input hidden name="id" [value]="chosenPaintingId"/>
             </form>
-            <app-button [buttonType]="buttonType.square" [disabled]="!contactForm.valid" (clicked)="submitForm()">Send</app-button>
+            <app-button label="contact" [buttonType]="buttonType.square" [disabled]="!contactForm.valid" (clicked)="submitForm()">Send</app-button>
         </ng-container>
         <ng-template #loader>
             <app-loader class="loader"></app-loader>

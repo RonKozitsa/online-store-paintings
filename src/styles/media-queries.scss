@@ -115,7 +115,7 @@
       width: 100%;
       height: var(--small-screen-navigation-height);
 
-      .menu-icon,
+      .menu-icon-img,
       .logo {
         height: 40px;
       }
@@ -179,8 +179,12 @@
           &-contact-wrapper {
             flex-direction: column;
 
-            .social-media-logo {
+            .social-media-link {
               margin: 0 0 20px;
+
+              &-img {
+                height: 35px;
+              }
             }
           }
         }

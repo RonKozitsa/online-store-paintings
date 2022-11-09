@@ -5,9 +5,13 @@
   height: 100%;
   align-items: center;
 
-  .social-media-logo {
+  .social-media-link {
     cursor: pointer;
     height: 25%;
     margin: 0 10px;
+
+    &-img {
+      height: 100%;
+    }
   }
 }

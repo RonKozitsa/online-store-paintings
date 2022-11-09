@@ -1,7 +1,7 @@
 <div class="header-content">
-    <div class="logo-container">
-        <img routerLink="/home" class="logo" src="/assets/logo/logo.svg"/>
-    </div>
+    <app-button class="logo-container" routerLink="/home" label="home page" [buttonType]="ButtonType.icon">
+        <img class="logo" src="/assets/logo/logo.svg" alt="website logo" aria-hidden="true"/>
+    </app-button>
     <app-navigation class="navigation" [navigationMenu]="navigationMenu" (navigationClicked)="navigationClicked.emit()"></app-navigation>
     <app-social-media-contact class="social-media"></app-social-media-contact>
     <app-theme-controller class="theme-controller"></app-theme-controller>

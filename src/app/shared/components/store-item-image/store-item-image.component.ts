@@ -7,6 +7,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StoreItemImageComponent {
-  @Input() imgName: string;
+  @Input() imgPath: string;
+  @Input() alt: string;
   @Input() frameColor: string;
 }

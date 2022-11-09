@@ -1,9 +1,5 @@
-<div class="menu-wrapper">
-  <menu class="menu-items">
-    <div *ngFor="let item of sideMenuItems" class="menu-item" role="menu-item">
-      <a routerLinkActive="active" [routerLink]="item.url">
+<menu class="menu-items">
+    <a *ngFor="let item of sideMenuItems" class="menu-item" role="menu-item" routerLinkActive="active" [routerLink]="item.url">
         {{ item.name }}
-      </a>
-    </div>
-  </menu>
-</div>
+    </a>
+</menu>

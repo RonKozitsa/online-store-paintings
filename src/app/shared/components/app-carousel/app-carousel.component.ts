@@ -7,7 +7,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class AppCarouselComponent {
   @Input() frameColor: string;
-  @Input() carouselImages: string[];
+  @Input() carouselImagesPath: string[];
+  @Input() imagesName: string;
 
   pauseOnHover = true;
   pauseOnFocus = true;

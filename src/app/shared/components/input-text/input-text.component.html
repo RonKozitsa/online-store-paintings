@@ -6,6 +6,7 @@
         class="app-input-text"
         [ngClass]="{'invalid' : showError}"
         [attr.aria-invalid]="showError"
+        [required]="ngControl?.control?.hasValidator(Validators.required)"
         [(ngModel)]="value"
         (blur)="onTouch()"
         (input)="onChange($event?.target?.value)"

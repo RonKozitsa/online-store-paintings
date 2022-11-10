@@ -1,5 +1,5 @@
-import { Component, ChangeDetectionStrategy, Self } from '@angular/core';
-import { NgControl } from '@angular/forms';
+import {Component, ChangeDetectionStrategy, Self} from '@angular/core';
+import {NgControl, Validators} from '@angular/forms';
 
 import { ValueAccessor } from '../../classes/value-accessor';
 
@@ -9,17 +9,15 @@ import { ValueAccessor } from '../../classes/value-accessor';
   styleUrls: ['./input-text.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InputTextComponent extends ValueAccessor {
-  constructor(@Self() private ngControl: NgControl) {
+export class InputTextComponent extends ValueAccessor  {
+  readonly Validators = Validators;
+
+  constructor(@Self() public ngControl: NgControl) {
     super();
     this.ngControl.valueAccessor = this;
   }
 
   get showError(): boolean {
-    if (!this.ngControl) {
-      return false;
-    }
-
-    return this.ngControl.touched && this.ngControl.invalid;
+    return this.ngControl?.dirty && this.ngControl?.invalid;
   }
 }

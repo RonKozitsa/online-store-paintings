@@ -125,7 +125,6 @@
       }
     }
   },
-  "defaultProject": "painting-store",
   "schematics": {
     "@schematics/angular": {
       "component": {
@@ -151,6 +150,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

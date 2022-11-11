@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormGroup, UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, finalize, Subject } from 'rxjs';
@@ -23,7 +23,7 @@ export class ContactPageComponent implements OnInit, OnDestroy {
   contactForm: FormGroup;
   chosenPaintingId: string;
 
-  constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute, private httpClient: HttpClient) {}
+  constructor(private formBuilder: UntypedFormBuilder, private activatedRoute: ActivatedRoute, private httpClient: HttpClient) {}
 
   ngOnInit() {
     this.checkQueryParams();

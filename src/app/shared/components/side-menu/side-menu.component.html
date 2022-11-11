@@ -1,12 +1,14 @@
-<menu class="menu-items">
-    <li *ngFor="let item of sideMenuItems" class="menu-item" role="menu-item">
-        <a
-            #rla="routerLinkActive"
-            routerLinkActive="active"
-            [routerLink]="item.url"
-            [attr.aria-current]="rla.isActive ? 'page' : false"
-        >
-            {{ item.name }}
-        </a>
-    </li>
-</menu>
+<nav aria-label="painting categories">
+    <ul class="menu-items">
+        <li *ngFor="let item of sideMenuItems" class="menu-item" role="presentation">
+            <a
+                role="menu-item"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
+                [routerLink]="item.url"
+            >
+                {{ item.name }}
+            </a>
+        </li>
+    </ul>
+</nav>

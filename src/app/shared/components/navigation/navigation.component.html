@@ -3,6 +3,7 @@
         <li *ngFor="let navigationItem of navigationMenu" class="navigation-item">
             <a
                 routerLinkActive="active"
+                ariaCurrentWhenActive="page"
                 [routerLink]="navigationItem.url"
                 (click)="navigationClicked.emit()">
                 {{ navigationItem.name }}

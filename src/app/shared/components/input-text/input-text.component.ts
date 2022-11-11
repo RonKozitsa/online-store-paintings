@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, Self, OnInit} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Self, OnInit } from '@angular/core';
 import { NgControl, Validators } from '@angular/forms';
 
 import { ValueAccessor } from '../../classes/value-accessor';

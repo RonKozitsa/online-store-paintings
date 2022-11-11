@@ -10,4 +10,12 @@
       border-color: var(--app-error);
     }
   }
+
+  &-label {
+    position: relative;
+
+    &.required:after {
+      @include mixins.required-astrix();
+    }
+  }
 }

@@ -10,8 +10,8 @@
                     <app-input-text class="form-email" [formControlName]="ContactPageFormControls.email">Email</app-input-text>
                 </div>
                 <div class="sender-message">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" class="form-message" [formControlName]="ContactPageFormControls.message" required></textarea>
+                    <label class="sender-message-label" for="message">Message</label>
+                    <textarea id="message" class="form-message" [formControlName]="ContactPageFormControls.message" required></textarea>
                 </div>
                 <input hidden name="id" [value]="chosenPaintingId"/>
             </form>

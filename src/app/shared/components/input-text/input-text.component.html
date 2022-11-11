@@ -1,12 +1,13 @@
 <label class="app-input">
-    <ng-content></ng-content>
+    <span class="app-input-label" [ngClass]="{'required': isControlRequired}">
+        <ng-content></ng-content>
+    </span>
     <input
         type="text"
-        name="text"
         class="app-input-text"
         [ngClass]="{'invalid' : showError}"
         [attr.aria-invalid]="showError"
-        [required]="ngControl?.control?.hasValidator(Validators.required)"
+        [required]="isControlRequired"
         [(ngModel)]="value"
         (blur)="onTouch()"
         (input)="onChange($event?.target?.value)"

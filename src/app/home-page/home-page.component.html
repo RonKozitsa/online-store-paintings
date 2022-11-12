@@ -13,7 +13,7 @@
       <app-button class="go-to-collection-button" [buttonType]="buttonType.square" routerLink="/{{ mainPagesNavigationNamesEnums.collection }}">View My Collection </app-button>
     </div>
   </div>
-  <div class="quotes">
+  <div class="quotes" aria-label="quotes">
     <ng-container *ngIf="showQuote$ | async">
       <q @fadeInOut>{{ currentQuote.quote }}</q>
       <cite @fadeInOut>- {{ currentQuote.artist }}</cite>

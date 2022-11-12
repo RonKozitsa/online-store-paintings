@@ -4,6 +4,9 @@ phases:
   pre_build:
     commands:
       - npm install
+  install:
+    commands:
+      - n 16.14.0
   build:
     commands:
       - npm run build-prod
@@ -12,3 +15,4 @@ artifacts:
   files:
     - '**/*'
   discard-paths: no
+  base-directory: /dist/painting-store

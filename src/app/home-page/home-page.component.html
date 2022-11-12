@@ -1,4 +1,4 @@
-<main class="home-page">
+<div class="home-page">
   <div class="home-page-info">
     <img class="home-page-info-picture" src="assets/pictures/hands-painting.jpeg" alt="hands with paint"/>
     <div class="home-page-info-description">
@@ -15,8 +15,8 @@
   </div>
   <div class="quotes">
     <ng-container *ngIf="showQuote$ | async">
-      <p @fadeInOut>"{{ currentQuote.quote }}"</p>
-      <span @fadeInOut>- {{ currentQuote.artist }}</span>
+      <q @fadeInOut>{{ currentQuote.quote }}</q>
+      <cite @fadeInOut>- {{ currentQuote.artist }}</cite>
     </ng-container>
   </div>
-</main>
+</div>

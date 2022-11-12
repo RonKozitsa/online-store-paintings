@@ -12,4 +12,5 @@
         (blur)="onTouch()"
         (input)="onChange($event?.target?.value)"
     />
+    <span *ngIf="showError" class="error-message">{{errorMessage}}</span>
 </label>

@@ -10,4 +10,5 @@ import { SideMenuItemI } from './side-menu.interface';
 })
 export class SideMenuComponent {
   @Input() sideMenuItems: SideMenuItemI[];
+  @Input() menuTitle: string;
 }

@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {FormGroup, UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
+import { FormGroup, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, finalize, Subject } from 'rxjs';
@@ -64,8 +64,8 @@ export class ContactPageComponent implements OnInit, OnDestroy {
 
   private buildForm() {
     this.contactForm = this.formBuilder.group({
-      [ContactPageFormControls.name]: ['', Validators.required],
-      [ContactPageFormControls.email]: ['', [Validators.required, Validators.email]],
+      [ContactPageFormControls.name]: ['', {validators: [Validators.required], updateOn: 'blur'}],
+      [ContactPageFormControls.email]: ['', {validators: [Validators.required, Validators.email], updateOn: 'blur'}],
       [ContactPageFormControls.message]: [this.predefinedMessage, Validators.required],
       [ContactPageFormControls.id]: [this.chosenPaintingId || '']
     });

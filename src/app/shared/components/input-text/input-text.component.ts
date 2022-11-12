@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Self, OnInit } from '@angular/core';
+import {Component, ChangeDetectionStrategy, Self, OnInit, Input} from '@angular/core';
 import { NgControl, Validators } from '@angular/forms';
 
 import { ValueAccessor } from '../../classes/value-accessor';
@@ -10,7 +10,8 @@ import { ValueAccessor } from '../../classes/value-accessor';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InputTextComponent extends ValueAccessor implements OnInit {
-  readonly Validators = Validators;
+  @Input() errorMessage = 'Please enter a valid value';
+
   isControlRequired: boolean;
 
   constructor(@Self() public ngControl: NgControl) {

@@ -1,6 +1,7 @@
 @use 'mixins';
 
 .app-input {
+  position: relative;
   @include mixins.flex(true);
 
   &-text {
@@ -17,5 +18,14 @@
     &.required:after {
       @include mixins.required-astrix();
     }
+  }
+
+  .error-message {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    bottom: -18px;
+    color: var(--app-error);
+    font-size: 12px;
   }
 }

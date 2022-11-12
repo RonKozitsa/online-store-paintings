@@ -1,17 +1,22 @@
 @use 'mixins';
 
-.menu-items {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  @include mixins.flex(true);
-  align-items: center;
-  height: 100%;
+.side-menu-wrapper {
+  @include mixins.flex(true, true);
+
+  .menu-items {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    @include mixins.flex(true);
+    align-items: center;
+    height: 100%;
+  }
+
+  .menu-item {
+    @include mixins.flex($center: true);
+    cursor: pointer;
+    margin: 20px 0;
+    padding-bottom: 10px;
+  }
 }
 
-.menu-item {
-  @include mixins.flex($center: true);
-  cursor: pointer;
-  margin: 25px 0;
-  padding-bottom: 10px;
-}

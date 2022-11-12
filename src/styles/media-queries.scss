@@ -194,12 +194,13 @@
     app-online-shop-home {
       height: calc(100% - var(--small-screen-navigation-height)) !important;
 
-      .online-shop-page-wrapper {
-        .online-shop-page-content {
-          padding: 0 !important;
-        }
+      .online-shop-page-content {
+        padding: 0 !important;
+      }
+      .shopping-content .shop-side-menu {
+        padding-top: 20px;
 
-        .shopping-content .shop-side-menu .menu-wrapper {
+        .menu-wrapper {
           border-right-style: none;
         }
       }

@@ -1,4 +1,4 @@
-<main class="contact-page">
+<div class="contact-page">
     <ng-container *ngIf="(formSubmitted$ | async) === false; else submitted">
         <ng-container *ngIf="(submittingForm$ | async) === false else loader">
             <h3 class="contact-page-title">Contact Me !</h3>
@@ -7,7 +7,7 @@
                 <!-- honeypot to avoid bots -->
                 <div class="sender-info">
                     <app-input-text class="form-name" [formControlName]="ContactPageFormControls.name">Name</app-input-text>
-                    <app-input-text class="form-email" [formControlName]="ContactPageFormControls.email">Email</app-input-text>
+                    <app-input-text class="form-email" errorMessage="Invalid email address" [formControlName]="ContactPageFormControls.email">Email</app-input-text>
                 </div>
                 <div class="sender-message">
                     <label class="sender-message-label" for="message">Message</label>
@@ -22,7 +22,7 @@
         </ng-template>
     </ng-container>
     <ng-template #submitted>
-        <h2 class="contact-page-title">Thank You !</h2>
-        <h5>We will be in touch soon</h5>
+        <h3 class="contact-page-title">Thank You !</h3>
+        <h4>We will be in touch soon</h4>
     </ng-template>
-</main>
+</div>

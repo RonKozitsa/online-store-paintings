@@ -1,1 +1,10 @@
-<img class="store-image" src="/assets/pictures/{{ imgPath }}" [alt]="alt" [ngClass]="{ frame: frameColor }" [style.border-color]="frameColor" />
+<img
+    class="store-image"
+    src="/assets/pictures/{{ imgPath }}"
+    [alt]="alt"
+    [hidden]="(imageLoaded$ | async) === false"
+    [ngClass]="{ frame: frameColor}"
+    [style.border-color]="frameColor"
+    (load)="imageLoaded$.next(true)"
+/>
+<app-loader *ngIf="(imageLoaded$ | async) === false" class="image-loader"></app-loader>

@@ -1,6 +1,16 @@
 <ng-container *ngIf="!isSet; else setCollection">
-  <app-store-item-image class="display-store-image" [imgPath]="itemConfig.imagesPath[0]" [frameColor]="frameColor"></app-store-item-image>
+    <app-store-item-image
+        class="display-store-image"
+        [imgPath]="itemConfig.imagesPath[0]"
+        [frameColor]="frameColor"
+        (click)="pictureClicked.emit()"></app-store-item-image>
 </ng-container>
 <ng-template #setCollection>
-  <app-carousel class="carousel" imagesName="{{itemConfig.name}} painting" [carouselImagesPath]="itemConfig.imagesPath" [frameColor]="frameColor"></app-carousel>
+    <app-carousel
+        class="carousel"
+        imagesName="{{itemConfig.name}} painting"
+        [carouselImagesPath]="itemConfig.imagesPath"
+        [frameColor]="frameColor"
+        (pictureClicked)="pictureClicked.emit()"
+    ></app-carousel>
 </ng-template>

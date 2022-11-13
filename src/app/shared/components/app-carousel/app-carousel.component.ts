@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -9,6 +9,8 @@ export class AppCarouselComponent {
   @Input() frameColor: string;
   @Input() carouselImagesPath: string[];
   @Input() imagesName: string;
+
+  @Output() pictureClicked = new EventEmitter<null>();
 
   pauseOnHover = true;
   pauseOnFocus = true;

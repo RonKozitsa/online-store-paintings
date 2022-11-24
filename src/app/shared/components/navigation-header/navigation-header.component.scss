@@ -15,6 +15,10 @@
     height: var(--navigation-height);
     width: 210px;
     background-color: transparent;
+
+    .logo {
+      @include mixins.width-height-100();
+    }
   }
 
   .social-media {

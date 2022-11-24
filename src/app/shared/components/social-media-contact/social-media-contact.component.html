@@ -1,5 +1,5 @@
 <div class="social-media-contact-wrapper">
   <a *ngFor="let socialMediaConfig of configurations" class="social-media-link" [href]="socialMediaConfig.url" [attr.aria-label]="socialMediaConfig.alt">
-    <app-optimized-image class="social-media-link-img" path="assets/svg/{{ socialMediaConfig.logo }}" ariaHidden="true"></app-optimized-image>
+    <img class="social-media-link-img" src="assets/svg/{{ socialMediaConfig.logo }}" aria-hidden="true" [alt]="socialMediaConfig.alt">
   </a>
 </div>

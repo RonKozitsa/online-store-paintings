@@ -1,8 +1,6 @@
 <ng-container *ngIf="!isSet; else setCollection">
     <app-store-item-image
         class="display-store-image"
-        [expandedView]="expandedView"
-        [fillImage]="!expandedView"
         [imgPath]="itemConfig.imagesPath[0]"
         [frameColor]="frameColor"
         (click)="pictureClicked.emit()"></app-store-item-image>
@@ -11,7 +9,6 @@
     <app-carousel
         class="carousel"
         imagesName="{{itemConfig.name}} painting"
-        [expandedView]="expandedView"
         [carouselImagesPath]="itemConfig.imagesPath"
         [frameColor]="frameColor"
         (pictureClicked)="pictureClicked.emit()"

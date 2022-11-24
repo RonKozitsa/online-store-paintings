@@ -1,22 +1,26 @@
 <div class="website-wrapper">
-    <app-navigation-header *ngIf="showNavigationMenu$ | async" class="app-navigation-side" (appClickOut)="toggleMenu($event)"
-                           (navigationClicked)="toggleMenu()" @fadeInOut></app-navigation-header>
-    <div class="small-device-header">
-        <app-button class="menu-icon-button"
-                    label="main menu"
-                    [ariaExpanded]="showNavigationMenu$ | async"
-                    [buttonType]="ButtonType.icon"
-                    (clicked)="toggleMenu($event)">
-            <app-optimized-image class="menu-icon-img" path="assets/svg/menu.svg" ariaHidden="true"></app-optimized-image>
-        </app-button>
-        <app-button
-            label="home page"
-            routerLink="/home"
-            [buttonType]="ButtonType.icon">
-            <app-optimized-image class="logo" path="/assets/logo/logo.svg" ariaHidden="true" alt="website logo"></app-optimized-image>
-        </app-button>
-    </div>
-    <app-navigation-header class="app-navigation-top"></app-navigation-header>
+    <ng-container *ngIf="isSmallDevice() else bigDeviceNavigation">
+        <app-navigation-header *ngIf="showNavigationMenu$ | async" class="app-navigation-side" (appClickOut)="toggleMenu($event)"
+                               (navigationClicked)="toggleMenu()" @fadeInOut></app-navigation-header>
+        <div class="small-device-header">
+            <app-button class="menu-icon-button"
+                        label="main menu"
+                        [ariaExpanded]="showNavigationMenu$ | async"
+                        [buttonType]="ButtonType.icon"
+                        (clicked)="toggleMenu($event)">
+                <img class="menu-icon-img" src="assets/svg/menu.svg" aria-hidden="true" alt="menu icon">
+            </app-button>
+            <app-button
+                label="home page"
+                routerLink="/home"
+                [buttonType]="ButtonType.icon">
+                <img class="logo" src="/assets/logo/logo.svg" aria-hidden="true" alt="website logo">
+            </app-button>
+        </div>
+    </ng-container>
+    <ng-template #bigDeviceNavigation>
+        <app-navigation-header class="app-navigation-top"></app-navigation-header>
+    </ng-template>
     <main class="page-content">
         <router-outlet></router-outlet>
     </main>

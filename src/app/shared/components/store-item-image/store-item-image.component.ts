@@ -9,11 +9,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StoreItemImageComponent {
   @Input() imgPath: string;
-  @Input() expandedView: boolean;
   @Input() alt: string;
   @Input() frameColor: string;
-  @Input() isPriority: boolean;
-  @Input() fillImage = true;
 
   imageLoaded$ = new BehaviorSubject<boolean>(false);
 }

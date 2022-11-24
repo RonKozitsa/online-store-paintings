@@ -21,7 +21,6 @@ import { DisplayPaintingsComponent } from './components/display-paintings/displa
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { ThemeControllerComponent } from './components/theme-controller/theme-controller.component';
 import { LoaderComponent } from './components/loader/loader.component';
-import { OptimizedImageComponent } from './components/optimized-image/optimized-image.component';
 
 const components = [
   NavigationHeaderComponent,
@@ -39,7 +38,6 @@ const components = [
   ClickOutsideDirective,
   ThemeControllerComponent,
   LoaderComponent,
-  OptimizedImageComponent
 ];
 
 @NgModule({

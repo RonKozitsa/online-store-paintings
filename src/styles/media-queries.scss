@@ -98,10 +98,6 @@
     .app-navigation-side .navigation .navigation-item {
       margin-right: 20px;
     }
-
-    .app-navigation-top {
-      display: none !important;
-    }
   }
 
   .more-details-button {
@@ -109,18 +105,6 @@
   }
 
   .website-wrapper {
-    .small-device-header {
-      display: flex !important;
-      justify-content: space-between;
-      width: 100%;
-      height: var(--small-screen-navigation-height);
-
-      .menu-icon-img,
-      .logo {
-        height: 40px;
-      }
-    }
-
     .page-content {
       height: revert !important;
 

@@ -8,11 +8,6 @@
     height: calc(100% - var(--navigation-height));
   }
 
-  .app-navigation-side,
-  .small-device-header {
-    display: none;
-  }
-
   .app-navigation-top {
     display: block;
     background-image: linear-gradient(to bottom right, var(--color-on-primary) 5%, transparent 50%);
@@ -23,5 +18,17 @@
     background-color: transparent;
     width: 40px;
     height: 40px;
+  }
+
+  .small-device-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: var(--small-screen-navigation-height);
+
+    .menu-icon-img,
+    .logo {
+      height: 40px;
+    }
   }
 }

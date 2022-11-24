@@ -4,10 +4,10 @@
   @include mixins.flex(true, true);
 
   .menu-items {
+    @include mixins.flex(true);
     margin: 0;
     padding: 0;
     width: 100%;
-    @include mixins.flex(true);
     align-items: center;
     height: 100%;
   }

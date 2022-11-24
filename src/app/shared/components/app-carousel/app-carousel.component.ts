@@ -9,6 +9,7 @@ export class AppCarouselComponent {
   @Input() frameColor: string;
   @Input() carouselImagesPath: string[];
   @Input() imagesName: string;
+  @Input() expandedView: boolean;
 
   @Output() pictureClicked = new EventEmitter<null>();
 

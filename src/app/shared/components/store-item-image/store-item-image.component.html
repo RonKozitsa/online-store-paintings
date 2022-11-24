@@ -1,6 +1,8 @@
 <img
     class="store-image"
     ngSrc="/assets/pictures/{{ imgPath }}"
+    [height]="expandedView ? 'auto' : undefined"
+    [width]="expandedView ? 'auto' : undefined"
     [fill]="fillImage"
     [priority]="isPriority"
     [alt]="alt"

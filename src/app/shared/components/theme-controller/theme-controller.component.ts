@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { ButtonType } from '../app-button/app-button.interface';
 import { ThemeService } from '../../services/theme.service';
-import {ThemeType} from './theme-controller.interface';
+import { ThemeType } from './theme-controller.interface';
 
 @Component({
   selector: 'app-theme-controller',
@@ -17,6 +17,6 @@ export class ThemeControllerComponent {
   constructor(public themeService: ThemeService) {}
 
   get imagePath(): string {
-    return ``
+    return ``;
   }
 }

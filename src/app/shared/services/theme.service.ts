@@ -1,9 +1,9 @@
 import { Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { BehaviorSubject } from 'rxjs';
 
 import { ThemeType } from '../components/theme-controller/theme-controller.interface';
 import { WINDOW } from '../injection-tokens/window-token';
-import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

@@ -1,9 +1,8 @@
 <ngb-carousel class="carousel" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" [interval]="interval">
-  <ng-template ngbSlide *ngFor="let imgPath of carouselImagesPath; let first = first">
+  <ng-template ngbSlide *ngFor="let imgPath of carouselImagesPath">
     <app-store-item-image
         class="carousel-img"
         [imgPath]="imgPath"
-        [isPriority]="first"
         [alt]="imagesName"
         [fillImage]="!expandedView"
         [expandedView]="expandedView"

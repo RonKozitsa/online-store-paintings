@@ -10,7 +10,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule, NgbModule],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

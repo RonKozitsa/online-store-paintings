@@ -3,6 +3,7 @@
 :host {
   @include mixins.width-height-100();
   @include mixins.flex($center: true);
+  position: relative;
 }
 
 .store-image {

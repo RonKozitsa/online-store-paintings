@@ -11,6 +11,8 @@ export class StoreItemImageComponent {
   @Input() imgPath: string;
   @Input() alt: string;
   @Input() frameColor: string;
+  @Input() isPriority: boolean;
+  @Input() fillImage = true;
 
   imageLoaded$ = new BehaviorSubject<boolean>(false);
 }

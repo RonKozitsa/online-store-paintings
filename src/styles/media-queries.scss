@@ -152,7 +152,6 @@
 
         .logo {
           padding: 10px 0;
-          width: revert !important;
           margin-left: revert !important;
           padding-left: revert !important;
         }
@@ -219,8 +218,8 @@
     }
 
     .picture {
-      padding: 0 !important;
-      max-height: 350px !important;
+      margin: 0 !important;
+      height: 350px !important;
       width: 350px !important;
     }
   }

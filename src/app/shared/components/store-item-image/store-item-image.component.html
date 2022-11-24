@@ -1,8 +1,9 @@
 <img
     class="store-image"
-    src="/assets/pictures/{{ imgPath }}"
+    ngSrc="/assets/pictures/{{ imgPath }}"
+    [fill]="fillImage"
+    [priority]="isPriority"
     [alt]="alt"
-    [hidden]="(imageLoaded$ | async) === false"
     [ngClass]="{ frame: frameColor}"
     [style.border-color]="frameColor"
     (load)="imageLoaded$.next(true)"

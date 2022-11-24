@@ -7,13 +7,13 @@
                     [ariaExpanded]="showNavigationMenu$ | async"
                     [buttonType]="ButtonType.icon"
                     (clicked)="toggleMenu($event)">
-            <img class="menu-icon-img" src="assets/svg/menu.svg" aria-hidden="true"/>
+            <app-optimized-image class="menu-icon-img" src="assets/svg/menu.svg" ariaHidden="true"></app-optimized-image>
         </app-button>
         <app-button
-                    label="home page"
-                    routerLink="/home"
-                    [buttonType]="ButtonType.icon">
-            <img class="logo" src="/assets/logo/logo.svg" aria-hidden="true" alt="website logo"/>
+            label="home page"
+            routerLink="/home"
+            [buttonType]="ButtonType.icon">
+            <app-optimized-image class="logo" src="/assets/logo/logo.svg" ariaHidden="true" alt="website logo"></app-optimized-image>
         </app-button>
     </div>
     <app-navigation-header class="app-navigation-top"></app-navigation-header>

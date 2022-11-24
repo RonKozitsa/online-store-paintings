@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ColorPickerModule } from 'ngx-color-picker';
@@ -21,6 +21,7 @@ import { DisplayPaintingsComponent } from './components/display-paintings/displa
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { ThemeControllerComponent } from './components/theme-controller/theme-controller.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { OptimizedImageComponent } from './components/optimized-image/optimized-image.component';
 
 const components = [
   NavigationHeaderComponent,
@@ -37,12 +38,13 @@ const components = [
   DisplayPaintingsComponent,
   ClickOutsideDirective,
   ThemeControllerComponent,
-  LoaderComponent
+  LoaderComponent,
+  OptimizedImageComponent
 ];
 
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, RouterModule, NgbCarouselModule, FormsModule, ColorPickerModule],
+  imports: [CommonModule, RouterModule, NgbCarouselModule, FormsModule, ColorPickerModule, NgOptimizedImage],
   exports: [components],
   providers: [{ provide: WINDOW, useValue: window }]
 })

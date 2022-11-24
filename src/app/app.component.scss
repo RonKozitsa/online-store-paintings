@@ -18,7 +18,10 @@
     background-image: linear-gradient(to bottom right, var(--color-on-primary) 5%, transparent 50%);
   }
 
-  .menu-icon-button {
+  .menu-icon-button,
+  .logo {
     background-color: transparent;
+    width: 40px;
+    height: 40px;
   }
 }

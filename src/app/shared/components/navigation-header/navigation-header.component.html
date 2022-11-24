@@ -1,6 +1,6 @@
 <div class="header-content">
     <app-button class="logo-container" routerLink="/home" label="home page" [buttonType]="ButtonType.icon">
-        <app-optimized-image class="logo" src="/assets/logo/logo.svg" alt="website logo" ariaHidden="true"></app-optimized-image>
+        <app-optimized-image class="logo" path="/assets/logo/logo.svg" alt="website logo" ariaHidden="true"></app-optimized-image>
     </app-button>
     <app-navigation class="navigation" [navigationMenu]="navigationMenu" (navigationClicked)="navigationClicked.emit()"></app-navigation>
     <app-social-media-contact class="social-media"></app-social-media-contact>

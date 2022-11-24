@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OptimizedImageComponent {
-  @Input() src: string;
+  @Input() path: string;
   @Input() alt: string;
   @Input() height: string;
   @Input() width: string;

@@ -3,12 +3,13 @@ import { DOCUMENT } from '@angular/common';
 
 import { ThemeType } from '../components/theme-controller/theme-controller.interface';
 import { WINDOW } from '../injection-tokens/window-token';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
-  currentTheme: ThemeType;
+  currentTheme$ = new BehaviorSubject<ThemeType>(ThemeType.Light);
 
   constructor(@Inject(WINDOW) private window: Window, @Inject(DOCUMENT) private document: Document) {
     const preferredTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? ThemeType.Dark : ThemeType.Light;
@@ -17,17 +18,13 @@ export class ThemeService {
   }
 
   setCurrentTheme(theme: ThemeType): void {
-    this.currentTheme = theme;
+    this.currentTheme$.next(theme);
     this.document.body.className = theme;
     this.window.localStorage.setItem('theme', theme);
   }
 
   toggleTheme(): void {
-    const newTheme = this.currentTheme === ThemeType.Dark ? ThemeType.Light : ThemeType.Dark;
+    const newTheme = this.currentTheme$.value === ThemeType.Dark ? ThemeType.Light : ThemeType.Dark;
     this.setCurrentTheme(newTheme);
-  }
-
-  getOppositeTheme(): ThemeType {
-    return this.currentTheme === ThemeType.Dark ? ThemeType.Light : ThemeType.Dark;
   }
 }

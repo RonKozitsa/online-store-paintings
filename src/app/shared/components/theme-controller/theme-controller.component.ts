@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { ButtonType } from '../app-button/app-button.interface';
 import { ThemeService } from '../../services/theme.service';
+import {ThemeType} from './theme-controller.interface';
 
 @Component({
   selector: 'app-theme-controller',
@@ -11,6 +12,11 @@ import { ThemeService } from '../../services/theme.service';
 })
 export class ThemeControllerComponent {
   readonly buttonType = ButtonType.icon;
+  readonly ThemeType = ThemeType;
 
   constructor(public themeService: ThemeService) {}
+
+  get imagePath(): string {
+    return ``
+  }
 }

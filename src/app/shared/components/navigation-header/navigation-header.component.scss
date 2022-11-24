@@ -13,7 +13,7 @@
   .logo-container {
     @include mixins.flex($center: true);
     height: var(--navigation-height);
-    width: 80px;
+    width: 200px;
     background-color: transparent;
   }
 

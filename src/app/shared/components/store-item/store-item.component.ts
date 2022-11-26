@@ -11,6 +11,8 @@ import { StoreItemService } from '../../services/store-item.service';
 })
 export class StoreItemComponent {
   @Input() itemConfig: StoreItemInterface;
+  @Input() loadImageAsPriority: boolean;
+  @Input() isViewExpandedMode: boolean;
 
   @Output() showFullDetails = new EventEmitter<number>();
 

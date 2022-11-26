@@ -1,11 +1,12 @@
 <img
     class="store-image"
     ngSrc="/assets/pictures/{{ imgPath }}"
-    height="auto"
-    width="auto"
+    [height]="isViewExpandedMode ? 'auto' : '220px'"
+    [width]="isViewExpandedMode ? 'auto' : '220px'"
     [alt]="alt"
     [ngClass]="{ frame: frameColor}"
     [style.border-color]="frameColor"
+    [priority]="priority"
     (load)="imageLoaded$.next(true)"
 />
 <app-loader *ngIf="(imageLoaded$ | async) === false" class="image-loader"></app-loader>

@@ -2,6 +2,8 @@
     <app-store-item-image
         class="display-store-image"
         [imgPath]="itemConfig.imagesPath[0]"
+        [priority]="loadImageAsPriority"
+        [isViewExpandedMode]="isViewExpandedMode"
         [frameColor]="frameColor"
         (click)="pictureClicked.emit()"></app-store-item-image>
 </ng-container>

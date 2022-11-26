@@ -1,7 +1,7 @@
-import {Component, ChangeDetectionStrategy, Input, OnInit} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { StoreItemInterface } from '../store-item/store-item.interface';
-import {BreakpointObserver} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-images-grid',

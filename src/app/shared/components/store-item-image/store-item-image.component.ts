@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./store-item-image.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class StoreItemImageComponent  {
+export class StoreItemImageComponent {
   @Input() imgPath: string;
   @Input() alt: string;
   @Input() frameColor: string;

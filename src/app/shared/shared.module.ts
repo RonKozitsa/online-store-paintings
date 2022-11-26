@@ -37,7 +37,7 @@ const components = [
   DisplayPaintingsComponent,
   ClickOutsideDirective,
   ThemeControllerComponent,
-  LoaderComponent,
+  LoaderComponent
 ];
 
 @NgModule({

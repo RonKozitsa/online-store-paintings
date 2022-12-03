@@ -5,6 +5,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { animations } from './shared/animations/animations';
 import { ButtonType } from './shared/components/app-button/app-button.interface';
+import {ThemeService} from './shared/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,9 @@ export class AppComponent {
 
   showNavigationMenu$ = new BehaviorSubject<boolean>(false);
 
-  constructor(public breakpointObserver: BreakpointObserver) {}
+  constructor(public breakpointObserver: BreakpointObserver, private themeService:ThemeService) {
+    themeService.setInitialTheme();
+  }
 
   toggleMenu(event?: Event) {
     this.showNavigationMenu$.next(!this.showNavigationMenu$.value);

@@ -12,6 +12,10 @@ export class ThemeService {
   currentTheme$ = new BehaviorSubject<ThemeType>(ThemeType.Light);
 
   constructor(@Inject(WINDOW) private window: Window, @Inject(DOCUMENT) private document: Document) {
+    this.setInitialTheme();
+  }
+
+  setInitialTheme() {
     const preferredTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? ThemeType.Dark : ThemeType.Light;
     const currentTheme = (window.localStorage.getItem('theme') as ThemeType) || preferredTheme;
     this.setCurrentTheme(currentTheme);

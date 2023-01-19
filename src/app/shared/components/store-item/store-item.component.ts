@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, Input, EventEmitter, Output, OnInit} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, EventEmitter, Output, OnInit } from '@angular/core';
 
 import { StoreItemInterface } from './store-item.interface';
 import { StoreItemService } from '../../services/store-item.service';

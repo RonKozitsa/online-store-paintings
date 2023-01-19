@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, EventEmitter, Output } from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input, EventEmitter, Output, OnInit} from '@angular/core';
 
 import { StoreItemInterface } from './store-item.interface';
 import { StoreItemService } from '../../services/store-item.service';
@@ -9,13 +9,19 @@ import { StoreItemService } from '../../services/store-item.service';
   styleUrls: ['./store-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class StoreItemComponent {
+export class StoreItemComponent implements OnInit {
   @Input() itemConfig: StoreItemInterface;
   @Input() loadImageAsPriority: boolean;
 
   @Output() showFullDetails = new EventEmitter<number>();
 
+  isSet: boolean;
+
   constructor(private storeItemService: StoreItemService) {}
+
+  ngOnInit() {
+    this.isSet = this.itemConfig?.imagesPath?.length > 1;
+  }
 
   showDetails() {
     this.storeItemService.showItemDetails(this.itemConfig);

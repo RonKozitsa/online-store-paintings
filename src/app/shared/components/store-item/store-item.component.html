@@ -1,7 +1,8 @@
 <div class="store-item-wrapper">
-  <span class="store-item-name">{{ itemConfig.name }}</span>
+  <span class="store-item-name">{{ itemConfig.name }} {{isSet ? '- set' : ''}}</span>
   <app-display-paintings class="paintings"
                          [itemConfig]="itemConfig"
+                         [isSet]="isSet"
                          [loadImageAsPriority]="loadImageAsPriority"
                          (pictureClicked)="showDetails()"
   ></app-display-paintings>

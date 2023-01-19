@@ -12,19 +12,19 @@ export const childrenPaintings: StoreItemInterface[] = [
   {
     description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
     imagesPath: [`${directoryPrefix}/astronaut-set/astronaut.jpeg`, `${directoryPrefix}/astronaut-set/missile.jpeg`],
-    name: "Astronaut's Dreams - Set",
+    name: "Astronaut's Dreams",
     year: 2020
   },
   {
     description: 'Two little pirates, never alone discovering hidden treasures on their pirate map  \n',
     imagesPath: [`${directoryPrefix}/pirate-set/pirate-left.jpeg`, `${directoryPrefix}/pirate-set/pirate-right.jpeg`],
-    name: 'Two pirates - Set',
+    name: 'Two pirates',
     year: 2019
   },
   {
     description: 'Simple and timeless trilogy with calm colors that can fit any room\n',
     framed: true,
-    name: 'Llama Queen - Set',
+    name: 'Llama Queen',
     imagesPath: [`${directoryPrefix}/lama-set/lama-left.jpeg`, `${directoryPrefix}/lama-set/lama-middle.jpeg`, `${directoryPrefix}/lama-set/lama-right.jpeg`, `${directoryPrefix}/lama-set/lama-preview.jpeg`],
     year: 2020
   }

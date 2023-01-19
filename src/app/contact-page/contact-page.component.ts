@@ -64,8 +64,8 @@ export class ContactPageComponent implements OnInit, OnDestroy {
 
   private buildForm() {
     this.contactForm = this.formBuilder.group({
-      [ContactPageFormControls.name]: ['', { validators: [Validators.required], updateOn: 'blur' }],
-      [ContactPageFormControls.email]: ['', { validators: [Validators.required, Validators.email], updateOn: 'blur' }],
+      [ContactPageFormControls.name]: ['', [Validators.required]],
+      [ContactPageFormControls.email]: ['', [Validators.required, Validators.email]],
       [ContactPageFormControls.message]: [this.predefinedMessage, Validators.required],
       [ContactPageFormControls.id]: [this.chosenPaintingId || '']
     });

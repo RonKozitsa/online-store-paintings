@@ -11,6 +11,7 @@
     <app-carousel
         class="carousel"
         imagesName="{{itemConfig.name}} painting"
+        [isViewExpandedMode]="isViewExpandedMode"
         [carouselImagesPath]="itemConfig.imagesPath"
         [frameColor]="frameColor"
         (pictureClicked)="pictureClicked.emit()"

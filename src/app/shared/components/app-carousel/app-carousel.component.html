@@ -4,6 +4,7 @@
         class="carousel-img"
         [imgPath]="imgPath"
         [alt]="imagesName"
+        [isViewExpandedMode]="isViewExpandedMode"
         [frameColor]="isPreviewImage(imgPath) ? undefined : frameColor"
         (click)="pictureClicked.emit()"
     ></app-store-item-image>

@@ -9,7 +9,10 @@
 .store-image {
   @include mixins.width-height-max-100();
   object-fit: contain;
-  cursor: pointer;
+
+  &.clickable {
+    cursor: pointer;
+  }
 
   &.frame {
     border-width: 15px;

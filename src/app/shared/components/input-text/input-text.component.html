@@ -1,11 +1,11 @@
 <label class="app-input">
-    <span class="app-input-label" [ngClass]="{'required': isControlRequired}">
+    <span class="app-input-label" [class.required]="isControlRequired">
         <ng-content></ng-content>
     </span>
     <input
         type="text"
         class="app-input-text"
-        [ngClass]="{'invalid' : showError}"
+        [class.invalid]="showError"
         [attr.aria-invalid]="showError"
         [required]="isControlRequired"
         [(ngModel)]="value"

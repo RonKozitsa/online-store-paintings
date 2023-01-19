@@ -7,8 +7,9 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 })
 export class AppCarouselComponent {
   @Input() frameColor: string;
-  @Input() carouselImagesPath: string[];
   @Input() imagesName: string;
+  @Input() isViewExpandedMode: boolean;
+  @Input() carouselImagesPath: string[];
 
   @Output() pictureClicked = new EventEmitter<null>();
 

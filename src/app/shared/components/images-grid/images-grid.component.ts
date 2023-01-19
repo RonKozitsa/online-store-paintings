@@ -18,6 +18,6 @@ export class ImagesGridComponent implements OnInit {
   constructor(public breakpointObserver: BreakpointObserver) {}
 
   ngOnInit() {
-    this.priorityImagesCount = this.breakpointObserver.isMatched('(max-width: 599px)') ? 3 : 8;
+    this.priorityImagesCount = this.breakpointObserver.isMatched('(max-width: 599px)') ? 6 : 12;
   }
 }

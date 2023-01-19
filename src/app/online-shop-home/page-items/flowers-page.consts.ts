@@ -43,7 +43,7 @@ export const flowersPaintings: StoreItemInterface[] = [
     year: 2018
   },
   {
-    description: 'helps to boosts the immune system\n',
+    description: 'helps to boosts the immune system',
     id: 2,
     framed: true,
     imagesPath: [`${directoryPrefix}/echinacea-2.jpeg`],
@@ -51,7 +51,7 @@ export const flowersPaintings: StoreItemInterface[] = [
     year: 2018
   },
   {
-    description: 'Have anti cancer properties, improve sleep and help relief symptoms of stress and anxiety.',
+    description: 'The Magnolia flower has anti cancer properties, improve sleep and help relief symptoms of stress and anxiety.',
     imagesPath: [`${directoryPrefix}/magnolia-bad-quality/left.jpeg`, `${directoryPrefix}/magnolia-bad-quality/right.jpeg`],
     id: 2,
     name: 'Magnolia',
@@ -86,7 +86,7 @@ export const flowersPaintings: StoreItemInterface[] = [
   {
     description: '',
     imagesPath: [`${directoryPrefix}/pink-flowers-with-scratches.jpeg`],
-    name: '',
+    name: 'Pink Flowers',
     year: 2019
   },
   {

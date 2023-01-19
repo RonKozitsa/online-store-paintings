@@ -4,7 +4,7 @@
     [height]="isViewExpandedMode ? 'auto' : '220px'"
     [width]="isViewExpandedMode ? 'auto' : '220px'"
     [alt]="alt"
-    [ngClass]="{ frame: frameColor}"
+    [ngClass]="{ frame: frameColor, clickable: !isViewExpandedMode}"
     [style.border-color]="frameColor"
     [priority]="priority"
     (load)="imageLoaded$.next(true)"

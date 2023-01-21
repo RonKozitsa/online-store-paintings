@@ -6,6 +6,7 @@
     <app-display-paintings
         #paintings
         class="paintings"
+        [isSet]="itemConfig?.imagesPath?.length > 1"
         [itemConfig]="itemConfig"
         [frameColor]="frameColor"
         [isViewExpandedMode]="true"

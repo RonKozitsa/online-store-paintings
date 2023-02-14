@@ -4,6 +4,7 @@
         class="carousel-img"
         [imgPath]="imgPath"
         [alt]="imagesName"
+        [priority]="true"
         [isViewExpandedMode]="isViewExpandedMode"
         [frameColor]="isPreviewImage(imgPath) ? undefined : frameColor"
         (click)="pictureClicked.emit()"

@@ -41,4 +41,12 @@ export class ItemExpandedViewComponent {
     this.colorPicker.nativeElement.click();
     this.paintings.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
+
+  getWantItButtonLabel(item: StoreItemInterface): string {
+    if (!item.soldOut) {
+      return 'I Want It !';
+    } else if (item.soldOut) {
+      return item.printAvailable ? 'Get A Print' : 'Sold Out';
+    }
+  }
 }

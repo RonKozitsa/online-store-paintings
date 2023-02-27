@@ -59,6 +59,8 @@ export const naturePaintings: StoreItemInterface[] = [
     id: 1,
     imagesPath: [`${directoryPrefix}/lake.jpeg`],
     name: '',
-    year: 2021
+    year: 2021,
+    soldOut: true,
+    printAvailable: true,
   }
 ];

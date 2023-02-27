@@ -34,7 +34,7 @@ export const artistsQuotes: QuoteI[] = [
     artist: 'Jackson Pollock'
   },
   {
-    quote: '“I never paint dreams or nightmares. I paint my own reality.',
+    quote: 'I never paint dreams or nightmares. I paint my own reality.',
     artist: 'Frida Kahlo'
   },
   {
@@ -62,15 +62,19 @@ export const artistsQuotes: QuoteI[] = [
     artist: 'Leonardo da Vinci'
   },
   {
-    quote: "Have no fear of perfection, you'll never reach it.",
+    quote: 'Have no fear of perfection, you\'ll never reach it.',
     artist: 'Salvador Dalí'
   },
   {
-    quote: "If you hear a voice within you say 'you cannot paint', then by all means paint, and that voice will be silenced.",
+    quote: 'If you hear a voice within you say \'you cannot paint\', then by all means paint, and that voice will be silenced.',
     artist: 'Vincent van Gogh'
   },
   {
     quote: 'Every child is an artist. The problem is how to remain an artist once we grow up.',
     artist: 'Pablo Picasso'
+  },
+  {
+    quote: 'Every child is an artist until he\'s told he\'s not an artist.',
+    artist: 'John Lennon',
   }
 ];

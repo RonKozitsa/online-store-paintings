@@ -6,6 +6,8 @@ export interface StoreItemInterface {
   id?: number;
   framed?: boolean;
   year?: number;
+  soldOut?: boolean;
+  printAvailable?: boolean;
 }
 
 export interface ItemDimensionsI {

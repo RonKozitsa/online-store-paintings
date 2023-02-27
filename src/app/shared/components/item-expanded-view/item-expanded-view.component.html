@@ -43,8 +43,15 @@
                     X
                 </app-button>
             </div>
-            <app-button class="want-it-btn" label="contact for painting details" [buttonType]="buttonType.standard" (clicked)="navigateToContact(itemConfig)">
-                I want it !
+            <app-button
+                class="want-it-btn"
+                label="contact for painting details"
+                [infoTooltip]="itemConfig.soldOut && itemConfig.printAvailable ? 'Original painting is already sold out. You can purchase a print.' : ''"
+                [disabled]="itemConfig.soldOut && !itemConfig.printAvailable"
+                [buttonType]="buttonType.standard"
+                (clicked)="navigateToContact(itemConfig)"
+            >
+                {{getWantItButtonLabel(itemConfig)}}
             </app-button>
         </div>
     </div>

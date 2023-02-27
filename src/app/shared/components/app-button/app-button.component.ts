@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, HostBinding } from '@angular/core';
 
 import { ButtonType } from './app-button.interface';
+import { BreakpointObserverService } from '../../services/breakpoint-observer.service';
 
 @Component({
   selector: 'app-button',
@@ -16,6 +17,9 @@ export class AppButtonComponent {
   @Input() ariaExpanded: boolean;
   @Input() label: string;
   @Input() customClass = '';
+  @Input() infoTooltip = '';
 
   @Output() clicked = new EventEmitter<Event>();
+
+  constructor(public breakpointObserverService: BreakpointObserverService) {}
 }

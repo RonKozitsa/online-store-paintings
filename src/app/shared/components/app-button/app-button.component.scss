@@ -10,16 +10,19 @@
 }
 
 .app-button {
+  position: relative;
   &[disabled] {
     opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
   }
 
-  &.standard:not([disabled]) {
+  &.standard {
     @extend %button-common;
     border-radius: 50px;
   }
 
-  &.square:not([disabled]) {
+  &.square {
     @extend %button-common;
   }
 
@@ -36,3 +39,9 @@
     padding: 0;
   }
 }
+
+.icon-info {
+  padding-left: 10px;
+  cursor: pointer;
+}
+

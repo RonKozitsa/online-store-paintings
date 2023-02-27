@@ -25,20 +25,24 @@ export class HomePageComponent implements OnInit, OnDestroy {
   buttonType = ButtonType;
 
   ngOnInit() {
-    interval(8000)
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(() => {
-        this.showQuote$.next(false);
-        setTimeout(() => {
-          // to make disappear and reappear
-          this.currentQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
-          this.showQuote$.next(true);
-        }, 1000);
-      });
+    this.startQuotesInterval();
   }
 
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  private startQuotesInterval() {
+    interval(5000)
+        .pipe(takeUntil(this.destroy$))
+        .subscribe(() => {
+          this.showQuote$.next(false);
+          setTimeout(() => {
+            // to make disappear and reappear
+            this.currentQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
+            this.showQuote$.next(true);
+          }, 1000);
+        });
   }
 }

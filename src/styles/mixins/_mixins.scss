@@ -28,7 +28,7 @@
 }
 
 @mixin required-astrix() {
-  content: '*' / ""; // the '/ ""' is for scree readers to not read 'star'
+  content: '*' / ""; // the '/ ""' is for screen readers to not read 'star'
   position: absolute;
   top: 0;
   margin-left: 5px;

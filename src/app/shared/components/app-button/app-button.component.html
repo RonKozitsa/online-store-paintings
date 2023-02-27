@@ -6,3 +6,9 @@
         (click)="clicked.emit($event)">
     <ng-content></ng-content>
 </button>
+<span
+    *ngIf="infoTooltip"
+    class="icon-info"
+    [ngbTooltip]="breakpointObserverService.isSmallDevice() ? '' : infoTooltip"
+    [ngbPopover]="breakpointObserverService.isSmallDevice() ? infoTooltip : ''"
+>&#9432;</span>

@@ -1,7 +1,7 @@
-<ng-container *ngIf="!isSet; else setCollection">
+<ng-container *ngIf="!isSet || !isViewExpandedMode; else setCollection">
     <app-store-item-image
         class="display-store-image"
-        [imgPath]="itemConfig.imagesPath[0]"
+        [imgPath]="imagePathToDisplay"
         [priority]="loadImageAsPriority"
         [isViewExpandedMode]="isViewExpandedMode"
         [frameColor]="frameColor"

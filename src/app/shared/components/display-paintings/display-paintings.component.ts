@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input, Output, EventEmitter, OnInit} from '@angular/core';
 
 import { StoreItemInterface } from '../store-item/store-item.interface';
 
@@ -7,7 +7,7 @@ import { StoreItemInterface } from '../store-item/store-item.interface';
   templateUrl: './display-paintings.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DisplayPaintingsComponent {
+export class DisplayPaintingsComponent implements OnInit {
   @Input() itemConfig: StoreItemInterface;
   @Input() frameColor: string;
   @Input() loadImageAsPriority: boolean;
@@ -15,4 +15,10 @@ export class DisplayPaintingsComponent {
   @Input() isSet: boolean;
 
   @Output() pictureClicked = new EventEmitter<null>();
+
+  imagePathToDisplay: string;
+
+  ngOnInit() {
+    this.imagePathToDisplay = this.itemConfig.imagesPath.find(path => path.includes('preview')) || this.itemConfig.imagesPath[0];
+  }
 }

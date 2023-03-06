@@ -1,5 +1,5 @@
 import { StoreItemInterface } from '../../shared/components/store-item/store-item.interface';
-import {createImagesPaths} from '../../shared/functions';
+import { createImagesPaths } from '../../shared/functions';
 
 const directoryPrefix = 'children';
 
@@ -13,7 +13,7 @@ export const childrenPaintings: StoreItemInterface[] = [
   {
     description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
     imagesPath: createImagesPaths(['astronaut.jpeg', 'missile.jpeg'], `${directoryPrefix}/astronaut-set`),
-    name: 'Astronaut\'s Dreams',
+    name: "Astronaut's Dreams",
     soldOut: true,
     printAvailable: true,
     year: 2020
@@ -37,7 +37,7 @@ export const childrenPaintings: StoreItemInterface[] = [
   {
     description: '',
     name: 'Animal Kingdom',
-    imagesPath: createImagesPaths(['zebra.png', 'rhino.png','hippo.png', 'lion.png', 'tiger.png', 'giraffe.png', 'crocodile.png', 'elephant.png', 'monkey.png', 'preview.png'], `${directoryPrefix}/animal-kingdom`),
+    imagesPath: createImagesPaths(['zebra.png', 'rhino.png', 'hippo.png', 'lion.png', 'tiger.png', 'giraffe.png', 'crocodile.png', 'elephant.png', 'monkey.png', 'preview.png'], `${directoryPrefix}/animal-kingdom`),
     year: 2023
   },
   {
@@ -54,25 +54,25 @@ export const childrenPaintings: StoreItemInterface[] = [
   },
   {
     description: '',
-    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png' ,'preview.png'], `${directoryPrefix}/exploring-friends`),
+    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png', 'preview.png'], `${directoryPrefix}/exploring-friends`),
     name: 'Exploring Friends',
     year: 2023
   },
   {
     description: '',
-    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png' ,'preview.png'], `${directoryPrefix}/underwater-friends`),
+    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png', 'preview.png'], `${directoryPrefix}/underwater-friends`),
     name: 'Underwater Friends',
     year: 2023
   },
   {
     description: '',
-    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png' ,'preview.png'], `${directoryPrefix}/magic-of-australia`),
+    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png', 'preview.png'], `${directoryPrefix}/magic-of-australia`),
     name: 'Magic Of Australia',
     year: 2023
   },
   {
     description: '',
-    imagesPath: createImagesPaths(['left.png', 'right.png' ,'preview.png'], `${directoryPrefix}/musical-angels`),
+    imagesPath: createImagesPaths(['left.png', 'right.png', 'preview.png'], `${directoryPrefix}/musical-angels`),
     name: 'Musical Angels',
     year: 2023
   },
@@ -81,5 +81,5 @@ export const childrenPaintings: StoreItemInterface[] = [
     imagesPath: createImagesPaths(['flamingo-queen.png'], directoryPrefix),
     name: 'Flamingo Queen',
     year: 2023
-  },
+  }
 ];

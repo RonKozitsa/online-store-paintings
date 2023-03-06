@@ -1,5 +1,5 @@
 import { StoreItemInterface } from '../../shared/components/store-item/store-item.interface';
-import {createImagesPaths} from '../../shared/functions';
+import { createImagesPaths } from '../../shared/functions';
 
 const directoryPrefix = 'animals';
 

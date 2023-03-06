@@ -35,14 +35,14 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   private startQuotesInterval() {
     interval(5000)
-        .pipe(takeUntil(this.destroy$))
-        .subscribe(() => {
-          this.showQuote$.next(false);
-          setTimeout(() => {
-            // to make disappear and reappear
-            this.currentQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
-            this.showQuote$.next(true);
-          }, 1000);
-        });
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.showQuote$.next(false);
+        setTimeout(() => {
+          // to make disappear and reappear
+          this.currentQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
+          this.showQuote$.next(true);
+        }, 1000);
+      });
   }
 }

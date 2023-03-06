@@ -3,7 +3,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ColorPickerModule } from 'ngx-color-picker';
-import {NgbCarouselModule, NgbPopoverModule, NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbPopoverModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { WINDOW } from './injection-tokens/window-token';
 import { NavigationHeaderComponent } from './components/navigation-header/navigation-header.component';

@@ -1,17 +1,18 @@
 import { StoreItemInterface } from '../../shared/components/store-item/store-item.interface';
+import {createImagesPaths} from '../../shared/functions';
 
 const directoryPrefix = 'children';
 
 export const childrenPaintings: StoreItemInterface[] = [
   {
     description: 'Little fairy on a big elephant inside a playroom where anything can can happen with the right imagination',
-    imagesPath: [`${directoryPrefix}/elephant.jpeg`],
+    imagesPath: createImagesPaths(['elephant.jpeg'], directoryPrefix),
     name: 'Elephant fairy',
     year: 2020
   },
   {
     description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
-    imagesPath: [`${directoryPrefix}/astronaut-set/astronaut.jpeg`, `${directoryPrefix}/astronaut-set/missile.jpeg`],
+    imagesPath: createImagesPaths(['astronaut.jpeg', 'missile.jpeg'], `${directoryPrefix}/astronaut-set`),
     name: 'Astronaut\'s Dreams',
     soldOut: true,
     printAvailable: true,
@@ -19,7 +20,7 @@ export const childrenPaintings: StoreItemInterface[] = [
   },
   {
     description: 'Two little pirates, never alone discovering hidden treasures on their pirate map  \n',
-    imagesPath: [`${directoryPrefix}/pirate-set/pirate-left.jpeg`, `${directoryPrefix}/pirate-set/pirate-right.jpeg`],
+    imagesPath: createImagesPaths(['pirate-left.jpeg', 'pirate-right.jpeg'], `${directoryPrefix}/pirate-set`),
     name: 'Two pirates',
     soldOut: true,
     printAvailable: true,
@@ -30,7 +31,55 @@ export const childrenPaintings: StoreItemInterface[] = [
     framed: true,
     name: 'Llama Queen',
     soldOut: true,
-    imagesPath: [`${directoryPrefix}/lama-set/lama-left.jpeg`, `${directoryPrefix}/lama-set/lama-middle.jpeg`, `${directoryPrefix}/lama-set/lama-right.jpeg`, `${directoryPrefix}/lama-set/lama-preview.jpeg`],
+    imagesPath: createImagesPaths(['lama-left.jpeg', 'lama-middle.jpeg', 'lama-right.jpeg', 'lama-preview.jpeg'], `${directoryPrefix}/lama-set`),
     year: 2020
-  }
+  },
+  {
+    description: '',
+    name: 'Animal Kingdom',
+    imagesPath: createImagesPaths(['zebra.png', 'rhino.png','hippo.png', 'lion.png', 'tiger.png', 'giraffe.png', 'crocodile.png', 'elephant.png', 'monkey.png', 'preview.png'], `${directoryPrefix}/animal-kingdom`),
+    year: 2023
+  },
+  {
+    description: '',
+    imagesPath: createImagesPaths(['explorer.png'], directoryPrefix),
+    name: 'The Explorer',
+    year: 2023
+  },
+  {
+    description: '',
+    imagesPath: createImagesPaths(['bear.png', 'elephant.png', 'preview.png'], `${directoryPrefix}/busy-books`),
+    name: 'Busy Books',
+    year: 2023
+  },
+  {
+    description: '',
+    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png' ,'preview.png'], `${directoryPrefix}/exploring-friends`),
+    name: 'Exploring Friends',
+    year: 2023
+  },
+  {
+    description: '',
+    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png' ,'preview.png'], `${directoryPrefix}/underwater-friends`),
+    name: 'Underwater Friends',
+    year: 2023
+  },
+  {
+    description: '',
+    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png' ,'preview.png'], `${directoryPrefix}/magic-of-australia`),
+    name: 'Magic Of Australia',
+    year: 2023
+  },
+  {
+    description: '',
+    imagesPath: createImagesPaths(['left.png', 'right.png' ,'preview.png'], `${directoryPrefix}/musical-angels`),
+    name: 'Musical Angels',
+    year: 2023
+  },
+  {
+    description: '',
+    imagesPath: createImagesPaths(['flamingo-queen.png'], directoryPrefix),
+    name: 'Flamingo Queen',
+    year: 2023
+  },
 ];

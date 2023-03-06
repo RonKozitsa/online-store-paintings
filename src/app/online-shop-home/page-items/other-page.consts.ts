@@ -1,4 +1,3 @@
-import {StoreItemInterface} from '../../shared/components/store-item/store-item.interface';
-
+import { StoreItemInterface } from '../../shared/components/store-item/store-item.interface';
 
 export const otherPaintings: StoreItemInterface[] = [];

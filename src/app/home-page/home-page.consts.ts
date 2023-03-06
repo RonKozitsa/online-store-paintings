@@ -62,11 +62,11 @@ export const artistsQuotes: QuoteI[] = [
     artist: 'Leonardo da Vinci'
   },
   {
-    quote: 'Have no fear of perfection, you\'ll never reach it.',
+    quote: "Have no fear of perfection, you'll never reach it.",
     artist: 'Salvador Dalí'
   },
   {
-    quote: 'If you hear a voice within you say \'you cannot paint\', then by all means paint, and that voice will be silenced.',
+    quote: "If you hear a voice within you say 'you cannot paint', then by all means paint, and that voice will be silenced.",
     artist: 'Vincent van Gogh'
   },
   {
@@ -74,7 +74,7 @@ export const artistsQuotes: QuoteI[] = [
     artist: 'Pablo Picasso'
   },
   {
-    quote: 'Every child is an artist until he\'s told he\'s not an artist.',
-    artist: 'John Lennon',
+    quote: "Every child is an artist until he's told he's not an artist.",
+    artist: 'John Lennon'
   }
 ];

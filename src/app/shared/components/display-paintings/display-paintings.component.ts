@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 import { StoreItemInterface } from '../store-item/store-item.interface';
 
@@ -19,6 +19,6 @@ export class DisplayPaintingsComponent implements OnInit {
   imagePathToDisplay: string;
 
   ngOnInit() {
-    this.imagePathToDisplay = this.itemConfig.imagesPath.find(path => path.includes('preview')) || this.itemConfig.imagesPath[0];
+    this.imagePathToDisplay = this.itemConfig.imagesPath.find((path) => path.includes('preview')) || this.itemConfig.imagesPath[0];
   }
 }

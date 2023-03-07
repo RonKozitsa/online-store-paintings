@@ -203,4 +203,9 @@
       width: 350px !important;
     }
   }
+
+  .modal-body.expanded-view-item .paintings .carousel {
+    display: block;
+    height: 300px;
+  }
 }

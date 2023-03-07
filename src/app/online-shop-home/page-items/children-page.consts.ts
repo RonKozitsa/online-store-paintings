@@ -11,20 +11,10 @@ export const childrenPaintings: StoreItemInterface[] = [
     year: 2020
   },
   {
-    description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
-    imagesPath: createImagesPaths(['astronaut.jpeg', 'missile.jpeg'], `${directoryPrefix}/astronaut-set`),
-    name: "Astronaut's Dreams",
-    soldOut: true,
-    printAvailable: true,
-    year: 2020
-  },
-  {
-    description: 'Two little pirates, never alone discovering hidden treasures on their pirate map  \n',
-    imagesPath: createImagesPaths(['pirate-left.jpeg', 'pirate-right.jpeg'], `${directoryPrefix}/pirate-set`),
-    name: 'Two pirates',
-    soldOut: true,
-    printAvailable: true,
-    year: 2019
+    description: '',
+    name: 'Animal Kingdom',
+    imagesPath: createImagesPaths(['zebra.png', 'rhino.png', 'hippo.png', 'lion.png', 'tiger.png', 'giraffe.png', 'crocodile.png', 'elephant.png', 'monkey.png', 'preview.png'], `${directoryPrefix}/animal-kingdom`),
+    year: 2023
   },
   {
     description: 'Simple and timeless trilogy with calm colors that can fit any room\n',
@@ -33,12 +23,6 @@ export const childrenPaintings: StoreItemInterface[] = [
     soldOut: true,
     imagesPath: createImagesPaths(['lama-left.jpeg', 'lama-middle.jpeg', 'lama-right.jpeg', 'lama-preview.jpeg'], `${directoryPrefix}/lama-set`),
     year: 2020
-  },
-  {
-    description: '',
-    name: 'Animal Kingdom',
-    imagesPath: createImagesPaths(['zebra.png', 'rhino.png', 'hippo.png', 'lion.png', 'tiger.png', 'giraffe.png', 'crocodile.png', 'elephant.png', 'monkey.png', 'preview.png'], `${directoryPrefix}/animal-kingdom`),
-    year: 2023
   },
   {
     description: '',
@@ -69,6 +53,22 @@ export const childrenPaintings: StoreItemInterface[] = [
     imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png', 'preview.png'], `${directoryPrefix}/magic-of-australia`),
     name: 'Magic Of Australia',
     year: 2023
+  },
+  {
+    description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
+    imagesPath: createImagesPaths(['astronaut.jpeg', 'missile.jpeg'], `${directoryPrefix}/astronaut-set`),
+    name: "Astronaut's Dreams",
+    soldOut: true,
+    printAvailable: true,
+    year: 2020
+  },
+  {
+    description: 'Two little pirates, never alone discovering hidden treasures on their pirate map  \n',
+    imagesPath: createImagesPaths(['pirate-left.jpeg', 'pirate-right.jpeg'], `${directoryPrefix}/pirate-set`),
+    name: 'Two pirates',
+    soldOut: true,
+    printAvailable: true,
+    year: 2019
   },
   {
     description: '',

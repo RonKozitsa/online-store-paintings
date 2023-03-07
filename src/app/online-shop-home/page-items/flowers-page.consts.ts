@@ -12,7 +12,7 @@ export const flowersPaintings: StoreItemInterface[] = [
   },
   {
     description: 'Classic and romantic flowers with the most wonderful smell.\nNo wonder that they also can release stress and depression.',
-    imagesPath: createImagesPaths(['red-rose.jpeg'], `${directoryPrefix}/red-rose-set`),
+    imagesPath: createImagesPaths(['red-rose.jpeg'], `${directoryPrefix}`),
     name: 'Rose',
     year: 2019
   },
@@ -25,7 +25,7 @@ export const flowersPaintings: StoreItemInterface[] = [
   },
   {
     description: "When a leek flower came across me, I couldn't help but paint and reflect it's beauty. Leek contain a variety of nutrients, may reduce inflammation and promote heart health.",
-    imagesPath: createImagesPaths(['leek-flower.jpeg'], `${directoryPrefix}/leek-flower-set`),
+    imagesPath: createImagesPaths(['leek-flower.jpeg'], `${directoryPrefix}`),
     name: 'Leek Flower',
     year: 2021
   },
@@ -93,7 +93,7 @@ export const flowersPaintings: StoreItemInterface[] = [
   {
     description: 'Is used for insomnia, bladder and liver diseases.',
     framed: true,
-    imagesPath: createImagesPaths(['yellow-flowers.jpeg', 'preview.jpeg'], `${directoryPrefix}/poppy-set`),
+    imagesPath: createImagesPaths(['poppy.jpeg'], `${directoryPrefix}`),
     name: 'Poppy',
     year: 2018
   },

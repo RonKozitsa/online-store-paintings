@@ -8,7 +8,7 @@ export const naturePaintings: StoreItemInterface[] = [
     description:
       'The best vacation locations include exotic palm trees, waves and snorkeling, where my paintings will give a sense of the calm feeling of relaxing on the beach, reading a book while listening to the crashing of the waves in the background.',
     id: 1,
-    imagesPath: createImagesPaths(['tree.jpeg', 'wave.jpeg', 'fish.jpeg', 'preview.jpeg'], `${directoryPrefix}/beach-set`),
+    imagesPath: createImagesPaths(['tree.jpeg', 'wave.jpeg', 'fish.jpeg'], `${directoryPrefix}/beach-set`),
     name: 'Vacation',
     year: 2018
   },
@@ -35,7 +35,7 @@ export const naturePaintings: StoreItemInterface[] = [
   {
     description: 'A tall mighty soldier, who stands at the boarder of the sea, providing hope and security and guidance for the sailors who pass him day and night.',
     id: 1,
-    imagesPath: createImagesPaths(['light-tower.jpeg', 'light-tower-preview.jpeg'], `${directoryPrefix}/light-tower-set`),
+    imagesPath: createImagesPaths(['light-tower.jpeg'], `${directoryPrefix}/light-tower-set`),
     name: 'Lighthouse',
     year: 2018
   },

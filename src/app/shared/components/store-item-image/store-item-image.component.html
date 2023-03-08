@@ -1,8 +1,8 @@
 <img
     class="store-image"
     ngSrc="/assets/pictures/{{ imgPath }}"
-    [height]="isViewExpandedMode ? 'auto' : '220px'"
-    [width]="isViewExpandedMode ? 'auto' : '220px'"
+    height="auto"
+    width="auto"
     [alt]="alt"
     [ngClass]="{ frame: frameColor, clickable: !isViewExpandedMode}"
     [style.border-color]="frameColor"

@@ -15,8 +15,4 @@ export class ThemeControllerComponent {
   readonly ThemeType = ThemeType;
 
   constructor(public themeService: ThemeService) {}
-
-  get imagePath(): string {
-    return ``;
-  }
 }

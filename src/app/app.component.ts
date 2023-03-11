@@ -12,7 +12,7 @@ import { BreakpointObserverService } from './shared/services/breakpoint-observer
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [trigger('fadeInOut', animations.fadeInOut)]
+  animations: [trigger('slideInOut', animations.slideInOut)]
 })
 export class AppComponent {
   readonly ButtonType = ButtonType;

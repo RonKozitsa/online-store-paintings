@@ -1,7 +1,7 @@
 <div class="website-wrapper">
     <ng-container *ngIf="breakpointObserverService.isSmallDevice() else bigDeviceNavigation">
         <app-navigation-header *ngIf="showNavigationMenu$ | async" class="app-navigation-side" (appClickOut)="toggleMenu($event)"
-                               (navigationClicked)="toggleMenu()" @fadeInOut></app-navigation-header>
+                               (navigationClicked)="toggleMenu()" @slideInOut></app-navigation-header>
         <div class="small-device-header">
             <app-button class="menu-icon-button"
                         label="main menu"

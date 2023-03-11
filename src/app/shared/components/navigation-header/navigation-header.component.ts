@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { NavigationItemInterface } from '../navigation/navigation.interface';
 import { MainPagesNavigationNamesEnums } from '../../interfaces/pages-navigation-names.interface';
@@ -11,7 +12,10 @@ import { ButtonType } from '../app-button/app-button.interface';
 })
 export class NavigationHeaderComponent {
   readonly ButtonType = ButtonType;
+
   @Output() navigationClicked = new EventEmitter<void>();
+
+  constructor(private router: Router) {}
 
   navigationMenu: NavigationItemInterface[] = [
     {
@@ -31,4 +35,9 @@ export class NavigationHeaderComponent {
       url: MainPagesNavigationNamesEnums.contact
     }
   ];
+
+  homeButtonClicked() {
+    this.navigationClicked.emit();
+    this.router.navigate(['/home']);
+  }
 }

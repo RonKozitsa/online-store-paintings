@@ -176,6 +176,7 @@
       .online-shop-page-content {
         padding: 0 !important;
       }
+
       .shopping-content .shop-side-menu {
         padding-top: 20px;
 
@@ -204,8 +205,11 @@
     }
   }
 
-  .modal-body.expanded-view-item .paintings .carousel {
-    display: block;
-    height: 300px;
+  .modal-body.expanded-view-item .paintings {
+    .carousel,
+    .display-store-image {
+      display: block;
+      height: 300px;
+    }
   }
 }

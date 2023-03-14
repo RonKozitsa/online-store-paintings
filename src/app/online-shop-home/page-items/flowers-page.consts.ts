@@ -5,12 +5,6 @@ const directoryPrefix = 'flowers';
 
 export const flowersPaintings: StoreItemInterface[] = [
   {
-    description: 'These small little plants are not only fun to paint, they also have much to offer.' + '\nThey can help purify the air, improve your focus and enhance memory.',
-    imagesPath: createImagesPaths(['left.jpeg', 'right.jpeg', 'middle.jpeg', 'preview.jpeg'], `${directoryPrefix}/cactus-set`),
-    name: 'Succulent',
-    year: 2020
-  },
-  {
     description: 'Classic and romantic flowers with the most wonderful smell.\nNo wonder that they also can release stress and depression.',
     imagesPath: createImagesPaths(['red-rose.jpeg'], `${directoryPrefix}`),
     name: 'Rose',
@@ -83,6 +77,12 @@ export const flowersPaintings: StoreItemInterface[] = [
     id: 3,
     name: 'Magnolia',
     year: 2019
+  },
+  {
+    description: 'These small little plants are not only fun to paint, they also have much to offer.' + '\nThey can help purify the air, improve your focus and enhance memory.',
+    imagesPath: createImagesPaths(['left.jpeg', 'right.jpeg', 'middle.jpeg', 'preview.jpeg'], `${directoryPrefix}/cactus-set`),
+    name: 'Succulent',
+    year: 2020
   },
   {
     description: '',

@@ -61,13 +61,4 @@ export const naturePaintings: StoreItemInterface[] = [
     name: 'A walk in the desert',
     year: 2018
   },
-  {
-    description: '',
-    id: 1,
-    imagesPath: createImagesPaths(['lake.jpeg'], directoryPrefix),
-    name: '',
-    year: 2021,
-    soldOut: true,
-    printAvailable: true
-  }
 ];

@@ -68,11 +68,14 @@
       margin-top: auto;
       width: 100%;
 
+      .want-it-btn {
+        @include mixins.flex($center: true);
+      }
+
       .item-color-picker {
         @include mixins.flex();
         align-items: center;
         position: relative;
-        flex-basis: 200px;
         flex-shrink: 0;
 
         &-button {

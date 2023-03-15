@@ -12,7 +12,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 18,
       width: 13
-    },
+    }
   },
   {
     description: 'Little fairy on a big elephant inside a playroom where anything can can happen with the right imagination',
@@ -32,7 +32,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 45,
       width: 45
-    },
+    }
   },
   {
     description: 'Cute little boy discovering to unknown world filled of wonders.',
@@ -42,7 +42,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 18,
       width: 13
-    },
+    }
   },
   {
     description: 'What a better fit than an elephant and a bear discovering the many different adventures and worlds inside of books -perfect for book lovers.',
@@ -52,7 +52,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 20,
       width: 25
-    },
+    }
   },
   {
     description: 'Different forest animals smiling at the tourist who took their picture on their hike in the mountains, while feeling the fresh and quiet air.',
@@ -62,7 +62,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 18,
       width: 13
-    },
+    }
   },
   {
     description: 'Not to forget the unseen world of wonders, perfect for those beach and swim lovers.',
@@ -72,7 +72,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 18,
       width: 13
-    },
+    }
   },
   {
     description: 'Little Australian animals each nurturing their own little babies, providing them with love and comfort.',
@@ -82,7 +82,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 20,
       width: 25
-    },
+    }
   },
   {
     description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
@@ -106,7 +106,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 20,
       width: 25
-    },
+    }
   },
   {
     description: 'Two little pirates, never alone discovering hidden treasures on their pirate map  \n',
@@ -124,7 +124,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 25,
       width: 30
-    },
+    }
   },
   {
     description: 'Flamingo proudly standing with her little crown waiting to be admired from a little girl in her bedroom.',
@@ -134,7 +134,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 18,
       width: 13
-    },
+    }
   },
   {
     description: 'Little royal animal friends who found each other in the forrest.',
@@ -144,6 +144,6 @@ export const childrenPaintings: StoreItemInterface[] = [
     dimensions: {
       height: 31,
       width: 25
-    },
-  },
+    }
+  }
 ];

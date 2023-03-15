@@ -2,9 +2,9 @@ import { Component, ChangeDetectionStrategy, Input, ViewChild, ElementRef } from
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
-import {ItemDimensionsI, StoreItemInterface} from '../store-item/store-item.interface';
+import { ItemDimensionsI, StoreItemInterface } from '../store-item/store-item.interface';
 import { ButtonType } from '../app-button/app-button.interface';
-import {BreakpointObserverService} from '../../services/breakpoint-observer.service';
+import { BreakpointObserverService } from '../../services/breakpoint-observer.service';
 
 @Component({
   selector: 'app-item-expanded-view',

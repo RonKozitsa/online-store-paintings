@@ -60,5 +60,5 @@ export const naturePaintings: StoreItemInterface[] = [
     imagesPath: createImagesPaths(['left.jpeg', 'middle.jpeg', 'right.jpeg'], `${directoryPrefix}/desert-set`),
     name: 'A walk in the desert',
     year: 2018
-  },
+  }
 ];

@@ -5,6 +5,7 @@ export interface StoreItemInterface {
   dimensions?: ItemDimensionsI;
   id?: number;
   framed?: boolean;
+  price?: number;
   year?: number;
   soldOut?: boolean;
   printAvailable?: boolean;

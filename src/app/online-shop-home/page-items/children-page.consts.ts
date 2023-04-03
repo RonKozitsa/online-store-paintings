@@ -86,7 +86,7 @@ export const childrenPaintings: StoreItemInterface[] = [
   },
   {
     description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
-    imagesPath: createImagesPaths(['astronaut.jpeg', 'missile.jpeg'], `${directoryPrefix}/astronaut-set`),
+    imagesPath: createImagesPaths(['astronaut.jpeg', 'missile.jpeg', 'preview.jpg'], `${directoryPrefix}/astronaut-set`),
     name: "Astronaut's Dreams",
     soldOut: true,
     printAvailable: true,
@@ -110,7 +110,7 @@ export const childrenPaintings: StoreItemInterface[] = [
   },
   {
     description: 'Two little pirates, never alone discovering hidden treasures on their pirate map  \n',
-    imagesPath: createImagesPaths(['pirate-left.jpeg', 'pirate-right.jpeg'], `${directoryPrefix}/pirate-set`),
+    imagesPath: createImagesPaths(['pirate-left.jpeg', 'pirate-right.jpeg', 'preview.jpg'], `${directoryPrefix}/pirate-set`),
     name: 'Two pirates',
     soldOut: true,
     printAvailable: true,

@@ -19,6 +19,9 @@
         <div class="item-info-section">
             <h5 *ngIf="!breakpointObserverService.isSmallDevice()" class="item-info-section-title">Information:</h5>
             <div class="item-info-section-content">
+                <span class="key">Price:</span>
+                <span *ngIf="itemConfig.price else noPriceTpl" class="value">{{ itemConfig.price }}&#8362;</span>
+                <ng-template #noPriceTpl><span>Please contact for price</span></ng-template>
                 <span class="key">Dimensions:</span>
                 <span class="value">{{ itemConfig.dimensions ? itemDimensionsForDisplay(itemConfig.dimensions) : 'Please contact to get dimensions' }}</span>
                 <span class="key">Year:</span>

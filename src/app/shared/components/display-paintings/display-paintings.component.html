@@ -1,6 +1,7 @@
 <ng-container *ngIf="!isSet || !isViewExpandedMode; else setCollection">
     <app-store-item-image
         class="display-store-image"
+        alt="{{itemConfig.name}} painting"
         [imgPath]="imagePathToDisplay"
         [priority]="loadImageAsPriority"
         [isViewExpandedMode]="isViewExpandedMode"

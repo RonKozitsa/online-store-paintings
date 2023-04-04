@@ -44,10 +44,10 @@ export class ItemExpandedViewComponent {
   }
 
   getWantItButtonLabel(item: StoreItemInterface): string {
-    if (!item.soldOut) {
+    if (!(item.soldOutPrintUnavailable || item.soldOutPrintAvailable)) {
       return 'I Want It !';
-    } else if (item.soldOut) {
-      return item.printAvailable ? 'Get A Print' : 'Sold Out';
+    } else {
+      return item.soldOutPrintAvailable ? 'Get A Print' : 'Sold Out';
     }
   }
 

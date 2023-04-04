@@ -88,8 +88,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
     imagesPath: createImagesPaths(['astronaut.jpeg', 'missile.jpeg', 'preview.jpg'], `${directoryPrefix}/astronaut-set`),
     name: "Astronaut's Dreams",
-    soldOut: true,
-    printAvailable: true,
+    soldOutPrintAvailable: true,
     dimensions: {
       height: 20,
       width: 25
@@ -100,7 +99,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     description: 'Simple and timeless trilogy with calm colors that can fit any room\n',
     framed: true,
     name: 'Llama Queen',
-    soldOut: true,
+    soldOutPrintUnavailable: true,
     imagesPath: createImagesPaths(['lama-left.jpeg', 'lama-middle.jpeg', 'lama-right.jpeg', 'lama-preview.jpeg'], `${directoryPrefix}/lama-set`),
     year: 2020,
     dimensions: {
@@ -112,8 +111,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     description: 'Two little pirates, never alone discovering hidden treasures on their pirate map  \n',
     imagesPath: createImagesPaths(['pirate-left.jpeg', 'pirate-right.jpeg', 'preview.jpg'], `${directoryPrefix}/pirate-set`),
     name: 'Two pirates',
-    soldOut: true,
-    printAvailable: true,
+    soldOutPrintAvailable: true,
     year: 2019
   },
   {
@@ -130,6 +128,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     description: 'Flamingo proudly standing with her little crown waiting to be admired from a little girl in her bedroom.',
     imagesPath: createImagesPaths(['flamingo-queen.png'], directoryPrefix),
     name: 'Flamingo Queen',
+    soldOutPrintAvailable: true,
     year: 2023,
     dimensions: {
       height: 18,

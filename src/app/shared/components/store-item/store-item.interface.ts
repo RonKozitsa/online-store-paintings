@@ -7,8 +7,8 @@ export interface StoreItemInterface {
   framed?: boolean;
   price?: number;
   year?: number;
-  soldOut?: boolean;
-  printAvailable?: boolean;
+  soldOutPrintAvailable?: boolean;
+  soldOutPrintUnavailable?: boolean;
 }
 
 export interface ItemDimensionsI {

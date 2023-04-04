@@ -12,6 +12,7 @@ export class StoreItemImageComponent {
   @Input() alt: string;
   @Input() frameColor: string;
   @Input() priority: boolean;
+  @Input() soldOut: boolean;
   @Input() isViewExpandedMode: boolean;
 
   imageLoaded$ = new BehaviorSubject<boolean>(false);

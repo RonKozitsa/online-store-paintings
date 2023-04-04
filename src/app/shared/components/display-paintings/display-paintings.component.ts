@@ -12,6 +12,7 @@ export class DisplayPaintingsComponent implements OnInit {
   @Input() frameColor: string;
   @Input() loadImageAsPriority: boolean;
   @Input() isViewExpandedMode: boolean;
+  @Input() soldOut: boolean;
   @Input() isSet: boolean;
 
   @Output() pictureClicked = new EventEmitter<null>();

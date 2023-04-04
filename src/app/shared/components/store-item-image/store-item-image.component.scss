@@ -6,17 +6,33 @@
   position: relative;
 }
 
-.store-image {
-  @include mixins.width-height-max-100();
-  object-fit: contain;
+.image-container {
+  @include mixins.width-height-100();
+  @include mixins.flex($center: true);
 
-  &.clickable {
-    cursor: pointer;
+  .store-image {
+    @include mixins.width-height-max-100();
+    object-fit: contain;
+
+    &.clickable {
+      cursor: pointer;
+    }
+
+    &.frame {
+      border-width: 15px;
+      border-style: ridge ridge groove groove;
+    }
   }
 
-  &.frame {
-    border-width: 15px;
-    border-style: ridge ridge groove groove;
+  .sold-out-image {
+    position: absolute;
+    transform: scale(0.7);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
   }
 }
 

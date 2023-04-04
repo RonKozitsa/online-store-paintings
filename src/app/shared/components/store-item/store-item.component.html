@@ -3,6 +3,7 @@
   <app-display-paintings class="paintings"
                          [itemConfig]="itemConfig"
                          [isSet]="isSet"
+                         [soldOut]="itemConfig.soldOutPrintUnavailable"
                          [loadImageAsPriority]="loadImageAsPriority"
                          (pictureClicked)="showDetails()"
   ></app-display-paintings>

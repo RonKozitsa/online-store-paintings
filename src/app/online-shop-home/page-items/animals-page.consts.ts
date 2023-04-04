@@ -13,6 +13,7 @@ export const animalPaintings: StoreItemInterface[] = [
   {
     description: 'The first thing I wanted to see when entering the zoo was the pink special looking bird standing on one leg',
     name: 'Flamingos',
+    soldOutPrintAvailable: true,
     imagesPath: createImagesPaths(['flamingos.jpeg'], directoryPrefix),
     year: 2020
   },
@@ -31,6 +32,7 @@ export const animalPaintings: StoreItemInterface[] = [
   {
     description: '',
     name: 'Highland Cow',
+    soldOutPrintUnavailable: true,
     imagesPath: createImagesPaths(['cow.jpeg'], directoryPrefix),
     year: 2018
   },

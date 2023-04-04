@@ -1,13 +1,16 @@
-<img
-    class="store-image"
-    ngSrc="/assets/pictures/{{ imgPath }}"
-    [alt]="alt"
-    [height]="isViewExpandedMode ? 'auto' : undefined"
-    [width]="isViewExpandedMode ? 'auto' : undefined"
-    [ngClass]="{ frame: frameColor, clickable: !isViewExpandedMode}"
-    [style.border-color]="frameColor"
-    [priority]="priority"
-    (load)="imageLoaded$.next(true)"
-    [fill]="!isViewExpandedMode"
-/>
+<div class="image-container">
+    <img
+        class="store-image"
+        ngSrc="/assets/pictures/{{ imgPath }}"
+        [alt]="alt"
+        [height]="isViewExpandedMode ? 'auto' : undefined"
+        [width]="isViewExpandedMode ? 'auto' : undefined"
+        [ngClass]="{ frame: frameColor, clickable: !isViewExpandedMode}"
+        [style.border-color]="frameColor"
+        [priority]="priority"
+        (load)="imageLoaded$.next(true)"
+        [fill]="!isViewExpandedMode"
+    />
+    <img *ngIf="(imageLoaded$ | async) && !isViewExpandedMode && soldOut" class="sold-out-image" src="assets/svg/sold-out.svg">
+</div>
 <app-loader *ngIf="(imageLoaded$ | async) === false" class="image-loader"></app-loader>

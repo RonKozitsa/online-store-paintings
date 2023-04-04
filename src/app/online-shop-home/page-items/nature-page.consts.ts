@@ -44,6 +44,7 @@ export const naturePaintings: StoreItemInterface[] = [
     id: 1,
     imagesPath: createImagesPaths(['landscape.jpeg'], directoryPrefix),
     name: 'Valley of beauty',
+    soldOutPrintAvailable: true,
     year: 2021
   },
 
@@ -51,6 +52,7 @@ export const naturePaintings: StoreItemInterface[] = [
     description: 'The long and painful way up a steep mountain, blisters on the feet, pushing the limits, and showing endurance is all worth the view and a small picnic.',
     id: 1,
     imagesPath: createImagesPaths(['mountain.jpeg'], directoryPrefix),
+    soldOutPrintUnavailable: true,
     name: 'Mountain',
     year: 2015
   },

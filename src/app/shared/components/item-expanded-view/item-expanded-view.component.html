@@ -49,8 +49,8 @@
             <app-button
                 class="want-it-btn"
                 label="contact for painting details"
-                [infoTooltip]="itemConfig.soldOut && itemConfig.printAvailable ? 'Original painting is already sold out. You can purchase a print.' : ''"
-                [disabled]="itemConfig.soldOut && !itemConfig.printAvailable"
+                [infoTooltip]="itemConfig.soldOutPrintAvailable ? 'Original painting is already sold out. You can purchase a print.' : ''"
+                [disabled]="itemConfig.soldOutPrintUnavailable"
                 [buttonType]="buttonType.standard"
                 (clicked)="navigateToContact(itemConfig)"
             >

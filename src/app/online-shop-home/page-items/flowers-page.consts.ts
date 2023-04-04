@@ -34,6 +34,7 @@ export const flowersPaintings: StoreItemInterface[] = [
     framed: true,
     id: 1,
     imagesPath: createImagesPaths(['magnolia.jpeg'], directoryPrefix),
+    soldOutPrintUnavailable: true,
     name: 'Magnolia',
     year: 2018
   },
@@ -42,6 +43,7 @@ export const flowersPaintings: StoreItemInterface[] = [
     id: 2,
     framed: true,
     imagesPath: createImagesPaths(['echinacea-2.jpeg'], directoryPrefix),
+    soldOutPrintUnavailable: true,
     name: 'Echinacea',
     year: 2018
   },
@@ -62,6 +64,7 @@ export const flowersPaintings: StoreItemInterface[] = [
     description: 'Purifies the air, promotes restful sleep, removes mold spores from the air.',
     imagesPath: createImagesPaths(['lily.jpeg'], directoryPrefix),
     name: 'Lily',
+    soldOutPrintAvailable: true,
     year: 2018
   },
   {

@@ -16,8 +16,7 @@ export class ThemeService {
   }
 
   setInitialTheme() {
-    const preferredTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? ThemeType.Dark : ThemeType.Light;
-    const currentTheme = (window.localStorage.getItem('theme') as ThemeType) || preferredTheme;
+    const currentTheme = (window.localStorage.getItem('theme') as ThemeType) || ThemeType.Dark;
     this.setCurrentTheme(currentTheme);
   }
 

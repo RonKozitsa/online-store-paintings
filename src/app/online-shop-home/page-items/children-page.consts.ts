@@ -39,6 +39,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     imagesPath: createImagesPaths(['explorer.png'], directoryPrefix),
     name: 'The Explorer',
     year: 2023,
+    framed: true,
     dimensions: {
       height: 18,
       width: 13
@@ -59,6 +60,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png', 'preview.png'], `${directoryPrefix}/exploring-friends`),
     name: 'Exploring Friends',
     year: 2023,
+    framed: true,
     dimensions: {
       height: 18,
       width: 13
@@ -69,6 +71,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png', 'preview.png'], `${directoryPrefix}/underwater-friends`),
     name: 'Underwater Friends',
     year: 2023,
+    framed: true,
     dimensions: {
       height: 18,
       width: 13
@@ -79,6 +82,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png', 'preview.png'], `${directoryPrefix}/magic-of-australia`),
     name: 'Little Australia',
     year: 2023,
+    soldOutPrintUnavailable: true,
     dimensions: {
       height: 20,
       width: 25
@@ -87,11 +91,11 @@ export const childrenPaintings: StoreItemInterface[] = [
   {
     description: 'Any boy’s dream room filled with toys, paintings and one big racket to discover the mysterious and unknown planets ',
     imagesPath: createImagesPaths(['astronaut.jpeg', 'missile.jpeg', 'preview.jpg'], `${directoryPrefix}/astronaut-set`),
-    name: "Astronaut's Dreams",
+    name: "Astronaut's Dream",
     soldOutPrintAvailable: true,
     dimensions: {
       height: 20,
-      width: 25
+      width: 20
     },
     year: 2020
   },
@@ -103,7 +107,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     imagesPath: createImagesPaths(['lama-left.jpeg', 'lama-middle.jpeg', 'lama-right.jpeg', 'lama-preview.jpeg'], `${directoryPrefix}/lama-set`),
     year: 2020,
     dimensions: {
-      height: 20,
+      height: 25,
       width: 25
     }
   },
@@ -111,6 +115,10 @@ export const childrenPaintings: StoreItemInterface[] = [
     description: 'Two little pirates, never alone discovering hidden treasures on their pirate map  \n',
     imagesPath: createImagesPaths(['pirate-left.jpeg', 'pirate-right.jpeg', 'preview.jpg'], `${directoryPrefix}/pirate-set`),
     name: 'Two pirates',
+    dimensions: {
+      height: 25,
+      width: 25
+    },
     soldOutPrintAvailable: true,
     year: 2019
   },
@@ -125,10 +133,17 @@ export const childrenPaintings: StoreItemInterface[] = [
     }
   },
   {
+    description: '',
+    name: 'Camels in the desert',
+    framed: true,
+    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png', 'preview.png'], `${directoryPrefix}/camels-in-desert-set`),
+    year: 2023
+  },
+  {
     description: 'Flamingo proudly standing with her little crown waiting to be admired from a little girl in her bedroom.',
     imagesPath: createImagesPaths(['flamingo-queen.png'], directoryPrefix),
     name: 'Flamingo Queen',
-    soldOutPrintAvailable: true,
+    framed: true,
     year: 2023,
     dimensions: {
       height: 18,
@@ -141,7 +156,7 @@ export const childrenPaintings: StoreItemInterface[] = [
     name: 'Royal forrest friends',
     year: 2023,
     dimensions: {
-      height: 31,
+      height: 30,
       width: 25
     }
   }

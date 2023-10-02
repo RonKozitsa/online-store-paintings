@@ -25,10 +25,21 @@
         "plugin:@angular-eslint/template/process-inline-templates",
         "plugin:prettier/recommended"
       ],
+      "plugins": ["@typescript-eslint"],
       "rules": {
         "no-unused-vars": "off",
-        "@typescript-eslint/no-unused-vars": ["warn"],
-        "@typescript-eslint/no-empty-function": ["error", {"allow": ["arrowFunctions", "methods"]}],
+        "@typescript-eslint/no-unused-vars": [
+          "warn"
+        ],
+        "@typescript-eslint/no-empty-function": [
+          "error",
+          {
+            "allow": [
+              "arrowFunctions",
+              "methods"
+            ]
+          }
+        ],
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -54,8 +65,7 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {
-      }
+      "rules": {}
     }
   ]
 }

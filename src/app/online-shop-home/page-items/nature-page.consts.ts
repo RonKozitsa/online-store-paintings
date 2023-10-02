@@ -13,12 +13,6 @@ export const naturePaintings: StoreItemInterface[] = [
     year: 2018
   },
   {
-    description: '',
-    name: 'Camels in the desert',
-    imagesPath: createImagesPaths(['left.png', 'middle.png', 'right.png', 'preview.png'], `${directoryPrefix}/camels-in-desert-set`),
-    year: 2023
-  },
-  {
     description: 'Willow trees are my favorite because they give a sense of comfort and calmness, while the branches slowly move in the wind with a soft sound.',
     id: 1,
     imagesPath: createImagesPaths(['pond.jpeg'], directoryPrefix),

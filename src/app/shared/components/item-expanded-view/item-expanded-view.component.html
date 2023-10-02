@@ -20,10 +20,14 @@
             <h5 *ngIf="!breakpointObserverService.isSmallDevice()" class="item-info-section-title">Information:</h5>
             <div class="item-info-section-content">
                 <span class="key">Price:</span>
-                <span *ngIf="itemConfig.price else noPriceTpl" class="value">{{ itemConfig.price }}&#8362;</span>
+                <div *ngIf="itemConfig.price || itemConfig.pricePrint else noPriceTpl" class="value">
+                    <div>Original - {{ itemConfig.price }}&#8362;</div>
+                    <div *ngIf="itemConfig.pricePrint" class="value">Print - {{ itemConfig.pricePrint }}&#8362;</div>
+                </div>
                 <ng-template #noPriceTpl><span>Please contact for price</span></ng-template>
                 <span class="key">Dimensions:</span>
-                <span class="value">{{ itemConfig.dimensions ? itemDimensionsForDisplay(itemConfig.dimensions) : 'Please contact to get dimensions' }}</span>
+                <span
+                    class="value">{{ itemConfig.dimensions ? itemDimensionsForDisplay(itemConfig.dimensions) : 'Please contact to get dimensions' }}</span>
                 <span class="key">Year:</span>
                 <span class="value">{{itemConfig.year}}</span>
                 <span class="key">Framed:</span>

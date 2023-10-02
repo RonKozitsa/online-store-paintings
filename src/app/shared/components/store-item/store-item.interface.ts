@@ -6,6 +6,7 @@ export interface StoreItemInterface {
   id?: number;
   framed?: boolean;
   price?: number;
+  pricePrint?: number;
   year?: number;
   soldOutPrintAvailable?: boolean;
   soldOutPrintUnavailable?: boolean;

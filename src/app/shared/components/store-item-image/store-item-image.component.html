@@ -1,4 +1,4 @@
-<div class="image-container">
+<div class="image-container" [class.loaded]="imageLoaded$ | async">
     <img
         class="store-image"
         ngSrc="/assets/pictures/{{ imgPath }}"
@@ -8,9 +8,9 @@
         [ngClass]="{ frame: frameColor, clickable: !isViewExpandedMode}"
         [style.border-color]="frameColor"
         [priority]="priority"
-        (load)="imageLoaded$.next(true)"
         [fill]="!isViewExpandedMode"
+        (load)="imageLoaded$.next(true)"
     />
-    <img *ngIf="(imageLoaded$ | async) && !isViewExpandedMode && soldOut" class="sold-out-image" src="assets/svg/sold-out.svg">
+    <img *ngIf="(imageLoaded$ | async) && !isViewExpandedMode && soldOut" class="sold-out-image" src="assets/svg/sold-out.svg" alt="sold out">
 </div>
 <app-loader *ngIf="(imageLoaded$ | async) === false" class="image-loader"></app-loader>

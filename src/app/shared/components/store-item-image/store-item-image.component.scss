@@ -10,7 +10,7 @@
   @include mixins.width-height-100();
   @include mixins.flex($center: true);
 
-  &:after {
+  &.loaded:after {
     @include mixins.flex($center: true);
     content: "Blooming Arts";
     position: absolute;

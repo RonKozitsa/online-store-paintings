@@ -3,7 +3,7 @@ import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, OnInit
 import { StoreItemInterface } from '../store-item/store-item.interface';
 import { StoreItemImageComponent } from '../store-item-image/store-item-image.component';
 import { AppCarouselComponent } from '../app-carousel/app-carousel.component';
-import {NgIf} from '@angular/common';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-display-paintings',

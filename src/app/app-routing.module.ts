@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { MainPagesNavigationNamesEnums } from './shared/interfaces/pages-navigation-names.interface';
 
-const routes: Routes = [
+export const appRoutes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
     path: MainPagesNavigationNamesEnums.home,
@@ -22,13 +21,3 @@ const routes: Routes = [
     loadComponent: () => import('./contact-page/contact-page.component').then((c) => c.ContactPageComponent)
   }
 ];
-
-@NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {
-      preloadingStrategy: PreloadAllModules
-    })
-  ],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}

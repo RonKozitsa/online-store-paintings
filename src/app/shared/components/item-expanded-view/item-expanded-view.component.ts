@@ -5,22 +5,17 @@ import { Router } from '@angular/router';
 import { ItemDimensionsI, StoreItemInterface } from '../store-item/store-item.interface';
 import { ButtonType } from '../app-button/app-button.interface';
 import { BreakpointObserverService } from '../../services/breakpoint-observer.service';
-import {AppButtonComponent} from '../app-button/app-button.component';
-import {DisplayPaintingsComponent} from '../display-paintings/display-paintings.component';
-import {NgIf} from '@angular/common';
-import {ColorPickerModule} from 'ngx-color-picker';
+import { AppButtonComponent } from '../app-button/app-button.component';
+import { DisplayPaintingsComponent } from '../display-paintings/display-paintings.component';
+import { NgIf } from '@angular/common';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 @Component({
   selector: 'app-item-expanded-view',
   templateUrl: './item-expanded-view.component.html',
   styleUrls: ['./item-expanded-view.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AppButtonComponent,
-    DisplayPaintingsComponent,
-    NgIf,
-    ColorPickerModule
-  ],
+  imports: [AppButtonComponent, DisplayPaintingsComponent, NgIf, ColorPickerModule],
   standalone: true
 })
 export class ItemExpandedViewComponent {

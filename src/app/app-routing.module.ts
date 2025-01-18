@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { MainPagesNavigationNamesEnums } from './shared/interfaces/pages-navigation-names.interface';
-import {ContactPageComponent} from './contact-page/contact-page.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -16,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: MainPagesNavigationNamesEnums.about,
-    loadComponent: () => import('./about-page/about-page.component').then(c => c.AboutPageComponent)
+    loadComponent: () => import('./about-page/about-page.component').then((c) => c.AboutPageComponent)
   },
   {
     path: MainPagesNavigationNamesEnums.contact,

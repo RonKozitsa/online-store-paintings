@@ -4,21 +4,16 @@ import { Router } from '@angular/router';
 import { NavigationItemInterface } from '../navigation/navigation.interface';
 import { MainPagesNavigationNamesEnums } from '../../interfaces/pages-navigation-names.interface';
 import { ButtonType } from '../app-button/app-button.interface';
-import {AppButtonComponent} from '../app-button/app-button.component';
-import {SocialMediaContactComponent} from '../social-media-contact/social-media-contact.component';
-import {ThemeControllerComponent} from '../theme-controller/theme-controller.component';
-import {NavigationComponent} from '../navigation/navigation.component';
+import { AppButtonComponent } from '../app-button/app-button.component';
+import { SocialMediaContactComponent } from '../social-media-contact/social-media-contact.component';
+import { ThemeControllerComponent } from '../theme-controller/theme-controller.component';
+import { NavigationComponent } from '../navigation/navigation.component';
 
 @Component({
   selector: 'app-navigation-header',
   templateUrl: './navigation-header.component.html',
   styleUrls: ['./navigation-header.component.scss'],
-  imports: [
-    AppButtonComponent,
-    SocialMediaContactComponent,
-    ThemeControllerComponent,
-    NavigationComponent
-  ],
+  imports: [AppButtonComponent, SocialMediaContactComponent, ThemeControllerComponent, NavigationComponent],
   standalone: true
 })
 export class NavigationHeaderComponent {

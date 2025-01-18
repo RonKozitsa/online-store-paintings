@@ -1,29 +1,22 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {FormGroup, ReactiveFormsModule, UntypedFormBuilder, Validators} from '@angular/forms';
+import { FormGroup, ReactiveFormsModule, UntypedFormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, finalize, Subject } from 'rxjs';
 
 import { ButtonType } from '../shared/components/app-button/app-button.interface';
 import { ContactPageFormControls } from './contact-page.interface';
-import {AsyncPipe, NgIf} from '@angular/common';
-import {InputTextComponent} from '../shared/components/input-text/input-text.component';
-import {AppButtonComponent} from '../shared/components/app-button/app-button.component';
-import {LoaderComponent} from '../shared/components/loader/loader.component';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { InputTextComponent } from '../shared/components/input-text/input-text.component';
+import { AppButtonComponent } from '../shared/components/app-button/app-button.component';
+import { LoaderComponent } from '../shared/components/loader/loader.component';
 
 @Component({
   selector: 'app-about-page',
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.scss'],
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    AsyncPipe,
-    InputTextComponent,
-    AppButtonComponent,
-    LoaderComponent,
-    NgIf
-  ]
+  imports: [ReactiveFormsModule, AsyncPipe, InputTextComponent, AppButtonComponent, LoaderComponent, NgIf]
 })
 export class ContactPageComponent implements OnInit, OnDestroy {
   readonly buttonType = ButtonType;

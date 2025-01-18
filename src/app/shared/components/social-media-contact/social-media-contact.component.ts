@@ -2,16 +2,14 @@ import { Component, ChangeDetectionStrategy, Inject } from '@angular/core';
 
 import { SocialMediaContactInterface } from './social-media-contact.interface';
 import { WINDOW } from '../../injection-tokens/window-token';
-import {NgForOf} from '@angular/common';
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-social-media-contact',
   templateUrl: './social-media-contact.component.html',
   styleUrls: ['./social-media-contact.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    NgForOf
-  ],
+  imports: [NgForOf],
   standalone: true
 })
 export class SocialMediaContactComponent {

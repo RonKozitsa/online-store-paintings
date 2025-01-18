@@ -10,7 +10,7 @@ import { NavigationHeaderComponent } from './shared/components/navigation-header
 import { AsyncPipe, NgIf } from '@angular/common';
 import { ClickOutsideDirective } from './shared/directives/click-outside.directive';
 import { AppButtonComponent } from './shared/components/app-button/app-button.component';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,14 +18,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [
-    NavigationHeaderComponent,
-    AppButtonComponent,
-    AsyncPipe,
-    ClickOutsideDirective,
-    RouterOutlet,
-    NgIf
-  ],
+  imports: [NavigationHeaderComponent, AppButtonComponent, AsyncPipe, ClickOutsideDirective, RouterOutlet, NgIf],
   animations: [trigger('slideInOut', animations.slideInOut)]
 })
 export class AppComponent {

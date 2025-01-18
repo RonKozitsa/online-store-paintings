@@ -5,7 +5,7 @@
 @use 'media-queries';
 @use 'overrides';
 @use 'variables';
-@import 'bootstrap/dist/css/bootstrap.css';
+@import 'bootstrap/scss/bootstrap';
 
 html {
   height: 100vh;

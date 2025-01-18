@@ -12,11 +12,11 @@ import { AppButtonComponent } from '../shared/components/app-button/app-button.c
 import { LoaderComponent } from '../shared/components/loader/loader.component';
 
 @Component({
-  selector: 'app-about-page',
+  selector: 'app-contact-page',
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.scss'],
-  standalone: true,
-  imports: [ReactiveFormsModule, AsyncPipe, InputTextComponent, AppButtonComponent, LoaderComponent, NgIf]
+  imports: [ReactiveFormsModule, AsyncPipe, InputTextComponent, AppButtonComponent, LoaderComponent, NgIf],
+  standalone: true
 })
 export class ContactPageComponent implements OnInit, OnDestroy {
   readonly buttonType = ButtonType;

@@ -7,8 +7,7 @@ import { StoreItemService } from '../../services/store-item.service';
   selector: 'app-store-item',
   templateUrl: './store-item.component.html',
   styleUrls: ['./store-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StoreItemComponent implements OnInit {
   @Input() itemConfig: StoreItemInterface;

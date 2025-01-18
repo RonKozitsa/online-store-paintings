@@ -6,8 +6,7 @@ import { SideMenuItemI } from './side-menu.interface';
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SideMenuComponent {
   @Input() sideMenuItems: SideMenuItemI[];

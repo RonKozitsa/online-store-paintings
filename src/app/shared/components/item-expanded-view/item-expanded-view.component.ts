@@ -10,8 +10,7 @@ import { BreakpointObserverService } from '../../services/breakpoint-observer.se
   selector: 'app-item-expanded-view',
   templateUrl: './item-expanded-view.component.html',
   styleUrls: ['./item-expanded-view.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemExpandedViewComponent {
   @ViewChild('paintings', { read: ElementRef }) paintings: ElementRef;

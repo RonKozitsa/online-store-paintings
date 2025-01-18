@@ -6,8 +6,7 @@ import { SideMenuItemI } from '../shared/components/side-menu/side-menu.interfac
   selector: 'app-online-shop-home',
   templateUrl: './online-shop-home.component.html',
   styleUrls: ['./online-shop-home.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OnlineShopHomeComponent {
   categories: SideMenuItemI[] = [

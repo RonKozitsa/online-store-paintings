@@ -8,8 +8,7 @@ import { ButtonType } from '../app-button/app-button.interface';
 @Component({
   selector: 'app-navigation-header',
   templateUrl: './navigation-header.component.html',
-  styleUrls: ['./navigation-header.component.scss'],
-  standalone: false
+  styleUrls: ['./navigation-header.component.scss']
 })
 export class NavigationHeaderComponent {
   readonly ButtonType = ButtonType;

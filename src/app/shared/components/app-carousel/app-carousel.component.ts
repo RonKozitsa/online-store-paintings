@@ -3,8 +3,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 @Component({
   selector: 'app-carousel',
   templateUrl: './app-carousel.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppCarouselComponent {
   @Input() frameColor: string;

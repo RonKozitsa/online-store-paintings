@@ -7,8 +7,7 @@ import { BreakpointObserverService } from '../../services/breakpoint-observer.se
   selector: 'app-button',
   templateUrl: './app-button.component.html',
   styleUrls: ['./app-button.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppButtonComponent {
   @HostBinding('attr.tabindex') tabIndex = -1;

@@ -5,8 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   selector: 'app-store-item-image',
   templateUrl: './store-item-image.component.html',
   styleUrls: ['./store-item-image.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StoreItemImageComponent {
   @Input() imgPath: string;

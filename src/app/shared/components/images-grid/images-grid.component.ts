@@ -7,8 +7,7 @@ import { StoreItemInterface } from '../store-item/store-item.interface';
   selector: 'app-images-grid',
   templateUrl: './images-grid.component.html',
   styleUrls: ['./images-grid.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ImagesGridComponent implements OnInit {
   @Input() gridItems: StoreItemInterface[] = [];

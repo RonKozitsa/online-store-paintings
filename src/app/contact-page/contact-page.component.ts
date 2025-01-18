@@ -10,8 +10,7 @@ import { ContactPageFormControls } from './contact-page.interface';
 @Component({
   selector: 'app-about-page',
   templateUrl: './contact-page.component.html',
-  styleUrls: ['./contact-page.component.scss'],
-  standalone: false
+  styleUrls: ['./contact-page.component.scss']
 })
 export class ContactPageComponent implements OnInit, OnDestroy {
   readonly buttonType = ButtonType;

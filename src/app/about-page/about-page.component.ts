@@ -4,8 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-about-page',
   templateUrl: './about-page.component.html',
   styleUrls: ['./about-page.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AboutPageComponent {
   age = this.getAge();

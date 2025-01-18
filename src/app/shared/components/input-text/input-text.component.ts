@@ -7,8 +7,7 @@ import { ValueAccessor } from '../../classes/value-accessor';
   selector: 'app-input-text',
   templateUrl: './input-text.component.html',
   styleUrls: ['./input-text.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InputTextComponent extends ValueAccessor implements OnInit {
   @Input() errorMessage = 'Please enter a valid value';

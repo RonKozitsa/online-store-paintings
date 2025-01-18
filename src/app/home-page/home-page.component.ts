@@ -13,8 +13,7 @@ import { MainPagesNavigationNamesEnums } from '../shared/interfaces/pages-naviga
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
   animations: [trigger('fadeInOut', animations.fadeInOut)],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePageComponent implements OnInit, OnDestroy {
   readonly mainPagesNavigationNamesEnums = MainPagesNavigationNamesEnums;

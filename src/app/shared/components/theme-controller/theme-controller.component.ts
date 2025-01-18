@@ -8,8 +8,7 @@ import { ThemeType } from './theme-controller.interface';
   selector: 'app-theme-controller',
   templateUrl: './theme-controller.component.html',
   styleUrls: ['./theme-controller.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThemeControllerComponent {
   readonly buttonType = ButtonType.icon;

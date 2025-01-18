@@ -1,8 +1,7 @@
 import { Directive, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Directive({
-  selector: '[appClickOut]',
-  standalone: false
+  selector: '[appClickOut]'
 })
 export class ClickOutsideDirective {
   @Output() appClickOut = new EventEmitter<MouseEvent>();

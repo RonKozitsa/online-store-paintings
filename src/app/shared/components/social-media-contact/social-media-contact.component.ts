@@ -7,8 +7,7 @@ import { WINDOW } from '../../injection-tokens/window-token';
   selector: 'app-social-media-contact',
   templateUrl: './social-media-contact.component.html',
   styleUrls: ['./social-media-contact.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SocialMediaContactComponent {
   configurations: SocialMediaContactInterface[];

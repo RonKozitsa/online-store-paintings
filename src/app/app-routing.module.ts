@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { MainPagesNavigationNamesEnums } from './shared/interfaces/pages-navigation-names.interface';
+import {ContactPageComponent} from './contact-page/contact-page.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
     path: MainPagesNavigationNamesEnums.home,
-    loadChildren: () => import('./home-page/home-page.module').then((m) => m.HomePageModule)
+    loadComponent: () => import('./home-page/home-page.component').then((c) => c.HomePageComponent)
   },
   {
     path: MainPagesNavigationNamesEnums.collection,
@@ -15,11 +16,11 @@ const routes: Routes = [
   },
   {
     path: MainPagesNavigationNamesEnums.about,
-    loadChildren: () => import('./about-page/about-page.module').then((m) => m.AboutPageModule)
+    loadComponent: () => import('./about-page/about-page.component').then(c => c.AboutPageComponent)
   },
   {
     path: MainPagesNavigationNamesEnums.contact,
-    loadChildren: () => import('./contact-page/contact-page.module').then((m) => m.ContactPageModule)
+    loadComponent: () => import('./contact-page/contact-page.component').then((c) => c.ContactPageComponent)
   }
 ];
 

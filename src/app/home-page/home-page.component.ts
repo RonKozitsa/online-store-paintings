@@ -7,13 +7,23 @@ import { ButtonType } from '../shared/components/app-button/app-button.interface
 import { artistsQuotes } from './home-page.consts';
 import { QuoteI } from './home-page.interface';
 import { MainPagesNavigationNamesEnums } from '../shared/interfaces/pages-navigation-names.interface';
+import {AppButtonComponent} from '../shared/components/app-button/app-button.component';
+import {AsyncPipe, NgIf} from '@angular/common';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
   animations: [trigger('fadeInOut', animations.fadeInOut)],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [
+    AppButtonComponent,
+    AsyncPipe,
+    NgIf,
+    RouterLink
+  ]
 })
 export class HomePageComponent implements OnInit, OnDestroy {
   readonly mainPagesNavigationNamesEnums = MainPagesNavigationNamesEnums;

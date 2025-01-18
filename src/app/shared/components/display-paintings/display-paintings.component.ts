@@ -1,11 +1,18 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 import { StoreItemInterface } from '../store-item/store-item.interface';
+import {StoreItemImageComponent} from '../store-item-image/store-item-image.component';
+import {AppCarouselComponent} from '../app-carousel/app-carousel.component';
 
 @Component({
   selector: 'app-display-paintings',
   templateUrl: './display-paintings.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    StoreItemImageComponent,
+    AppCarouselComponent
+  ],
+  standalone: true
 })
 export class DisplayPaintingsComponent implements OnInit {
   @Input() itemConfig: StoreItemInterface;

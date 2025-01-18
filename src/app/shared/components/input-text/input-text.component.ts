@@ -1,13 +1,19 @@
 import { Component, ChangeDetectionStrategy, Self, OnInit, Input } from '@angular/core';
-import { NgControl, Validators } from '@angular/forms';
+import {FormsModule, NgControl, Validators} from '@angular/forms';
 
 import { ValueAccessor } from '../../classes/value-accessor';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-input-text',
   templateUrl: './input-text.component.html',
   styleUrls: ['./input-text.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [
+    FormsModule,
+    NgIf
+  ]
 })
 export class InputTextComponent extends ValueAccessor implements OnInit {
   @Input() errorMessage = 'Please enter a valid value';

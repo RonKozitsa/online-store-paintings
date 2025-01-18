@@ -5,12 +5,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
+import {WINDOW} from './shared/injection-tokens/window-token';
+import {NavigationHeaderComponent} from './shared/components/navigation-header/navigation-header.component';
+import {AppButtonComponent} from './shared/components/app-button/app-button.component';
+import {ClickOutsideDirective} from './shared/directives/click-outside.directive';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule, NgbModule, LayoutModule],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, NgbModule, LayoutModule, NavigationHeaderComponent, AppButtonComponent, ClickOutsideDirective],
+  providers: [{ provide: WINDOW, useValue: window }]
 })
 export class AppModule {}

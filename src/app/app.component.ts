@@ -6,13 +6,28 @@ import { animations } from './shared/animations/animations';
 import { ButtonType } from './shared/components/app-button/app-button.interface';
 import { ThemeService } from './shared/services/theme.service';
 import { BreakpointObserverService } from './shared/services/breakpoint-observer.service';
+import {NavigationHeaderComponent} from './shared/components/navigation-header/navigation-header.component';
+import {AsyncPipe, NgIf} from '@angular/common';
+import {ClickOutsideDirective} from './shared/directives/click-outside.directive';
+import {AppButtonComponent} from './shared/components/app-button/app-button.component';
+import {RouterLink, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [trigger('slideInOut', animations.slideInOut)]
+  animations: [trigger('slideInOut', animations.slideInOut)],
+  imports: [
+    NavigationHeaderComponent,
+    AsyncPipe,
+    ClickOutsideDirective,
+    AppButtonComponent,
+    RouterOutlet,
+    NgIf,
+    RouterLink
+  ],
+  standalone: true
 })
 export class AppComponent {
   readonly ButtonType = ButtonType;

@@ -7,11 +7,11 @@ import { ButtonType } from '../app-button/app-button.interface';
 import { BreakpointObserverService } from '../../services/breakpoint-observer.service';
 
 @Component({
-    selector: 'app-item-expanded-view',
-    templateUrl: './item-expanded-view.component.html',
-    styleUrls: ['./item-expanded-view.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: 'app-item-expanded-view',
+  templateUrl: './item-expanded-view.component.html',
+  styleUrls: ['./item-expanded-view.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false
 })
 export class ItemExpandedViewComponent {
   @ViewChild('paintings', { read: ElementRef }) paintings: ElementRef;

@@ -1,13 +1,13 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { StoreItemInterface } from '../../shared/components/store-item/store-item.interface';
-import { childrenPaintings } from '../page-items/children-page.consts';
+import { childrenPaintings } from '../page-items';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'app-online-shop-page',
-    templateUrl: './online-shop-page.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: 'app-online-shop-page',
+  templateUrl: './online-shop-page.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false
 })
 export class OnlineShopPageComponent implements OnInit {
   gridItems: StoreItemInterface[] = childrenPaintings;

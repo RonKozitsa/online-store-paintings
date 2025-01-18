@@ -4,11 +4,11 @@ import { ButtonType } from './app-button.interface';
 import { BreakpointObserverService } from '../../services/breakpoint-observer.service';
 
 @Component({
-    selector: 'app-button',
-    templateUrl: './app-button.component.html',
-    styleUrls: ['./app-button.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: 'app-button',
+  templateUrl: './app-button.component.html',
+  styleUrls: ['./app-button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false
 })
 export class AppButtonComponent {
   @HostBinding('attr.tabindex') tabIndex = -1;

@@ -5,11 +5,11 @@ import { ThemeService } from '../../services/theme.service';
 import { ThemeType } from './theme-controller.interface';
 
 @Component({
-    selector: 'app-theme-controller',
-    templateUrl: './theme-controller.component.html',
-    styleUrls: ['./theme-controller.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: 'app-theme-controller',
+  templateUrl: './theme-controller.component.html',
+  styleUrls: ['./theme-controller.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false
 })
 export class ThemeControllerComponent {
   readonly buttonType = ButtonType.icon;

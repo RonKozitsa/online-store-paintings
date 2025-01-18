@@ -4,11 +4,11 @@ import { NgControl, Validators } from '@angular/forms';
 import { ValueAccessor } from '../../classes/value-accessor';
 
 @Component({
-    selector: 'app-input-text',
-    templateUrl: './input-text.component.html',
-    styleUrls: ['./input-text.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: 'app-input-text',
+  templateUrl: './input-text.component.html',
+  styleUrls: ['./input-text.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false
 })
 export class InputTextComponent extends ValueAccessor implements OnInit {
   @Input() errorMessage = 'Please enter a valid value';

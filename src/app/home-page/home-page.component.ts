@@ -9,12 +9,12 @@ import { QuoteI } from './home-page.interface';
 import { MainPagesNavigationNamesEnums } from '../shared/interfaces/pages-navigation-names.interface';
 
 @Component({
-    selector: 'app-home-page',
-    templateUrl: './home-page.component.html',
-    styleUrls: ['./home-page.component.scss'],
-    animations: [trigger('fadeInOut', animations.fadeInOut)],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.scss'],
+  animations: [trigger('fadeInOut', animations.fadeInOut)],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false
 })
 export class HomePageComponent implements OnInit, OnDestroy {
   readonly mainPagesNavigationNamesEnums = MainPagesNavigationNamesEnums;

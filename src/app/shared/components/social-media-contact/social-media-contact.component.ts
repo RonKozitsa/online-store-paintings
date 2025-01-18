@@ -4,10 +4,11 @@ import { SocialMediaContactInterface } from './social-media-contact.interface';
 import { WINDOW } from '../../injection-tokens/window-token';
 
 @Component({
-  selector: 'app-social-media-contact',
-  templateUrl: './social-media-contact.component.html',
-  styleUrls: ['./social-media-contact.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-social-media-contact',
+    templateUrl: './social-media-contact.component.html',
+    styleUrls: ['./social-media-contact.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class SocialMediaContactComponent {
   configurations: SocialMediaContactInterface[];

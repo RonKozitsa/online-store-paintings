@@ -8,11 +8,12 @@ import { ThemeService } from './shared/services/theme.service';
 import { BreakpointObserverService } from './shared/services/breakpoint-observer.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [trigger('slideInOut', animations.slideInOut)]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [trigger('slideInOut', animations.slideInOut)],
+    standalone: false
 })
 export class AppComponent {
   readonly ButtonType = ButtonType;

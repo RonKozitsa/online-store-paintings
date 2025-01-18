@@ -6,9 +6,10 @@ import { MainPagesNavigationNamesEnums } from '../../interfaces/pages-navigation
 import { ButtonType } from '../app-button/app-button.interface';
 
 @Component({
-  selector: 'app-navigation-header',
-  templateUrl: './navigation-header.component.html',
-  styleUrls: ['./navigation-header.component.scss']
+    selector: 'app-navigation-header',
+    templateUrl: './navigation-header.component.html',
+    styleUrls: ['./navigation-header.component.scss'],
+    standalone: false
 })
 export class NavigationHeaderComponent {
   readonly ButtonType = ButtonType;

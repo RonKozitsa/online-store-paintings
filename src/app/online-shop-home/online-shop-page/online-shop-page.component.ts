@@ -4,9 +4,10 @@ import { childrenPaintings } from '../page-items/children-page.consts';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-online-shop-page',
-  templateUrl: './online-shop-page.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-online-shop-page',
+    templateUrl: './online-shop-page.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class OnlineShopPageComponent implements OnInit {
   gridItems: StoreItemInterface[] = childrenPaintings;

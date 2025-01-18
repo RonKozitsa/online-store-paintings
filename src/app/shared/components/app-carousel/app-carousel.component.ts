@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-carousel',
-  templateUrl: './app-carousel.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-carousel',
+    templateUrl: './app-carousel.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class AppCarouselComponent {
   @Input() frameColor: string;

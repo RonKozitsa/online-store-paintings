@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { trigger } from '@angular/animations';
 import { BehaviorSubject } from 'rxjs';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { AsyncPipe, NgIf } from '@angular/common';
 
 import { animations } from './shared/animations/animations';

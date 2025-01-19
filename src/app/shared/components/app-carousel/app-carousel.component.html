@@ -1,13 +1,15 @@
 <ngb-carousel class="carousel" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" [interval]="interval">
-  <ng-template ngbSlide *ngFor="let imgPath of carouselImagesPath">
-    <app-store-item-image
-        class="carousel-img"
-        [imgPath]="imgPath"
-        [alt]="imagesName"
-        [priority]="true"
-        [isViewExpandedMode]="isViewExpandedMode"
-        [frameColor]="isPreviewImage(imgPath) ? undefined : frameColor"
-        (click)="pictureClicked.emit()"
-    ></app-store-item-image>
-  </ng-template>
+    @for (imgPath of carouselImagesPath; track imgPath) {
+        <ng-template ngbSlide>
+            <app-store-item-image
+                class="carousel-img"
+                [imgPath]="imgPath"
+                [alt]="imagesName"
+                [priority]="true"
+                [isViewExpandedMode]="isViewExpandedMode"
+                [frameColor]="isPreviewImage(imgPath) ? undefined : frameColor"
+                (click)="pictureClicked.emit()"
+            ></app-store-item-image>
+        </ng-template>
+    }
 </ngb-carousel>

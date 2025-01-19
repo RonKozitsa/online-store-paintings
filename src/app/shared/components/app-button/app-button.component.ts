@@ -2,12 +2,16 @@ import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, HostBi
 
 import { ButtonType } from './app-button.interface';
 import { BreakpointObserverService } from '../../services/breakpoint-observer.service';
+import { NgClass, NgIf } from '@angular/common';
+import { NgbPopover, NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-button',
   templateUrl: './app-button.component.html',
   styleUrls: ['./app-button.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgClass, NgIf, NgbTooltip, NgbPopover]
 })
 export class AppButtonComponent {
   @HostBinding('attr.tabindex') tabIndex = -1;

@@ -1,9 +1,14 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { StoreItemImageComponent } from '../store-item-image/store-item-image.component';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './app-carousel.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [NgbCarouselModule, StoreItemImageComponent],
+  standalone: true
 })
 export class AppCarouselComponent {
   @Input() frameColor: string;

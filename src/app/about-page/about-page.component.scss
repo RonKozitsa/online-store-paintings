@@ -2,11 +2,12 @@
 
 :host {
   height: 100%;
+  @include mixins.flex($center: true);
 }
 
 .about-me {
-  @include mixins.flex($center: true);
-  height: 800px;
+  @include mixins.flex();
+  max-height: 100%;
 
   .picture {
     margin: 0 60px 0 10px;
